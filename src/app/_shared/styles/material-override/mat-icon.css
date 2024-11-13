@@ -1,0 +1,41 @@
+mat-icon.mat-primary {
+    color: var(--primary-600) !important;
+}
+
+mat-icon.mat-accent {
+    color: var(--pink) !important;
+}
+
+mat-icon.mat-warn {
+    color: var(--orange) !important;
+}
+
+mat-icon.small {
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-icon.medium {
+  height: 2.5rem;
+  width: 2.5rem;
+  font-size: 2.5rem;
+}
+
+mat-icon.big {
+    height: 9.375rem;
+    width: 9.375rem;
+    font-size: 9.375rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-icon.primary-600 {
+    --mat-icon-color: var(--primary-600) !important;
+}
+
+mat-icon.disabled {
+  --mat-icon-color: var(--disabled) !important;
+}

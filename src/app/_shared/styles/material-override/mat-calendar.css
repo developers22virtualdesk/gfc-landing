@@ -1,0 +1,45 @@
+/* Change if needed */
+.mat-datepicker-content.mat-accent {
+    --mat-datepicker-calendar-date-selected-state-text-color: rgba(0, 0, 0, 0.87);
+    --mat-datepicker-calendar-date-selected-state-background-color: #ffd740;
+    --mat-datepicker-calendar-date-selected-disabled-state-background-color: rgba(255, 215, 64, 0.4);
+    --mat-datepicker-calendar-date-today-selected-state-outline-color: rgba(0, 0, 0, 0.87);
+    --mat-datepicker-calendar-date-focus-state-background-color: rgba(255, 215, 64, 0.3);
+    --mat-datepicker-calendar-date-hover-state-background-color: rgba(255, 215, 64, 0.3);
+    --mat-datepicker-calendar-date-in-range-state-background-color: rgba(255, 215, 64, 0.2);
+    --mat-datepicker-calendar-date-in-comparison-range-state-background-color: rgba(249, 171, 0, 0.2);
+    --mat-datepicker-calendar-date-in-overlap-range-state-background-color: #a8dab5;
+    --mat-datepicker-calendar-date-in-overlap-range-selected-state-background-color: #46a35e
+}
+
+.mat-datepicker-content.mat-warn {
+    --mat-datepicker-calendar-date-selected-state-text-color: white;
+    --mat-datepicker-calendar-date-selected-state-background-color: #f44336;
+    --mat-datepicker-calendar-date-selected-disabled-state-background-color: rgba(244, 67, 54, 0.4);
+    --mat-datepicker-calendar-date-today-selected-state-outline-color: white;
+    --mat-datepicker-calendar-date-focus-state-background-color: rgba(244, 67, 54, 0.3);
+    --mat-datepicker-calendar-date-hover-state-background-color: rgba(244, 67, 54, 0.3);
+    --mat-datepicker-calendar-date-in-range-state-background-color: rgba(244, 67, 54, 0.2);
+    --mat-datepicker-calendar-date-in-comparison-range-state-background-color: rgba(249, 171, 0, 0.2);
+    --mat-datepicker-calendar-date-in-overlap-range-state-background-color: #a8dab5;
+    --mat-datepicker-calendar-date-in-overlap-range-selected-state-background-color: #46a35e
+}
+
+.mat-datepicker-toggle-active.mat-accent {
+    --mat-datepicker-toggle-active-state-icon-color: #ffd740
+}
+
+.mat-datepicker-toggle-active.mat-warn {
+    --mat-datepicker-toggle-active-state-icon-color: #f44336
+}
+
+.mat-calendar-controls {
+    --mat-icon-button-touch-target-display: none
+}
+
+.mat-calendar-controls .mat-mdc-icon-button.mat-mdc-button-base {
+    --mdc-icon-button-state-layer-size: 40px;
+    width: var(--mdc-icon-button-state-layer-size);
+    height: var(--mdc-icon-button-state-layer-size);
+    padding: 8px
+}

@@ -1,0 +1,542 @@
+@import url('../_shared/styles/material-override/mat-sidenav.css');
+@import url('../_shared/styles/material-override/mat-icon.css');
+@import url('../_shared/styles/material-override/mat-card.css');
+@import url('../_shared/styles/material-override/mat-calendar.css');
+@import url('../_shared/styles/material-override/mat-checkbox.css');
+@import url('../_shared/styles/material-override/mat-chip.css');
+@import url('../_shared/styles/material-override/mat-dialog.css');
+@import url('../_shared/styles/material-override/mat-paginator.css');
+@import url('../_shared/styles/material-override/mat-button.css');
+@import url('../_shared/styles/material-override/mat-form-field.css');
+@import url('../_shared/styles/material-override/mat-toggler.css');
+@import url('../_shared/styles/material-override/mat-tab.css');
+@import url('../_shared/styles/material-override/mat-table.css');
+@import url('../_shared/styles/material-override/mat-expansion-panel.css');
+@import url('../_shared/styles/material-override/calendar-view.css');
+
+* {
+  /* #region Material Button */
+  --mdc-text-button-label-text-font: "Montserrat";
+  --mdc-text-button-label-text-size: var(--fs-sm);
+  --mdc-text-button-label-text-tracking: 0.0892857143em;
+  --mdc-text-button-label-text-weight: 600;
+  --mdc-text-button-label-text-transform: uppercase;
+  --mdc-filled-button-label-text-font: "Montserrat";
+  --mdc-filled-button-label-text-size: var(--fs-sm);
+  --mdc-filled-button-label-text-tracking: 0.0892857143em;
+  --mdc-filled-button-label-text-weight: 600;
+  --mdc-filled-button-label-text-transform: uppercase;
+  --mdc-protected-button-label-text-font: "Montserrat";
+  --mdc-protected-button-label-text-size: var(--fs-sm);
+  --mdc-protected-button-label-text-tracking: 0.0892857143em;
+  --mdc-protected-button-label-text-weight: 600;
+  --mdc-protected-button-label-text-transform: uppercase;
+  --mdc-outlined-button-label-text-font: "Montserrat";
+  --mdc-outlined-button-label-text-size: var(--fs-sm);
+  --mdc-outlined-button-label-text-tracking: 0.0892857143em;
+  --mdc-outlined-button-label-text-weight: 600;
+  --mdc-outlined-button-label-text-transform: uppercase;
+
+  /* Basic button */
+  --mdc-text-button-label-text-color: var(--primary-600);
+  --mdc-text-button-disabled-label-text-color: var(--primary-disabled);
+  --mat-text-button-state-layer-color: var(--primary-overlay);
+  --mat-text-button-disabled-state-layer-color: black;
+  --mat-text-button-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-text-button-hover-state-layer-opacity: 0.04;
+  --mat-text-button-focus-state-layer-opacity: 0.12;
+  --mat-text-button-pressed-state-layer-opacity: 0.12;
+
+  /* Flat button */
+  --mdc-filled-button-container-color: var(--primary-600);
+  --mdc-filled-button-label-text-color: var(--surface-high-emphasis);
+  --mdc-filled-button-disabled-container-color: var(--primary-disabled);
+  --mdc-filled-button-disabled-label-text-color: var(--surface-high-emphasis);
+  --mat-filled-button-state-layer-color: var(--primary-overlay);
+  --mat-filled-button-disabled-state-layer-color: black;
+  --mat-filled-button-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-filled-button-hover-state-layer-opacity: 0.04;
+  --mat-filled-button-focus-state-layer-opacity: 0.12;
+  --mat-filled-button-pressed-state-layer-opacity: 0.12;
+
+  /* Raised button */
+  --mdc-protected-button-container-color: var(--primary-600);
+  --mdc-protected-button-label-text-color: var(--surface-high-emphasis);
+  --mdc-protected-button-disabled-container-color: var(--primary-disabled);
+  --mdc-protected-button-disabled-label-text-color: var(--surface-high-emphasis);
+  --mat-protected-button-state-layer-color: var(--primary-overlay);
+  --mat-protected-button-disabled-state-layer-color: black;
+  --mat-protected-button-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-protected-button-hover-state-layer-opacity: 0.04;
+  --mat-protected-button-focus-state-layer-opacity: 0.12;
+  --mat-protected-button-pressed-state-layer-opacity: 0.12;
+
+  /* Stroked button */
+  --mdc-outlined-button-disabled-outline-color: var(--primary-disabled);
+  --mdc-outlined-button-disabled-label-text-color: var(--primary-disabled);
+  --mdc-outlined-button-label-text-color: var(--primary-600);
+  --mdc-outlined-button-outline-color: var(--primary-600);
+  --mat-outlined-button-state-layer-color: var(--primary-overlay);
+  --mat-outlined-button-disabled-state-layer-color: black;
+  --mat-outlined-button-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-outlined-button-hover-state-layer-opacity: 0.4;
+  --mat-outlined-button-focus-state-layer-opacity: 0.12;
+  --mat-outlined-button-pressed-state-layer-opacity: 0.12;
+
+  /* Fab button */
+  /* Change if needed */
+  --mdc-fab-container-color: white;
+  --mat-fab-foreground-color: black;
+  --mat-fab-state-layer-color: black;
+  --mat-fab-disabled-state-layer-color: black;
+  --mat-fab-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-fab-hover-state-layer-opacity: 0.04;
+  --mat-fab-focus-state-layer-opacity: 0.12;
+  --mat-fab-pressed-state-layer-opacity: 0.12;
+  --mat-fab-disabled-state-container-color: rgba(0, 0, 0, 0.12);
+  --mat-fab-disabled-state-foreground-color: rgba(0, 0, 0, 0.38);
+  --mdc-fab-small-container-color: white;
+  --mat-fab-small-foreground-color: black;
+  --mat-fab-small-state-layer-color: black;
+  --mat-fab-small-disabled-state-layer-color: black;
+  --mat-fab-small-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-fab-small-hover-state-layer-opacity: 0.04;
+  --mat-fab-small-focus-state-layer-opacity: 0.12;
+  --mat-fab-small-pressed-state-layer-opacity: 0.12;
+  --mat-fab-small-disabled-state-container-color: rgba(0, 0, 0, 0.12);
+  --mat-fab-small-disabled-state-foreground-color: rgba(0, 0, 0, 0.38);
+  /* #endregion */
+
+  /* #region Material Dialog */
+  --mdc-dialog-container-shape: 16px;
+  --mat-dialog-container-elevation-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+  --mat-dialog-container-max-width: 80vw;
+  --mat-dialog-container-small-max-width: 80vw;
+  --mat-dialog-container-min-width: 0;
+  --mat-dialog-actions-alignment: start;
+  --mat-dialog-actions-padding: 8px;
+  --mat-dialog-content-padding: 20px 24px;
+  --mat-dialog-with-actions-content-padding: 20px 24px;
+  --mat-dialog-headline-padding: 0 24px 9px;
+
+  --mdc-dialog-container-color: white;
+  --mdc-dialog-subhead-color: var(--primary-high-emphasis);
+  --mdc-dialog-supporting-text-color: var(--primary-medium-emphasis);
+
+  --mdc-dialog-subhead-font: Roboto, sans-serif;
+  --mdc-dialog-subhead-line-height: 32px;
+  --mdc-dialog-subhead-size: 20px;
+  --mdc-dialog-subhead-weight: 500;
+  --mdc-dialog-subhead-tracking: 0.0125em;
+  --mdc-dialog-supporting-text-font: Roboto, sans-serif;
+  --mdc-dialog-supporting-text-line-height: 24px;
+  --mdc-dialog-supporting-text-size: 16px;
+  --mdc-dialog-supporting-text-weight: 400;
+  --mdc-dialog-supporting-text-tracking: 0.03125em;
+  /* #endregion */
+
+  /* #region Material Card */
+  --mdc-elevated-card-container-shape: 1rem;
+  --mdc-outlined-card-container-shape: 1rem;
+  --mdc-outlined-card-outline-width: 1px;
+
+  --mdc-elevated-card-container-color: var(--surface-high-emphasis);
+  --mdc-elevated-card-container-elevation: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --mdc-outlined-card-container-color: white;
+  --mdc-outlined-card-outline-color: rgba(0, 0, 0, 0.12);
+  --mdc-outlined-card-container-elevation: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  --mat-card-subtitle-text-color: var(--primary-medium-emphasis);
+
+  /* TODO Update to current typography */
+  --mat-card-title-text-font: "Montserrat";
+  --mat-card-title-text-line-height: 24px;
+  --mat-card-title-text-size: 20px;
+  --mat-card-title-text-tracking: 0.0125em;
+  --mat-card-title-text-weight: 700;
+
+  --mat-card-subtitle-text-font: "Montserrat";
+  --mat-card-subtitle-text-line-height: 22px;
+  --mat-card-subtitle-text-size: 14px;
+  --mat-card-subtitle-text-tracking: 0.0071428571em;
+  --mat-card-subtitle-text-weight: 500;
+  /* #endregion */
+
+  /* #region Material Checkbox */
+  --mdc-checkbox-disabled-selected-checkmark-color: #fff;
+  --mdc-checkbox-selected-focus-state-layer-opacity: 0.16;
+  --mdc-checkbox-selected-hover-state-layer-opacity: 0.04;
+  --mdc-checkbox-selected-pressed-state-layer-opacity: 0.16;
+  --mdc-checkbox-unselected-focus-state-layer-opacity: 0.16;
+  --mdc-checkbox-unselected-hover-state-layer-opacity: 0.04;
+  --mdc-checkbox-unselected-pressed-state-layer-opacity: 0.16;
+
+  --mdc-checkbox-disabled-selected-icon-color: var(--primary-disabled);
+  --mdc-checkbox-disabled-unselected-icon-color: var(--primary-disabled) !important;
+  --mdc-checkbox-selected-checkmark-color: var(--surface-high-emphasis);
+  --mdc-checkbox-selected-focus-icon-color: var(--primary-600);
+  --mdc-checkbox-selected-hover-icon-color: var(--primary-600);
+  --mdc-checkbox-selected-icon-color: var(--primary-600);
+  --mdc-checkbox-selected-pressed-icon-color: var(--primary-600);
+  --mdc-checkbox-unselected-focus-icon-color: #212121;
+  --mdc-checkbox-unselected-hover-icon-color: #212121;
+  --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54);
+  --mdc-checkbox-selected-focus-state-layer-color: var(--primary-600);
+  --mdc-checkbox-selected-hover-state-layer-color: var(--primary-600);
+  --mdc-checkbox-selected-pressed-state-layer-color: var(--primary-600);
+  --mdc-checkbox-unselected-focus-state-layer-color: black;
+  --mdc-checkbox-unselected-hover-state-layer-color: black;
+  --mdc-checkbox-unselected-pressed-state-layer-color: black;
+  --mat-checkbox-disabled-label-color: var(--primary-disabled);
+  --mat-checkbox-label-text-color: var(--primary-high-emphasis);
+  /* #endregion */
+
+  /* #region Material Chips */
+  --mdc-chip-container-shape-radius: 16px;
+  --mdc-chip-with-avatar-avatar-shape-radius: 14px;
+  --mdc-chip-with-avatar-avatar-size: 28px;
+  --mdc-chip-with-icon-icon-size: 18px;
+  --mdc-chip-outline-width: 0;
+  --mdc-chip-outline-color: transparent;
+  --mdc-chip-disabled-outline-color: transparent;
+  --mdc-chip-focus-outline-color: transparent;
+  --mdc-chip-hover-state-layer-opacity: 0.04;
+  --mdc-chip-with-avatar-disabled-avatar-opacity: 1;
+  --mdc-chip-flat-selected-outline-width: 0;
+  --mdc-chip-selected-hover-state-layer-opacity: 0.04;
+  --mdc-chip-with-trailing-icon-disabled-trailing-icon-opacity: 1;
+  --mdc-chip-with-icon-disabled-icon-opacity: 1;
+  --mat-chip-disabled-container-opacity: 0.4;
+  --mat-chip-trailing-action-opacity: 0.54;
+  --mat-chip-trailing-action-focus-opacity: 1;
+  --mat-chip-trailing-action-state-layer-color: transparent;
+  --mat-chip-selected-trailing-action-state-layer-color: transparent;
+  --mat-chip-trailing-action-hover-state-layer-opacity: 0;
+  --mat-chip-trailing-action-focus-state-layer-opacity: 0;
+
+  --mdc-chip-disabled-label-text-color: #212121;
+  --mdc-chip-elevated-container-color: #e0e0e0;
+  --mdc-chip-elevated-selected-container-color: var(--primary-600) !important;
+  --mdc-chip-elevated-disabled-container-color: #e0e0e0;
+  --mdc-chip-flat-disabled-selected-container-color: #e0e0e0;
+  --mdc-chip-focus-state-layer-color: black;
+  --mdc-chip-hover-state-layer-color: black;
+  --mdc-chip-selected-hover-state-layer-color: black;
+  --mdc-chip-focus-state-layer-opacity: 0.12;
+  --mdc-chip-selected-focus-state-layer-color: black;
+  --mdc-chip-selected-focus-state-layer-opacity: 0.12;
+  --mdc-chip-label-text-color: #212121;
+  --mdc-chip-selected-label-text-color: var(--surface-high-emphasis);
+  --mdc-chip-with-icon-icon-color: #212121;
+  --mdc-chip-with-icon-disabled-icon-color: #212121;
+  --mdc-chip-with-icon-selected-icon-color: var(--surface-high-emphasis);
+  --mdc-chip-with-trailing-icon-disabled-trailing-icon-color: #212121;
+  --mdc-chip-with-trailing-icon-trailing-icon-color: #212121;
+  --mat-chip-selected-disabled-trailing-icon-color: #212121;
+  --mat-chip-selected-trailing-icon-color: #212121;
+  /* #endregion */
+
+  /* #region Material Datepicker */
+  --mat-datepicker-calendar-text-font: "Montserrat";
+  --mat-datepicker-calendar-text-size: 13px;
+  --mat-datepicker-calendar-body-label-text-size: 14px;
+  --mat-datepicker-calendar-body-label-text-weight: 500;
+  --mat-datepicker-calendar-period-button-text-size: 14px;
+  --mat-datepicker-calendar-period-button-text-weight: 500;
+  --mat-datepicker-calendar-header-text-size: 11px;
+  --mat-datepicker-calendar-header-text-weight: 400;
+
+  --mat-datepicker-calendar-date-selected-state-text-color: var(--surface-high-emphasis);
+  --mat-datepicker-calendar-date-selected-state-background-color: var(--primary-600);
+  --mat-datepicker-calendar-date-selected-disabled-state-background-color: rgba(103, 58, 183, 0.4);
+  --mat-datepicker-calendar-date-today-selected-state-outline-color: white;
+  --mat-datepicker-calendar-date-focus-state-background-color: var(--primary-overlay);
+  --mat-datepicker-calendar-date-hover-state-background-color: var(--primary-overlay);
+  --mat-datepicker-toggle-active-state-icon-color: var(--primary-600);
+  --mat-datepicker-calendar-date-in-range-state-background-color: var(--primary-overlay);
+  --mat-datepicker-calendar-date-in-comparison-range-state-background-color: rgba(249, 171, 0, 0.2);
+  /* Change if needed */
+  --mat-datepicker-calendar-date-in-overlap-range-state-background-color: #a8dab5;
+  --mat-datepicker-calendar-date-in-overlap-range-selected-state-background-color: #46a35e;
+  /* . */
+
+  --mat-datepicker-toggle-icon-color: var(--primary-high-emphasis);
+  --mat-datepicker-calendar-body-label-text-color: var(--primary-high-emphasis);
+  --mat-datepicker-calendar-period-button-text-color: black;
+  --mat-datepicker-calendar-period-button-icon-color: rgba(0, 0, 0, 0.54);
+  --mat-datepicker-calendar-navigation-button-icon-color: rgba(0, 0, 0, 0.54);
+  --mat-datepicker-calendar-header-divider-color: rgba(0, 0, 0, 0.12);
+  --mat-datepicker-calendar-header-text-color: rgba(0, 0, 0, 0.54);
+  --mat-datepicker-calendar-date-today-outline-color: rgba(0, 0, 0, 0.38);
+  --mat-datepicker-calendar-date-today-disabled-state-outline-color: rgba(0, 0, 0, 0.18);
+  --mat-datepicker-calendar-date-text-color: rgba(0, 0, 0, 0.87);
+  --mat-datepicker-calendar-date-outline-color: transparent;
+  --mat-datepicker-calendar-date-disabled-state-text-color: rgba(0, 0, 0, 0.38);
+  --mat-datepicker-calendar-date-preview-state-outline-color: rgba(0, 0, 0, 0.24);
+  --mat-datepicker-range-input-separator-color: rgba(0, 0, 0, 0.87);
+  --mat-datepicker-range-input-disabled-state-separator-color: rgba(0, 0, 0, 0.38);
+  --mat-datepicker-range-input-disabled-state-text-color: rgba(0, 0, 0, 0.38);
+  --mat-datepicker-calendar-container-background-color: white;
+  --mat-datepicker-calendar-container-text-color: rgba(0, 0, 0, 0.87);
+  /* #endregion */
+
+  /* #region Material Expansion Panel */
+  --mat-expansion-container-shape: 4px;
+  --mat-expansion-legacy-header-indicator-display: inline-block;
+  --mat-expansion-header-indicator-display: none;
+
+  --mat-expansion-container-background-color: var(--surface-high-emphasis);
+  --mat-expansion-container-text-color: var(--primary-high-emphasis);
+  --mat-expansion-actions-divider-color: rgba(0, 0, 0, 0.12);
+  --mat-expansion-header-hover-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-expansion-header-focus-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-expansion-header-disabled-state-text-color: var(--primary-disabled);
+  --mat-expansion-header-text-color: var(--primary-high-emphasis);
+  --mat-expansion-header-description-color: var(--primary-medium-emphasis);
+  --mat-expansion-header-indicator-color: var(--primary-medium-emphasis);
+
+  --mat-expansion-header-text-font: Roboto, sans-serif;
+  --mat-expansion-header-text-size: var(--fs-md);
+  --mat-expansion-header-text-weight: 500;
+  --mat-expansion-header-text-line-height: inherit;
+  --mat-expansion-header-text-tracking: inherit;
+  --mat-expansion-container-text-font: Roboto, sans-serif;
+  --mat-expansion-container-text-line-height: 20px;
+  --mat-expansion-container-text-size: var(--fs-sm);
+  --mat-expansion-container-text-tracking: 0.0178571429em;
+  --mat-expansion-container-text-weight: 400;
+  /* #endregion */
+
+  /* #region Material Form Field */
+  --mdc-filled-text-field-caret-color: var(--primary-600);
+  --mdc-filled-text-field-focus-active-indicator-color: var(--primary-600);
+  --mdc-filled-text-field-focus-label-text-color: var(--primary-600);
+  --mdc-filled-text-field-container-color: transparent;
+  --mdc-filled-text-field-disabled-container-color: transparent;
+  --mdc-filled-text-field-label-text-color: var(--primary-medium-emphasis);
+  --mdc-filled-text-field-hover-label-text-color: var(--primary-medium-emphasis);
+  --mdc-filled-text-field-disabled-label-text-color: var(--primary-disabled);
+  --mdc-filled-text-field-input-text-color: var(--primary-high-emphasis);
+  --mdc-filled-text-field-disabled-input-text-color: var(--primary-disabled);
+  --mdc-filled-text-field-input-text-placeholder-color: var(--primary-medium-emphasis);
+  --mdc-filled-text-field-error-hover-label-text-color: var(--error);
+  --mdc-filled-text-field-error-focus-label-text-color: var(--error);
+  --mdc-filled-text-field-error-label-text-color: var(--error);
+  --mdc-filled-text-field-error-caret-color: var(--error);
+  --mdc-filled-text-field-active-indicator-color: var(--primary-high-emphasis);
+  --mdc-filled-text-field-disabled-active-indicator-color: var(--primary-disabled);
+  --mdc-filled-text-field-hover-active-indicator-color: var(--primary-600);
+  --mdc-filled-text-field-error-active-indicator-color: var(--error);
+  --mdc-filled-text-field-error-focus-active-indicator-color: var(--error);
+  --mdc-filled-text-field-error-hover-active-indicator-color: var(--error);
+
+  /* Change if needed */
+  --mdc-outlined-text-field-caret-color: var(--primary-600);
+  --mdc-outlined-text-field-focus-outline-color: var(--primary-600);
+  --mdc-outlined-text-field-focus-label-text-color: rgba(103, 58, 183, 0.87);
+  --mdc-outlined-text-field-label-text-color: rgba(0, 0, 0, 0.6);
+  --mdc-outlined-text-field-hover-label-text-color: rgba(0, 0, 0, 0.6);
+  --mdc-outlined-text-field-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+  --mdc-outlined-text-field-input-text-color: rgba(0, 0, 0, 0.87);
+  --mdc-outlined-text-field-disabled-input-text-color: rgba(0, 0, 0, 0.38);
+  --mdc-outlined-text-field-input-text-placeholder-color: rgba(0, 0, 0, 0.6);
+  --mdc-outlined-text-field-error-caret-color: var(--error);
+  --mdc-outlined-text-field-error-focus-label-text-color: var(--error);
+  --mdc-outlined-text-field-error-label-text-color: var(--error);
+  --mdc-outlined-text-field-error-hover-label-text-color: var(--error);
+  --mdc-outlined-text-field-outline-color: rgba(0, 0, 0, 0.38);
+  --mdc-outlined-text-field-disabled-outline-color: rgba(0, 0, 0, 0.06);
+  --mdc-outlined-text-field-hover-outline-color: rgba(0, 0, 0, 0.87);
+  --mdc-outlined-text-field-error-focus-outline-color: var(--error);
+  --mdc-outlined-text-field-error-hover-outline-color: var(--error);
+  --mdc-outlined-text-field-error-outline-color: var(--error);
+
+  --mat-form-field-focus-select-arrow-color: red;
+  --mat-form-field-disabled-input-text-placeholder-color: rgba(0, 0, 0, 0.38);
+  --mat-form-field-state-layer-color: transparent;
+  --mat-form-field-error-text-color: var(--error);
+  --mat-form-field-select-option-text-color: inherit;
+  --mat-form-field-select-disabled-option-text-color: GrayText;
+  --mat-form-field-leading-icon-color: unset;
+  --mat-form-field-disabled-leading-icon-color: unset;
+  --mat-form-field-trailing-icon-color: unset;
+  --mat-form-field-disabled-trailing-icon-color: unset;
+  --mat-form-field-error-focus-trailing-icon-color: unset;
+  --mat-form-field-error-hover-trailing-icon-color: unset;
+  --mat-form-field-error-trailing-icon-color: unset;
+  --mat-form-field-enabled-select-arrow-color: rgba(0, 0, 0, 0.54);
+  --mat-form-field-disabled-select-arrow-color: rgba(0, 0, 0, 0.38);
+  --mat-form-field-hover-state-layer-opacity: 0.04;
+  --mat-form-field-focus-state-layer-opacity: 0.08;
+  /* #endregion */
+
+  /* #region Material Menu */
+  --mat-menu-item-label-text-color: var(--primary-high-emphasis);
+  --mat-menu-item-icon-color: var(--primary-high-emphasis);
+  --mat-menu-item-hover-state-layer-color: var(--primary-overlay);
+  --mat-menu-item-focus-state-layer-color: var(--primary-overlay);
+  --mat-menu-container-color: white;
+  --mat-menu-divider-color: rgba(0, 0, 0, 0.12);
+  /* #endregion */
+
+  /* #region Material Tab */
+  --mdc-tab-indicator-active-indicator-color: var(--primary-600);
+  --mat-tab-header-disabled-ripple-color: var(--primary-disabled);
+  --mat-tab-header-pagination-icon-color: black;
+  --mat-tab-header-inactive-label-text-color: var(--primary-medium-emphasis);
+  --mat-tab-header-active-label-text-color: var(--primary-medium-emphasis);
+  --mat-tab-header-active-ripple-color: var(--primary-600);
+  --mat-tab-header-inactive-ripple-color: var(--primary-600);
+  --mat-tab-header-inactive-focus-label-text-color: var(--primary-medium-emphasis);
+  --mat-tab-header-inactive-hover-label-text-color: var(--primary-medium-emphasis);
+  --mat-tab-header-active-focus-label-text-color: var(--primary-600);
+  --mat-tab-header-active-hover-label-text-color: var(--primary-600);
+  --mat-tab-header-active-focus-indicator-color: var(--primary-600);
+  --mat-tab-header-active-hover-indicator-color: var(--primary-600);
+
+  --mat-tab-header-label-text-font: "Montserrat";
+  --mat-tab-header-label-text-size: var(--fs-sm) !important;
+  --mat-tab-header-label-text-tracking: 0.0892857143em !important;
+  --mat-tab-header-label-text-line-height: var(--lh-xxlg) !important;
+  --mat-tab-header-label-text-weight: 600 !important;
+  /* #endregion */
+
+  /* #region Material Table */
+  --mat-table-background-color: white;
+  --mat-table-header-headline-color: rgba(0, 0, 0, 0.87);
+  --mat-table-row-item-label-text-color: rgba(0, 0, 0, 0.87);
+  --mat-table-row-item-outline-color: var(--primary-disabled);
+    /* #endregion */
+
+    /* #region Material Toggle */
+    --mat-standard-button-toggle-text-color: var(--primary-high-emphasis);
+  --mat-standard-button-toggle-background-color: white;
+  --mat-standard-button-toggle-state-layer-color: var(--primary-600);
+  --mat-standard-button-toggle-selected-state-background-color: var(--primary-600);
+  --mat-standard-button-toggle-selected-state-text-color: var(--surface-high-emphasis);
+  --mat-standard-button-toggle-disabled-state-text-color: var(--surface-high-emphasis);
+  --mat-standard-button-toggle-disabled-state-background-color: var(--primary-disabled);
+  --mat-standard-button-toggle-disabled-selected-state-text-color: rgba(0, 0, 0, 0.87);
+  --mat-standard-button-toggle-disabled-selected-state-background-color: #bdbdbd;
+  --mat-standard-button-toggle-divider-color: #e0e0e0;
+  --mat-standard-button-toggle-shape: 16px;
+  --mat-standard-button-toggle-hover-state-layer-opacity: 0.04;
+  --mat-standard-button-toggle-focus-state-layer-opacity: 0.12;
+  --mat-standard-button-toggle-height: 48px;
+  /* #endregion */
+
+  /* #region Material Paginator */
+  --mat-paginator-container-text-color: var(--primary-high-emphasis);
+  --mat-paginator-container-background-color: white;
+  --mat-paginator-enabled-icon-color: var(--primary-high-emphasis);
+  --mat-paginator-disabled-icon-color: var(--primary-disabled);
+
+  /* Change if needed */
+  --mat-paginator-container-text-font: Roboto, sans-serif;
+  --mat-paginator-container-text-line-height: 20px;
+  --mat-paginator-container-text-size: 12px;
+  --mat-paginator-container-text-tracking: 0.0333333333em;
+  --mat-paginator-container-text-weight: 400;
+  --mat-paginator-select-trigger-text-size: 12px;
+  /* #endregion */
+
+  /* #region Material Select */
+  --mat-select-panel-background-color: white;
+  --mat-select-enabled-trigger-text-color: rgba(0, 0, 0, 0.87);
+  --mat-select-disabled-trigger-text-color: var(--primary-disabled);
+  --mat-select-placeholder-text-color: var(--primary-medium-emphasis);
+  --mat-select-disabled-arrow-color: var(--primary-disabled);
+  --mat-select-invalid-arrow-color: var(--error);
+
+  --mat-option-label-text-font: "Montserrat";
+  --mat-option-label-text-line-height: 24px;
+  --mat-option-label-text-size: 16px;
+  --mat-option-label-text-tracking: 0.03125em;
+  --mat-option-label-text-weight: 400;
+
+  --mat-option-selected-state-label-text-color: var(--primary-600);
+  --mat-option-label-text-color: var(--primary-high-emphasis);
+  --mat-option-hover-state-layer-color: var(--primary-overlay);
+  --mat-option-focus-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-option-selected-state-layer-color: rgba(0, 0, 0, 0.04);
+  /* #endregion */
+
+  /* #region Material Sidenav */
+  --mdc-list-list-item-container-shape: 0;
+  --mdc-list-list-item-leading-avatar-shape: 50%;
+  --mdc-list-list-item-container-color: transparent;
+  --mdc-list-list-item-selected-container-color: transparent;
+  --mdc-list-list-item-leading-avatar-color: transparent;
+  --mdc-list-list-item-leading-icon-size: 24px;
+  --mdc-list-list-item-leading-avatar-size: 40px;
+  --mdc-list-list-item-trailing-icon-size: 24px;
+  --mdc-list-list-item-disabled-state-layer-color: transparent;
+  --mdc-list-list-item-disabled-state-layer-opacity: 0;
+  --mdc-list-list-item-disabled-label-text-opacity: 0.38;
+  --mdc-list-list-item-disabled-leading-icon-opacity: 0.38;
+  --mdc-list-list-item-disabled-trailing-icon-opacity: 0.38;
+  --mat-list-active-indicator-color: transparent;
+  --mat-list-active-indicator-shape: 4px;
+
+  --mat-sidenav-container-divider-color: var(--level-2);
+  --mat-sidenav-container-background-color: white;
+  --mat-sidenav-container-text-color: var(--primary-high-emphasis);
+  --mat-sidenav-content-text-color: var(--primary-high-emphasis);
+  --mat-sidenav-scrim-color: rgba(0, 0, 0, 0.6);
+  --mdc-list-list-item-label-text-color: var(--primary-high-emphasis);
+  --mdc-list-list-item-supporting-text-color: rgba(0, 0, 0, 0.54);
+  --mdc-list-list-item-leading-icon-color: var(--primary-high-emphasis);
+  --mdc-list-list-item-trailing-supporting-text-color: rgba(0, 0, 0, 0.38);
+  --mdc-list-list-item-trailing-icon-color: rgba(0, 0, 0, 0.38);
+  --mdc-list-list-item-selected-trailing-icon-color: rgba(0, 0, 0, 0.38);
+  --mdc-list-list-item-disabled-label-text-color: black;
+  --mdc-list-list-item-disabled-leading-icon-color: black;
+  --mdc-list-list-item-disabled-trailing-icon-color: black;
+  --mdc-list-list-item-hover-label-text-color: rgba(0, 0, 0, 0.87);
+  --mdc-list-list-item-hover-leading-icon-color: rgba(0, 0, 0, 0.38);
+  --mdc-list-list-item-hover-trailing-icon-color: rgba(0, 0, 0, 0.38);
+  --mdc-list-list-item-focus-label-text-color: rgba(0, 0, 0, 0.87);
+  --mdc-list-list-item-hover-state-layer-color: var(--primary-overlay);
+  --mdc-list-list-item-hover-state-layer-opacity: 1;
+  --mdc-list-list-item-focus-state-layer-color: black;
+  --mdc-list-list-item-focus-state-layer-opacity: 0.12;
+  /* #endregion */
+
+  /* #region Material Switch */
+  ---mdc-switch-selected-focus-state-layer-color: var(--primary-600);
+  --mdc-switch-selected-handle-color: var(--primary-600);
+  --mdc-switch-selected-hover-state-layer-color: var(--primary-600);
+  --mdc-switch-selected-pressed-state-layer-color: var(--primary-600);
+  --mdc-switch-selected-focus-handle-color: var(--primary-900);
+  --mdc-switch-selected-hover-handle-color: var(--primary-900);
+  --mdc-switch-selected-pressed-handle-color: var(--primary-900);
+  --mdc-switch-selected-focus-track-color: var(--primary-overlay);
+  --mdc-switch-selected-hover-track-color: var(--primary-overlay);
+  --mdc-switch-selected-pressed-track-color: var(--primary-overlay);
+  --mdc-switch-selected-track-color: var(--primary-overlay);
+
+  --mdc-switch-disabled-selected-handle-color: var(--primary-600);
+  --mdc-switch-disabled-selected-icon-color: transparent;
+  --mdc-switch-disabled-selected-track-color: var(--primary-overlay);
+  --mdc-switch-disabled-unselected-handle-color: #424242;
+  --mdc-switch-disabled-unselected-icon-color: transparent;
+  --mdc-switch-disabled-unselected-track-color: #424242;
+  --mdc-switch-handle-surface-color: #fff;
+  --mdc-switch-selected-icon-color: transparent;
+  --mdc-switch-unselected-focus-handle-color: #212121;
+  --mdc-switch-unselected-focus-state-layer-color: #424242;
+  --mdc-switch-unselected-focus-track-color: #e0e0e0;
+  --mdc-switch-unselected-handle-color: #616161;
+  --mdc-switch-unselected-hover-handle-color: #212121;
+  --mdc-switch-unselected-hover-state-layer-color: #424242;
+  --mdc-switch-unselected-hover-track-color: #e0e0e0;
+  --mdc-switch-unselected-icon-color: transparent;
+  --mdc-switch-unselected-pressed-handle-color: #212121;
+  --mdc-switch-unselected-pressed-state-layer-color: #424242;
+  --mdc-switch-unselected-pressed-track-color: #e0e0e0;
+  --mdc-switch-unselected-track-color: #e0e0e0;
+  --mdc-switch-handle-elevation-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --mdc-switch-disabled-handle-elevation-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  --mdc-switch-disabled-label-text-color: var(--primary-disabled);
+  --mat-switch-label-text-color: var(--primary-high-emphasis);
+  /* #endregion */
+}

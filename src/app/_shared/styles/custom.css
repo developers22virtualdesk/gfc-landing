@@ -1,0 +1,365 @@
+/* #region PRIMARY BACKGROUND */
+.bg-primary-overlay {
+    background-color: var(--primary-overlay) !important;
+}
+
+.bg-primary-50 {
+    background-color: var(--primary-50) !important;
+}
+
+.bg-primary-100 {
+    background-color: var(--primary-100) !important;
+}
+
+.bg-primary-200 {
+    background-color: var(--primary-200) !important;
+}
+
+.bg-primary-300 {
+    background-color: var(--primary-300) !important;
+}
+
+.bg-primary-400 {
+    background-color: var(--primary-400) !important;
+}
+
+.bg-primary-500 {
+    background-color: var(--primary-500) !important;
+}
+
+.bg-primary-600 {
+    background-color: var(--primary-600) !important;
+}
+
+.bg-primary-700 {
+    background-color: var(--primary-700) !important;
+}
+
+.bg-primary-800 {
+    background-color: var(--primary-800) !important;
+}
+
+.bg-primary-900 {
+    background-color: var(--primary-900) !important;
+}
+
+/* #endregion */
+
+/* #region SECONDARY BACKGROUND */
+.bg-secondary-50 {
+    background-color: var(--secondary-50) !important;
+}
+
+.bg-secondary-100 {
+    background-color: var(--secondary-100) !important;
+}
+
+.bg-secondary-200 {
+    background-color: var(--secondary-200) !important;
+}
+
+.bg-secondary-300 {
+    background-color: var(--secondary-300) !important;
+}
+
+.bg-secondary-400 {
+    background-color: var(--secondary-400) !important;
+}
+
+.bg-secondary-500 {
+    background-color: var(--secondary-500) !important;
+}
+
+.bg-secondary-600 {
+    background-color: var(--secondary-600) !important;
+}
+
+.bg-secondary-700 {
+    background-color: var(--secondary-700) !important;
+}
+
+.bg-secondary-800 {
+    background-color: var(--secondary-800) !important;
+}
+
+.bg-secondary-900 {
+    background-color: var(--secondary-900) !important;
+}
+
+/* #endregion */
+
+/* #region COMPLEMENTARY BACKGROUND */
+.bg-red {
+    background-color: var(--red) !important;
+}
+
+.bg-pink {
+    background-color: var(--pink) !important;
+}
+
+.bg-purple {
+    background-color: var(--purple) !important;
+}
+
+.bg-blue {
+    background-color: var(--blue) !important;
+}
+
+.bg-cyan {
+    background-color: var(--cyan) !important;
+}
+
+.bg-teal {
+    background-color: var(--teal) !important;
+}
+
+.bg-green {
+    background-color: var(--green) !important;
+}
+
+.bg-yellow {
+    background-color: var(--yellow) !important;
+}
+
+.bg-orange {
+    background-color: var(--orange) !important;
+}
+
+.bg-brown {
+    background-color: var(--brown) !important;
+}
+
+.bg-gray {
+    background-color: var(--gray);
+}
+
+/* #endregion */
+
+/* #region TEXT STYLES */
+.text-disabled {
+    color: var(--surface-disabled);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-xsm);
+    line-height: var(--lh-sm);
+    letter-spacing: 0.009rem;
+}
+
+.text-overline {
+    color: var(--surface-high-emphasis);
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: var(--fs-xxsm);
+    line-height: var(--lh-xxsm);
+    letter-spacing: 0.094rem;
+    text-transform: uppercase;
+}
+
+.text-caption {
+    color: var(--surface-high-emphasis);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-xsm);
+    line-height: var(--lh-sm);
+    letter-spacing: 0.009rem;
+}
+
+.text-button {
+    color: var(--surface-high-emphasis);
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-sm);
+    letter-spacing: 0.078rem;
+    text-transform: uppercase;
+}
+
+.text-body-1 {
+    color: var(--surface-high-emphasis) !important;
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-md);
+    line-height: var(--lh-xxlg);
+    letter-spacing: 0.5px;
+}
+
+.text-body-2 {
+    color: var(--surface-high-emphasis);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-lg);
+    letter-spacing: 0.016rem;
+}
+
+.text-body-2.disabled {
+    color: var(--surface-disabled);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-lg);
+    letter-spacing: 0.016rem;
+}
+
+.text-link {
+    color: var(--primary-600);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-md);
+    line-height: var(--lh-xxlg);
+    letter-spacing: 0.016rem;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.text-link:hover,
+.text-link:focus {
+    color: var(--primary-800);
+}
+
+.text-menu {
+    color: var(--surface-medium-emphasis);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-lg);
+    letter-spacing: 0.016rem;
+}
+
+/* #endregion */
+
+/* #region TEXT COLORS */
+.text-blue-300 {
+    color: var(--secondary-300);
+}
+
+.text-red {
+    color: var(--red);
+}
+
+.text-green {
+    color: var(--green);
+}
+
+.text-primary-600 {
+    color: var(--primary-600);
+}
+
+.text-primary-900 {
+    color: var(--primary-900);
+}
+
+.text-disabled {
+    color: var(--surface-disabled);
+}
+
+.text-primary-gray {
+  color: var(--surface-medium-emphasis);
+}
+
+.text-primary-white {
+  color: var(--surface-high-emphasis);
+}
+
+/* #endregion */
+
+/*#region TEXT-STYLES*/
+.of-ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/*#endregion*/
+
+/* #region TITLE STYLES */
+.subtitle-1 {
+    color: var(--surface-high-emphasis);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: var(--fs-md);
+    line-height: var(--lh-xxlg);
+    letter-spacing: 0.009rem;
+}
+
+.subtitle-2 {
+    color: var(--surface-high-emphasis);
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: var(--fs-sm);
+    line-height: var(--lh-xxlg);
+    letter-spacing: 0.006rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat" !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+h6 {
+    color: var(--surface-high-emphasis);
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: var(--lh-xxlg);
+    letter-spacing: 0.009rem;
+}
+
+h5 {
+    color: var(--surface-high-emphasis);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: var(--lh-xxlg);
+    letter-spacing: 0.009rem;
+}
+
+h4 {
+    color: var(--surface-high-emphasis);
+    font-weight: 400;
+    font-size: 2.125rem;
+    line-height: 2.25rem;
+}
+
+h3 {
+    color: var(--surface-high-emphasis);
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 3.5rem;
+}
+
+h2 {
+    color: var(--surface-high-emphasis);
+    font-weight: 400;
+    font-size: 3.75rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.031rem;
+}
+
+h1 {
+    color: var(--surface-high-emphasis);
+    font-weight: 400;
+    font-size: 6rem;
+    line-height: 112px;
+    letter-spacing: -0.094rem;
+}
+
+.blank-textarea
+{
+  border: none;
+  overflow: auto;
+  outline: none;
+  background: transparent;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+
+  resize: none;
+  color: var(--main-white);
+}
+
+/* #endregion */

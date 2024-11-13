@@ -1,0 +1,4 @@
+mat-row.mat-mdc-row:hover {
+    background-color: var(--primary-overlay);
+    cursor: pointer;
+}

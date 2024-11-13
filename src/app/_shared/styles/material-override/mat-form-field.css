@@ -1,0 +1,42 @@
+/* Change if needed */
+.mat-mdc-form-field.mat-accent {
+    --mdc-filled-text-field-caret-color: #ffd740;
+    --mdc-filled-text-field-focus-active-indicator-color: #ffd740;
+    --mdc-filled-text-field-focus-label-text-color: rgba(255, 215, 64, 0.87);
+    --mdc-outlined-text-field-caret-color: #ffd740;
+    --mdc-outlined-text-field-focus-outline-color: #ffd740;
+    --mdc-outlined-text-field-focus-label-text-color: rgba(255, 215, 64, 0.87);
+    --mat-form-field-focus-select-arrow-color: rgba(255, 215, 64, 0.87)
+}
+
+.mat-mdc-form-field.mat-warn {
+    --mdc-filled-text-field-caret-color: #f44336;
+    --mdc-filled-text-field-focus-active-indicator-color: #f44336;
+    --mdc-filled-text-field-focus-label-text-color: rgba(244, 67, 54, 0.87);
+    --mdc-outlined-text-field-caret-color: #f44336;
+    --mdc-outlined-text-field-focus-outline-color: #f44336;
+    --mdc-outlined-text-field-focus-label-text-color: rgba(244, 67, 54, 0.87);
+    --mat-form-field-focus-select-arrow-color: rgba(244, 67, 54, 0.87)
+}
+
+.mat-mdc-form-field.mat-accent {
+    --mat-select-panel-background-color: white;
+    --mat-select-enabled-trigger-text-color: rgba(0, 0, 0, 0.87);
+    --mat-select-disabled-trigger-text-color: rgba(0, 0, 0, 0.38);
+    --mat-select-placeholder-text-color: rgba(0, 0, 0, 0.6);
+    --mat-select-enabled-arrow-color: rgba(0, 0, 0, 0.54);
+    --mat-select-disabled-arrow-color: rgba(0, 0, 0, 0.38);
+    --mat-select-focused-arrow-color: rgba(255, 215, 64, 0.87);
+    --mat-select-invalid-arrow-color: rgba(244, 67, 54, 0.87)
+}
+
+.mat-mdc-form-field.mat-warn {
+    --mat-select-panel-background-color: white;
+    --mat-select-enabled-trigger-text-color: rgba(0, 0, 0, 0.87);
+    --mat-select-disabled-trigger-text-color: rgba(0, 0, 0, 0.38);
+    --mat-select-placeholder-text-color: rgba(0, 0, 0, 0.6);
+    --mat-select-enabled-arrow-color: rgba(0, 0, 0, 0.54);
+    --mat-select-disabled-arrow-color: rgba(0, 0, 0, 0.38);
+    --mat-select-focused-arrow-color: rgba(244, 67, 54, 0.87);
+    --mat-select-invalid-arrow-color: rgba(244, 67, 54, 0.87)
+}

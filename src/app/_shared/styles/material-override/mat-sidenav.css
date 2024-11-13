@@ -1,0 +1,40 @@
+.mat-sidenav .mat-expansion-panel-header{
+    padding: 0 16px !important
+}
+
+/* #region Menu items */
+/* Active */
+.mat-mdc-list-item.menu-item.active span,
+.mat-expansion-panel-header.active span,
+.mat-mdc-list-item.menu-item.active mat-icon,
+.mat-expansion-panel-header.active mat-icon {
+    color: var(--primary-600) !important;
+}
+
+/* Disabled */
+.mat-mdc-list-item.menu-item.disabled span,
+.mat-expansion-panel-header.disabled span,
+.mat-mdc-list-item.menu-item.disabled mat-icon,
+.mat-expansion-panel-header.disabled mat-icon {
+    color: var(--surface-disabled) !important;
+}
+
+.mat-mdc-list-item.menu-item.disabled span,
+.mat-expansion-panel-header.disabled span,
+.mat-mdc-list-item.menu-item.disabled svg,
+.mat-expansion-panel-header.disabled svg {
+    fill: var(--surface-disabled) !important;
+}
+/* #endregion*/
+
+/* #region Submenu items */
+/* Active */
+.mat-mdc-list-item.submenu-item.active {
+    background-color: var(--primary-overlay) !important;
+}
+
+.mat-mdc-list-item.submenu-item.active span,
+.mat-mdc-list-item.submenu-item.active mat-icon {
+    color: var(--primary-600) !important;
+}
+/* #endregion*/

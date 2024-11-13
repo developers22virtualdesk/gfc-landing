@@ -1,0 +1,42 @@
+.cal-month-view {
+  background-color: transparent !important;
+  color: var(--surface-medium-emphasis) !important;
+}
+
+.cal-month-view .cal-cell-row:hover {
+  background-color: transparent !important;
+}
+
+.cal-month-view .cal-cell-row .cal-cell:hover {
+  background-color: var(--level-2) !important;
+}
+
+.cal-month-view .cal-days {
+  border-color: var(--surface-medium-emphasis) !important;
+}
+
+.cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
+  color: var(--surface-medium-emphasis) !important;
+}
+
+.cal-month-view .cal-day-cell.cal-today {
+  background-color: var(--primary-overlay) !important;
+  color: var(--primary-300) !important;
+}
+
+.cal-month-view .cal-day-cell:not(:last-child) {
+  border-right: 0px !important;
+}
+
+.cal-month-view .cal-days {
+  border: 0px !important;
+  border-bottom: 0 !important;
+}
+
+.cal-month-view .cal-days .cal-cell-row {
+  border-bottom: 0px !important;
+}
+
+.cal-month-view .cal-events {
+  display: none !important;
+}

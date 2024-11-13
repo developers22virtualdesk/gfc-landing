@@ -1,0 +1,12 @@
+.mat-mdc-card-header {
+    /* TODO Check if needed */
+    /* padding: 2rem 2rem 0 !important; */
+}
+
+.mat-mdc-card-content {
+    padding: 0 2rem !important;
+}
+
+.mat-mdc-card-actions {
+    padding: 2rem 1.5rem 2rem 1.5rem !important;
+}
