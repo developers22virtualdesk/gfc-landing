@@ -1,46 +1,49 @@
-@import url('../_shared/styles/material-override/mat-sidenav.css');
-@import url('../_shared/styles/material-override/mat-icon.css');
-@import url('../_shared/styles/material-override/mat-card.css');
-@import url('../_shared/styles/material-override/mat-calendar.css');
-@import url('../_shared/styles/material-override/mat-checkbox.css');
-@import url('../_shared/styles/material-override/mat-chip.css');
-@import url('../_shared/styles/material-override/mat-dialog.css');
-@import url('../_shared/styles/material-override/mat-paginator.css');
-@import url('../_shared/styles/material-override/mat-button.css');
-@import url('../_shared/styles/material-override/mat-form-field.css');
-@import url('../_shared/styles/material-override/mat-toggler.css');
-@import url('../_shared/styles/material-override/mat-tab.css');
-@import url('../_shared/styles/material-override/mat-table.css');
-@import url('../_shared/styles/material-override/mat-expansion-panel.css');
-@import url('../_shared/styles/material-override/calendar-view.css');
+@import url('../../_shared/styles/material-override/mat-sidenav.css');
+@import url('../../_shared/styles/material-override/mat-icon.css');
+@import url('../../_shared/styles/material-override/mat-card.css');
+@import url('../../_shared/styles/material-override/mat-calendar.css');
+@import url('../../_shared/styles/material-override/mat-checkbox.css');
+@import url('../../_shared/styles/material-override/mat-chip.css');
+@import url('../../_shared/styles/material-override/mat-dialog.css');
+@import url('../../_shared/styles/material-override/mat-paginator.css');
+@import url('../../_shared/styles/material-override/mat-button.css');
+@import url('../../_shared/styles/material-override/mat-form-field.css');
+@import url('../../_shared/styles/material-override/mat-toggler.css');
+@import url('../../_shared/styles/material-override/mat-tab.css');
+@import url('../../_shared/styles/material-override/mat-table.css');
+@import url('../../_shared/styles/material-override/mat-expansion-panel.css');
+@import url('../../_shared//styles//material-override//mat-toolbar.css');
 
 * {
   /* #region Material Button */
-  --mdc-text-button-label-text-font: "Montserrat";
-  --mdc-text-button-label-text-size: var(--fs-sm);
+  --mdc-text-button-label-text-font: Instrument Sans, sans-serif;
+  --mdc-text-button-label-text-size: var(--fs-md);
   --mdc-text-button-label-text-tracking: 0.0892857143em;
   --mdc-text-button-label-text-weight: 600;
-  --mdc-text-button-label-text-transform: uppercase;
-  --mdc-filled-button-label-text-font: "Montserrat";
-  --mdc-filled-button-label-text-size: var(--fs-sm);
+  --mdc-text-button-label-text-transform: none;
+
+  --mdc-filled-button-label-text-font: Instrument Sans, sans-serif;
+  --mdc-filled-button-label-text-size: var(--fs-md);
   --mdc-filled-button-label-text-tracking: 0.0892857143em;
   --mdc-filled-button-label-text-weight: 600;
-  --mdc-filled-button-label-text-transform: uppercase;
-  --mdc-protected-button-label-text-font: "Montserrat";
-  --mdc-protected-button-label-text-size: var(--fs-sm);
+  --mdc-filled-button-label-text-transform: none;
+
+  --mdc-protected-button-label-text-font: Instrument Sans, sans-serif;
+  --mdc-protected-button-label-text-size: var(--fs-md);
   --mdc-protected-button-label-text-tracking: 0.0892857143em;
   --mdc-protected-button-label-text-weight: 600;
-  --mdc-protected-button-label-text-transform: uppercase;
-  --mdc-outlined-button-label-text-font: "Montserrat";
-  --mdc-outlined-button-label-text-size: var(--fs-sm);
+  --mdc-protected-button-label-text-transform: none;
+
+  --mdc-outlined-button-label-text-font: Instrument Sans, sans-serif;
+  --mdc-outlined-button-label-text-size: var(--fs-md);
   --mdc-outlined-button-label-text-tracking: 0.0892857143em;
   --mdc-outlined-button-label-text-weight: 600;
-  --mdc-outlined-button-label-text-transform: uppercase;
+  --mdc-outlined-button-label-text-transform: none;
 
   /* Basic button */
-  --mdc-text-button-label-text-color: var(--primary-600);
-  --mdc-text-button-disabled-label-text-color: var(--primary-disabled);
-  --mat-text-button-state-layer-color: var(--primary-overlay);
+  --mdc-text-button-label-text-color: var(--primary-800);
+  --mdc-text-button-disabled-label-text-color: var(--neutral-700);
+  --mat-text-button-state-layer-color: var(--primary-500);
   --mat-text-button-disabled-state-layer-color: black;
   --mat-text-button-ripple-color: rgba(0, 0, 0, 0.1);
   --mat-text-button-hover-state-layer-opacity: 0.04;
@@ -49,36 +52,36 @@
 
   /* Flat button */
   --mdc-filled-button-container-color: var(--primary-600);
-  --mdc-filled-button-label-text-color: var(--surface-high-emphasis);
-  --mdc-filled-button-disabled-container-color: var(--primary-disabled);
-  --mdc-filled-button-disabled-label-text-color: var(--surface-high-emphasis);
-  --mat-filled-button-state-layer-color: var(--primary-overlay);
+  --mdc-filled-button-label-text-color: var(--neutral-50);
+  --mdc-filled-button-disabled-container-color: var(--neutral-400);
+  --mdc-filled-button-disabled-label-text-color: var(--neutral-700);
+  --mat-filled-button-state-layer-color: var(--primary-500);
   --mat-filled-button-disabled-state-layer-color: black;
-  --mat-filled-button-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-filled-button-ripple-color: var(--primary-900);
   --mat-filled-button-hover-state-layer-opacity: 0.04;
   --mat-filled-button-focus-state-layer-opacity: 0.12;
   --mat-filled-button-pressed-state-layer-opacity: 0.12;
 
   /* Raised button */
   --mdc-protected-button-container-color: var(--primary-600);
-  --mdc-protected-button-label-text-color: var(--surface-high-emphasis);
-  --mdc-protected-button-disabled-container-color: var(--primary-disabled);
-  --mdc-protected-button-disabled-label-text-color: var(--surface-high-emphasis);
-  --mat-protected-button-state-layer-color: var(--primary-overlay);
+  --mdc-protected-button-label-text-color: var(--neutral-50);
+  --mdc-protected-button-disabled-container-color: var(--neutral-400);
+  --mdc-protected-button-disabled-label-text-color: var(--neutral-700);
+  --mat-protected-button-state-layer-color: var(--primary-500);
   --mat-protected-button-disabled-state-layer-color: black;
-  --mat-protected-button-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-protected-button-ripple-color: var(--primary-900);
   --mat-protected-button-hover-state-layer-opacity: 0.04;
   --mat-protected-button-focus-state-layer-opacity: 0.12;
   --mat-protected-button-pressed-state-layer-opacity: 0.12;
 
   /* Stroked button */
-  --mdc-outlined-button-disabled-outline-color: var(--primary-disabled);
-  --mdc-outlined-button-disabled-label-text-color: var(--primary-disabled);
-  --mdc-outlined-button-label-text-color: var(--primary-600);
-  --mdc-outlined-button-outline-color: var(--primary-600);
-  --mat-outlined-button-state-layer-color: var(--primary-overlay);
+  --mdc-outlined-button-disabled-outline-color: var(--neutral-400);
+  --mdc-outlined-button-disabled-label-text-color: var(--neutral-700);
+  --mdc-outlined-button-label-text-color: var(--secondary-600);
+  --mdc-outlined-button-outline-color: var(--secondary-600);
+  --mat-outlined-button-state-layer-color: var(--secondary-200);
   --mat-outlined-button-disabled-state-layer-color: black;
-  --mat-outlined-button-ripple-color: rgba(0, 0, 0, 0.1);
+  --mat-outlined-button-ripple-color: var(--secondary-200);
   --mat-outlined-button-hover-state-layer-opacity: 0.4;
   --mat-outlined-button-focus-state-layer-opacity: 0.12;
   --mat-outlined-button-pressed-state-layer-opacity: 0.12;
@@ -94,7 +97,7 @@
   --mat-fab-focus-state-layer-opacity: 0.12;
   --mat-fab-pressed-state-layer-opacity: 0.12;
   --mat-fab-disabled-state-container-color: rgba(0, 0, 0, 0.12);
-  --mat-fab-disabled-state-foreground-color: rgba(0, 0, 0, 0.38);
+  --mat-fab-disabled-state-foreground-color: var(--neutral-900);
   --mdc-fab-small-container-color: white;
   --mat-fab-small-foreground-color: black;
   --mat-fab-small-state-layer-color: black;
@@ -104,7 +107,7 @@
   --mat-fab-small-focus-state-layer-opacity: 0.12;
   --mat-fab-small-pressed-state-layer-opacity: 0.12;
   --mat-fab-small-disabled-state-container-color: rgba(0, 0, 0, 0.12);
-  --mat-fab-small-disabled-state-foreground-color: rgba(0, 0, 0, 0.38);
+  --mat-fab-small-disabled-state-foreground-color: var(--neutral-900);
   /* #endregion */
 
   /* #region Material Dialog */
@@ -249,10 +252,10 @@
   --mat-datepicker-calendar-date-selected-state-background-color: var(--primary-600);
   --mat-datepicker-calendar-date-selected-disabled-state-background-color: rgba(103, 58, 183, 0.4);
   --mat-datepicker-calendar-date-today-selected-state-outline-color: white;
-  --mat-datepicker-calendar-date-focus-state-background-color: var(--primary-overlay);
-  --mat-datepicker-calendar-date-hover-state-background-color: var(--primary-overlay);
+  --mat-datepicker-calendar-date-focus-state-background-color: var(--primary-500);
+  --mat-datepicker-calendar-date-hover-state-background-color: var(--primary-500);
   --mat-datepicker-toggle-active-state-icon-color: var(--primary-600);
-  --mat-datepicker-calendar-date-in-range-state-background-color: var(--primary-overlay);
+  --mat-datepicker-calendar-date-in-range-state-background-color: var(--primary-500);
   --mat-datepicker-calendar-date-in-comparison-range-state-background-color: rgba(249, 171, 0, 0.2);
   /* Change if needed */
   --mat-datepicker-calendar-date-in-overlap-range-state-background-color: #a8dab5;
@@ -266,15 +269,15 @@
   --mat-datepicker-calendar-navigation-button-icon-color: rgba(0, 0, 0, 0.54);
   --mat-datepicker-calendar-header-divider-color: rgba(0, 0, 0, 0.12);
   --mat-datepicker-calendar-header-text-color: rgba(0, 0, 0, 0.54);
-  --mat-datepicker-calendar-date-today-outline-color: rgba(0, 0, 0, 0.38);
+  --mat-datepicker-calendar-date-today-outline-color: var(--neutral-900);
   --mat-datepicker-calendar-date-today-disabled-state-outline-color: rgba(0, 0, 0, 0.18);
   --mat-datepicker-calendar-date-text-color: rgba(0, 0, 0, 0.87);
   --mat-datepicker-calendar-date-outline-color: transparent;
-  --mat-datepicker-calendar-date-disabled-state-text-color: rgba(0, 0, 0, 0.38);
+  --mat-datepicker-calendar-date-disabled-state-text-color: var(--neutral-900);
   --mat-datepicker-calendar-date-preview-state-outline-color: rgba(0, 0, 0, 0.24);
   --mat-datepicker-range-input-separator-color: rgba(0, 0, 0, 0.87);
-  --mat-datepicker-range-input-disabled-state-separator-color: rgba(0, 0, 0, 0.38);
-  --mat-datepicker-range-input-disabled-state-text-color: rgba(0, 0, 0, 0.38);
+  --mat-datepicker-range-input-disabled-state-separator-color: var(--neutral-900);
+  --mat-datepicker-range-input-disabled-state-text-color: var(--neutral-900);
   --mat-datepicker-calendar-container-background-color: white;
   --mat-datepicker-calendar-container-text-color: rgba(0, 0, 0, 0.87);
   /* #endregion */
@@ -335,15 +338,15 @@
   --mdc-outlined-text-field-focus-label-text-color: rgba(103, 58, 183, 0.87);
   --mdc-outlined-text-field-label-text-color: rgba(0, 0, 0, 0.6);
   --mdc-outlined-text-field-hover-label-text-color: rgba(0, 0, 0, 0.6);
-  --mdc-outlined-text-field-disabled-label-text-color: rgba(0, 0, 0, 0.38);
+  --mdc-outlined-text-field-disabled-label-text-color: var(--neutral-900);
   --mdc-outlined-text-field-input-text-color: rgba(0, 0, 0, 0.87);
-  --mdc-outlined-text-field-disabled-input-text-color: rgba(0, 0, 0, 0.38);
+  --mdc-outlined-text-field-disabled-input-text-color: var(--neutral-900);
   --mdc-outlined-text-field-input-text-placeholder-color: rgba(0, 0, 0, 0.6);
   --mdc-outlined-text-field-error-caret-color: var(--error);
   --mdc-outlined-text-field-error-focus-label-text-color: var(--error);
   --mdc-outlined-text-field-error-label-text-color: var(--error);
   --mdc-outlined-text-field-error-hover-label-text-color: var(--error);
-  --mdc-outlined-text-field-outline-color: rgba(0, 0, 0, 0.38);
+  --mdc-outlined-text-field-outline-color: var(--neutral-900);
   --mdc-outlined-text-field-disabled-outline-color: rgba(0, 0, 0, 0.06);
   --mdc-outlined-text-field-hover-outline-color: rgba(0, 0, 0, 0.87);
   --mdc-outlined-text-field-error-focus-outline-color: var(--error);
@@ -351,7 +354,7 @@
   --mdc-outlined-text-field-error-outline-color: var(--error);
 
   --mat-form-field-focus-select-arrow-color: red;
-  --mat-form-field-disabled-input-text-placeholder-color: rgba(0, 0, 0, 0.38);
+  --mat-form-field-disabled-input-text-placeholder-color: var(--neutral-900);
   --mat-form-field-state-layer-color: transparent;
   --mat-form-field-error-text-color: var(--error);
   --mat-form-field-select-option-text-color: inherit;
@@ -364,16 +367,16 @@
   --mat-form-field-error-hover-trailing-icon-color: unset;
   --mat-form-field-error-trailing-icon-color: unset;
   --mat-form-field-enabled-select-arrow-color: rgba(0, 0, 0, 0.54);
-  --mat-form-field-disabled-select-arrow-color: rgba(0, 0, 0, 0.38);
+  --mat-form-field-disabled-select-arrow-color: var(--neutral-900);
   --mat-form-field-hover-state-layer-opacity: 0.04;
   --mat-form-field-focus-state-layer-opacity: 0.08;
   /* #endregion */
 
   /* #region Material Menu */
-  --mat-menu-item-label-text-color: var(--primary-high-emphasis);
-  --mat-menu-item-icon-color: var(--primary-high-emphasis);
-  --mat-menu-item-hover-state-layer-color: var(--primary-overlay);
-  --mat-menu-item-focus-state-layer-color: var(--primary-overlay);
+  --mat-menu-item-label-text-color: var(--black);
+  --mat-menu-item-icon-color: var(--black);
+  --mat-menu-item-hover-state-layer-color: var(--primary-100);
+  --mat-menu-item-focus-state-layer-color: var(--primary-100);
   --mat-menu-container-color: white;
   --mat-menu-divider-color: rgba(0, 0, 0, 0.12);
   /* #endregion */
@@ -405,10 +408,10 @@
   --mat-table-header-headline-color: rgba(0, 0, 0, 0.87);
   --mat-table-row-item-label-text-color: rgba(0, 0, 0, 0.87);
   --mat-table-row-item-outline-color: var(--primary-disabled);
-    /* #endregion */
+  /* #endregion */
 
-    /* #region Material Toggle */
-    --mat-standard-button-toggle-text-color: var(--primary-high-emphasis);
+  /* #region Material Toggle */
+  --mat-standard-button-toggle-text-color: var(--primary-high-emphasis);
   --mat-standard-button-toggle-background-color: white;
   --mat-standard-button-toggle-state-layer-color: var(--primary-600);
   --mat-standard-button-toggle-selected-state-background-color: var(--primary-600);
@@ -422,6 +425,11 @@
   --mat-standard-button-toggle-hover-state-layer-opacity: 0.04;
   --mat-standard-button-toggle-focus-state-layer-opacity: 0.12;
   --mat-standard-button-toggle-height: 48px;
+  /* #endregion */
+
+  /* #region Material Toolbar */
+  --mat-toolbar-container-background-color: var(--neutral-50);
+  --mat-toolbar-container-text-color: var(--black);
   /* #endregion */
 
   /* #region Material Paginator */
@@ -455,12 +463,30 @@
 
   --mat-option-selected-state-label-text-color: var(--primary-600);
   --mat-option-label-text-color: var(--primary-high-emphasis);
-  --mat-option-hover-state-layer-color: var(--primary-overlay);
+  --mat-option-hover-state-layer-color: var(--primary-500);
   --mat-option-focus-state-layer-color: rgba(0, 0, 0, 0.04);
   --mat-option-selected-state-layer-color: rgba(0, 0, 0, 0.04);
   /* #endregion */
 
   /* #region Material Sidenav */
+  --mdc-list-list-item-label-text-font: Instrument Sans, sans-serif;
+  --mdc-list-list-item-label-text-line-height: 24px;
+  --mdc-list-list-item-label-text-size: var(--fs-md);
+  --mdc-list-list-item-label-text-tracking: 0.03125em;
+  --mdc-list-list-item-label-text-weight: 400;
+
+  --mdc-list-list-item-supporting-text-font: Instrument Sans, sans-serif;
+  --mdc-list-list-item-supporting-text-line-height: 20px;
+  --mdc-list-list-item-supporting-text-size: var(--fs-sm);
+  --mdc-list-list-item-supporting-text-tracking: 0.0178571429em;
+  --mdc-list-list-item-supporting-text-weight: 400;
+
+  --mdc-list-list-item-trailing-supporting-text-font: Instrument Sans, sans-serif;
+  --mdc-list-list-item-trailing-supporting-text-line-height: 20px;
+  --mdc-list-list-item-trailing-supporting-text-size: var(--fs-xsm);
+  --mdc-list-list-item-trailing-supporting-text-tracking: 0.0333333333em;
+  --mdc-list-list-item-trailing-supporting-text-weight: 400;
+
   --mdc-list-list-item-container-shape: 0;
   --mdc-list-list-item-leading-avatar-shape: 50%;
   --mdc-list-list-item-container-color: transparent;
@@ -475,29 +501,24 @@
   --mdc-list-list-item-disabled-leading-icon-opacity: 0.38;
   --mdc-list-list-item-disabled-trailing-icon-opacity: 0.38;
   --mat-list-active-indicator-color: transparent;
-  --mat-list-active-indicator-shape: 4px;
+  --mat-list-active-indicator-shape: 0px;
 
-  --mat-sidenav-container-divider-color: var(--level-2);
-  --mat-sidenav-container-background-color: white;
-  --mat-sidenav-container-text-color: var(--primary-high-emphasis);
-  --mat-sidenav-content-text-color: var(--primary-high-emphasis);
-  --mat-sidenav-scrim-color: rgba(0, 0, 0, 0.6);
-  --mdc-list-list-item-label-text-color: var(--primary-high-emphasis);
+  --mdc-list-list-item-label-text-color: var(--neutral-900);
   --mdc-list-list-item-supporting-text-color: rgba(0, 0, 0, 0.54);
-  --mdc-list-list-item-leading-icon-color: var(--primary-high-emphasis);
-  --mdc-list-list-item-trailing-supporting-text-color: rgba(0, 0, 0, 0.38);
-  --mdc-list-list-item-trailing-icon-color: rgba(0, 0, 0, 0.38);
-  --mdc-list-list-item-selected-trailing-icon-color: rgba(0, 0, 0, 0.38);
-  --mdc-list-list-item-disabled-label-text-color: black;
-  --mdc-list-list-item-disabled-leading-icon-color: black;
-  --mdc-list-list-item-disabled-trailing-icon-color: black;
-  --mdc-list-list-item-hover-label-text-color: rgba(0, 0, 0, 0.87);
-  --mdc-list-list-item-hover-leading-icon-color: rgba(0, 0, 0, 0.38);
-  --mdc-list-list-item-hover-trailing-icon-color: rgba(0, 0, 0, 0.38);
-  --mdc-list-list-item-focus-label-text-color: rgba(0, 0, 0, 0.87);
-  --mdc-list-list-item-hover-state-layer-color: var(--primary-overlay);
-  --mdc-list-list-item-hover-state-layer-opacity: 1;
-  --mdc-list-list-item-focus-state-layer-color: black;
+  --mdc-list-list-item-leading-icon-color: var(--neutral-900);
+  --mdc-list-list-item-trailing-supporting-text-color: var(--neutral-900);
+  --mdc-list-list-item-trailing-icon-color: var(--neutral-900);
+  --mdc-list-list-item-selected-trailing-icon-color: var(--neutral-900);
+  --mdc-list-list-item-disabled-label-text-color: var(--neutral-700);
+  --mdc-list-list-item-disabled-leading-icon-color: var(--neutral-700);
+  --mdc-list-list-item-disabled-trailing-icon-color: var(--neutral-700);
+  --mdc-list-list-item-hover-label-text-color: var(--primary-500);
+  --mdc-list-list-item-hover-leading-icon-color: var(--neutral-900);
+  --mdc-list-list-item-hover-trailing-icon-color: var(--neutral-900);
+  --mdc-list-list-item-focus-label-text-color: var(--black);
+  --mdc-list-list-item-hover-state-layer-color: transparent;
+  --mdc-list-list-item-hover-state-layer-opacity: 0.04;
+  --mdc-list-list-item-focus-state-layer-color: transparent;
   --mdc-list-list-item-focus-state-layer-opacity: 0.12;
   /* #endregion */
 
@@ -509,14 +530,14 @@
   --mdc-switch-selected-focus-handle-color: var(--primary-900);
   --mdc-switch-selected-hover-handle-color: var(--primary-900);
   --mdc-switch-selected-pressed-handle-color: var(--primary-900);
-  --mdc-switch-selected-focus-track-color: var(--primary-overlay);
-  --mdc-switch-selected-hover-track-color: var(--primary-overlay);
-  --mdc-switch-selected-pressed-track-color: var(--primary-overlay);
-  --mdc-switch-selected-track-color: var(--primary-overlay);
+  --mdc-switch-selected-focus-track-color: var(--primary-500);
+  --mdc-switch-selected-hover-track-color: var(--primary-500);
+  --mdc-switch-selected-pressed-track-color: var(--primary-500);
+  --mdc-switch-selected-track-color: var(--primary-500);
 
   --mdc-switch-disabled-selected-handle-color: var(--primary-600);
   --mdc-switch-disabled-selected-icon-color: transparent;
-  --mdc-switch-disabled-selected-track-color: var(--primary-overlay);
+  --mdc-switch-disabled-selected-track-color: var(--primary-500);
   --mdc-switch-disabled-unselected-handle-color: #424242;
   --mdc-switch-disabled-unselected-icon-color: transparent;
   --mdc-switch-disabled-unselected-track-color: #424242;
