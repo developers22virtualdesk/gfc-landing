@@ -1,6 +1,6 @@
-import { NavitagionList } from "../models/navigation.model";
+import { INavitagionList } from "../models/navigation.model";
 
-export const NAVITAGION_ITEMS: NavitagionList[] = [
+export const NAVITAGION_ITEMS: INavitagionList[] = [
     { displayName: 'Home', link: 'home', isActive: true },
     { displayName: 'Our Story', link: 'our-story', isActive: false },
     { displayName: 'Services', link: 'our-services', isActive: true },

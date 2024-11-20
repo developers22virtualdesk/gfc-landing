@@ -7,3 +7,11 @@ body {
     padding: 0;
     margin: 0
 }
+
+section.landing-section{
+    height: 90dvh;
+}
+
+section.cta-section {
+    height: 70dvh;
+}
