@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SERVICES_INFO } from '../../../../_core/constants/services.const';
+import { SERVICES_ITEMS } from '../../../../_core/constants/services.const';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import { SERVICES_INFO } from '../../../../_core/constants/services.const';
 })
 export class HomeComponent implements OnInit {
 
-  public readonly ServicesItems = SERVICES_INFO;
+  public readonly ServicesItems = SERVICES_ITEMS;
   constructor() { }
 
   ngOnInit() {
