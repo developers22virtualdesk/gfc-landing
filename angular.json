@@ -28,8 +28,9 @@
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "src/app/_shared/styles/variables.css",
               "src/app/_shared/styles/custom.css",
+              "src/app/_shared/styles/custom-color.css",
               "src/app/_shared/styles/images.css",
-              "src/app/material/angular-material.css",
+              "src/app/modules/material/angular-material.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -102,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "426b6dbe-159e-49dc-a056-f0825a5dfb2e"
   }
 }

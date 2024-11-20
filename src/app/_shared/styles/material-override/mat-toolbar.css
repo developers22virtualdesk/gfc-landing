@@ -1,0 +1,19 @@
+.toolbar-spacer {
+    flex: 1 1 auto;
+  }
+  
+/* Change if needed */
+.mat-toolbar.mat-primary {
+    --mat-toolbar-container-background-color: #673ab7;
+    --mat-toolbar-container-text-color: white
+}
+
+.mat-toolbar.mat-accent {
+    --mat-toolbar-container-background-color: #ffd740;
+    --mat-toolbar-container-text-color: rgba(0, 0, 0, 0.87)
+}
+
+.mat-toolbar.mat-warn {
+    --mat-toolbar-container-background-color: #f44336;
+    --mat-toolbar-container-text-color: white
+}

@@ -1,0 +1,60 @@
+<mat-drawer-container class="w-100 h-100">
+    <mat-drawer #sideNavigationBar mode="over" class="d-block d-lg-none w-100">
+        <!-- Toggle sidenav button -->
+         <mat-toolbar>
+             <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
+                 <mat-icon>close</mat-icon>
+             </button>
+         </mat-toolbar>
+         
+        <!-- Menu -->
+        <mat-nav-list>
+            @for (item of NavigationItems; track item.displayName) {
+            <ng-container *ngIf="item.isActive">
+                <mat-list-item [routerLink]="item.link" [routerLinkActive]="['active']" (click)="toggleSidenav()"
+                    class="text-center">
+                    {{item.displayName}}
+                </mat-list-item>
+            </ng-container>
+            } @empty {
+            <li>There are no items.</li>
+            }
+        </mat-nav-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <section #navigationBar>
+            <mat-toolbar>
+                <!-- Toggle sidenav button -->
+                <span class="d-block d-lg-none me-4 me-lg-0">
+                    <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </span>
+                <!-- Logo -->
+                <span>GFI Landing</span>
+                <!-- <span class="toolbar-spacer"></span> -->
+                <!-- Menu -->
+                <mat-nav-list class="d-none d-lg-flex gap-2 ms-auto">
+                    @for (item of NavigationItems; track item.displayName) {
+                    <ng-container *ngIf="item.isActive">
+                        <mat-list-item [routerLink]="item.link" [routerLinkActive]="['active']">
+                            {{item.displayName}}
+                        </mat-list-item>
+                    </ng-container>
+                    } @empty {
+                    <li>There are no items.</li>
+                    }
+                </mat-nav-list>
+                <!-- CTA Button -->
+                <button mat-raised-button class="ms-auto ms-lg-4">
+                    <mat-icon iconPositionEnd>arrow_forward</mat-icon>
+                    Contact Us
+                </button>
+            </mat-toolbar>
+        </section>
+
+        <!-- Main content -->
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
