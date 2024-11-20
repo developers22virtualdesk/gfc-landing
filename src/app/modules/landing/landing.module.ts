@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../material/angular-material.module';
+import { FooterComponent } from "./components/footer/footer.component";
 import { LandingComponent } from './landing.component';
 import { LandingRoutes } from './landing.routes';
 import { ContactComponent } from './pages/contact/contact.component';
@@ -12,8 +13,9 @@ import { ServicesComponent } from './pages/services/services.component';
   imports: [
     RouterModule.forChild(LandingRoutes),
     CommonModule,
-    AngularMaterialModule
-  ],
+    AngularMaterialModule,
+    FooterComponent
+],
   declarations: [
     LandingComponent,
 
