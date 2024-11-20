@@ -9,3 +9,10 @@ export const NAVITAGION_ITEMS: INavitagionList[] = [
     { displayName: 'GFC Lifestyle', link: 'gfc-lifestyle', isActive: false },
     { displayName: 'Contact Us', link: 'contact-us', isActive: true },
 ];
+
+export const SOCIAL_MEDIA_ITEMS: INavitagionList[] = [
+    { displayName: 'Facebook', link: 'home', isActive: true },
+    { displayName: 'LinkedIn', link: 'our-story', isActive: true },
+    { displayName: 'Instagram', link: 'our-services', isActive: true },
+    { displayName: 'Twitter', link: 'business-platform', isActive: true },
+]
