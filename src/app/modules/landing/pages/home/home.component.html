@@ -1,11 +1,21 @@
-<section class="container-fluid landing-section">
-  <h1>Inspiring Families to Dream Again</h1>
-  <span>
-    Transform your financial future with personalized tools and expert mentorship.
-  </span>
-  <button mat-button>
-    Ve nuestros servicios
-  </button>
+<section class="landing-section position-relative d-flex align-items-center">
+  <img src="/assets/images/hero.jfif" alt="GFC CATALYST"
+    class="img-fluid position-absolute w-100 h-100 object-fit-cover z-n1">
+  <div class="text-white ms-md-5 ps-md-5 row">
+    <div class="row">
+      <h1 class="col-12 col-md-6">Inspiring Families To Dream Again</h1>
+    </div>
+    <div class="row">
+      <h5 class="col-12 col-md-5">
+        Transform your financial future with personalized tools and expert mentorship.
+      </h5>
+    </div>
+    <div class="row mt-3">
+      <button mat-stroked-button class="col-auto">
+        Ve nuestros servicios
+      </button>
+    </div>
+  </div>
 </section>
 
 <section class="container-fluid landing-section">
@@ -21,6 +31,8 @@
   </span>
 </section>
 
+
+
 <section class="container-fluid landing-section">
   <h6>Our mission, your independence</h6>
   <h2>Empowering You to Take Control of Your Finances and Live Independently.</h2>
@@ -30,7 +42,7 @@
 
   <div class="d-flex">
     @for (item of ServicesItems; track item.title) {
-      <span>{{item.title}}</span>
+    <span>{{item.title}}</span>
     } @empty {
     <li>There are no items.</li>
     }

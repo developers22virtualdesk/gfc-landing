@@ -21,10 +21,10 @@ h6 {
 h5 {
     font-family: "Montserrat" !important;
     color: var(--surface-high-emphasis);
-    font-weight: 600;
-    font-size: 1.5rem;
-    line-height: var(--lh-xxlg);
-    letter-spacing: 0.009rem;
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+    line-height: var(--lh-xxlg) !important;
+    letter-spacing: 0.009rem !important;
 }
 
 h4 {
@@ -55,10 +55,10 @@ h2 {
 h1 {
     font-family: "Montserrat" !important;
     color: var(--surface-high-emphasis);
-    font-weight: 400;
-    font-size: 6rem;
-    line-height: 112px;
-    letter-spacing: -0.094rem;
+    font-weight: 400 !important;
+    font-size: 6rem !important;
+    line-height: 112px !important;
+    letter-spacing: -0.094rem !important;
 }
 /* #endregion */
 
