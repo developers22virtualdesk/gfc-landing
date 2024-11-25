@@ -1,3 +1,119 @@
-<p>
-  contact works!
-</p>
+<section class="container-fluid landing-section">
+  CONTACT
+
+  <mat-stepper linear #stepper class="container">
+    <mat-step class="my-2">
+      <ng-template matStepLabel>Choose an option</ng-template>
+      <div class="row">
+        @for (item of ServiceOptions; track item.title) {
+        <div class="col-12 col-md-4">
+          <mat-card class="w-100">
+            <mat-card-header>
+              <mat-card-title>{{item.title}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="d-flex justify-content-center">
+              <div>
+                <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
+                  [fontIcon]="item.icon"></mat-icon>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        } @empty {
+        <li>There are no items.</li>
+        }
+      </div>
+
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="personalDataFormGroup" label="Fill out your data" class="my-2">
+      <form [formGroup]="personalDataFormGroup">
+        <div class="row">
+          <div class="col-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Name</mat-label>
+              <input matInput formControlName="name" placeholder="Enter your name">
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Last name</mat-label>
+              <input matInput formControlName="lastName" placeholder="Enter your last name">
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>E-mail</mat-label>
+              <input matInput formControlName="email" placeholder="Enter your e-mail">
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Phone</mat-label>
+              <input matInput formControlName="phone" placeholder="Enter your phone">
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>City</mat-label>
+              <input matInput formControlName="city" placeholder="Enter your city">
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>State</mat-label>
+              <input matInput formControlName="state" placeholder="Enter your state or province">
+            </mat-form-field>
+          </div>
+
+          <div class="col-6">
+            <mat-form-field class="w-100" appearance="outline">
+              <mat-label>Zip code</mat-label>
+              <input matInput formControlName="zip" placeholder="Enter your ZIP or postal code">
+            </mat-form-field>
+          </div>
+        </div>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <mat-step class="my-2">
+      <ng-template matStepLabel>Select your service</ng-template>
+      <div class="row">
+        @for (item of InsuranceOptions; track item.title) {
+        <div class="col-12 col-md-4">
+          <mat-card class="w-100">
+            <mat-card-header>
+              <mat-card-title>{{item.title}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content class="d-flex justify-content-center">
+              <div>
+                <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
+                  [fontIcon]="item.icon"></mat-icon>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+        } @empty {
+        <li>There are no items.</li>
+        }
+      </div>
+
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</section>

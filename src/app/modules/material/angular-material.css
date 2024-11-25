@@ -13,6 +13,7 @@
 @import url('../../_shared/styles/material-override/mat-table.css');
 @import url('../../_shared/styles/material-override/mat-expansion-panel.css');
 @import url('../../_shared//styles//material-override//mat-toolbar.css');
+@import url('../../_shared//styles//material-override//mat-stepper.css');
 
 * {
   /* #region Material Button */
@@ -522,6 +523,37 @@
   --mdc-list-list-item-focus-state-layer-opacity: 0.12;
   /* #endregion */
 
+  /* #region Material Stepper */
+  --mat-stepper-header-height: 72px;
+
+  --mat-stepper-container-text-font: Roboto, sans-serif;
+  --mat-stepper-header-label-text-font: Roboto, sans-serif;
+  --mat-stepper-header-label-text-size: 16px;
+  --mat-stepper-header-label-text-weight: 400;
+  --mat-stepper-header-error-state-label-text-size: 16px;
+  --mat-stepper-header-selected-state-label-text-size: 16px;
+  --mat-stepper-header-selected-state-label-text-weight: 400;
+
+  --mat-stepper-header-icon-foreground-color: var(--neutral-800);
+  --mat-stepper-header-selected-state-icon-background-color: var(--primary-400);
+  --mat-stepper-header-selected-state-icon-foreground-color: var(--neutral-100);
+  --mat-stepper-header-done-state-icon-background-color: var(--primary-400);
+  --mat-stepper-header-done-state-icon-foreground-color: var(--neutral-100);
+  --mat-stepper-header-edit-state-icon-background-color: var(--primary-400);
+  --mat-stepper-header-edit-state-icon-foreground-color: var(--neutral-100);
+  --mat-stepper-container-color: transparent;
+  --mat-stepper-line-color: var(--neutral-500);
+  --mat-stepper-header-hover-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-stepper-header-focus-state-layer-color: rgba(0, 0, 0, 0.04);
+  --mat-stepper-header-label-text-color: var(--neutral-700);
+  --mat-stepper-header-optional-label-text-color: rgba(0, 0, 0, 0.54);
+  --mat-stepper-header-selected-state-label-text-color: var(--neutral-900);
+  --mat-stepper-header-error-state-label-text-color: var(--red);
+  --mat-stepper-header-icon-background-color: var(--neutral-200);
+  --mat-stepper-header-error-state-icon-foreground-color: var(--red);
+  --mat-stepper-header-error-state-icon-background-color: transparent;
+  /* #endregion */
+  
   /* #region Material Switch */
   ---mdc-switch-selected-focus-state-layer-color: var(--primary-600);
   --mdc-switch-selected-handle-color: var(--primary-600);

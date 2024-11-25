@@ -1,0 +1,24 @@
+.mat-horizontal-content-container {
+    padding: 2rem !important;
+}
+
+/* Change if needed */
+.mat-step-header.mat-accent {
+    --mat-stepper-header-icon-foreground-color: rgba(0, 0, 0, 0.87);
+    --mat-stepper-header-selected-state-icon-background-color: #ffd740;
+    --mat-stepper-header-selected-state-icon-foreground-color: rgba(0, 0, 0, 0.87);
+    --mat-stepper-header-done-state-icon-background-color: #ffd740;
+    --mat-stepper-header-done-state-icon-foreground-color: rgba(0, 0, 0, 0.87);
+    --mat-stepper-header-edit-state-icon-background-color: #ffd740;
+    --mat-stepper-header-edit-state-icon-foreground-color: rgba(0, 0, 0, 0.87)
+}
+
+.mat-step-header.mat-warn {
+    --mat-stepper-header-icon-foreground-color: white;
+    --mat-stepper-header-selected-state-icon-background-color: #f44336;
+    --mat-stepper-header-selected-state-icon-foreground-color: white;
+    --mat-stepper-header-done-state-icon-background-color: #f44336;
+    --mat-stepper-header-done-state-icon-foreground-color: white;
+    --mat-stepper-header-edit-state-icon-background-color: #f44336;
+    --mat-stepper-header-edit-state-icon-foreground-color: white
+}

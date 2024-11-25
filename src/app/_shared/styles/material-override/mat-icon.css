@@ -39,3 +39,7 @@ mat-icon.primary-600 {
 mat-icon.disabled {
   --mat-icon-color: var(--disabled) !important;
 }
+
+mat-icon.neutral-300 {
+    --mat-icon-color: var(--neutral-300) !important;
+}

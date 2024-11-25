@@ -5,7 +5,6 @@ import { AngularMaterialModule } from '../material/angular-material.module';
 import { FooterComponent } from "./components/footer/footer.component";
 import { LandingComponent } from './landing.component';
 import { LandingRoutes } from './landing.routes';
-import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
 
@@ -20,8 +19,7 @@ import { ServicesComponent } from './pages/services/services.component';
     LandingComponent,
 
     HomeComponent,
-    ServicesComponent,
-    ContactComponent
+    ServicesComponent
   ]
 })
 export class LandingModule { }
