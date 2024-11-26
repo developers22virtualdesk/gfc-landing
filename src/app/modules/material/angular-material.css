@@ -141,12 +141,12 @@
 
   /* #region Material Card */
   --mdc-elevated-card-container-shape: 1rem;
-  --mdc-outlined-card-container-shape: 0rem;
+  --mdc-outlined-card-container-shape: .5rem;
   --mdc-outlined-card-outline-width: 1px;
 
   --mdc-elevated-card-container-color: var(--surface-high-emphasis);
   --mdc-elevated-card-container-elevation: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  --mdc-outlined-card-container-color: transparent;
+  --mdc-outlined-card-container-color: var(--neutral-200);
   --mdc-outlined-card-outline-color: transparent;
   --mdc-outlined-card-container-elevation: transparent;
   --mat-card-subtitle-text-color: var(--primary-medium-emphasis);
@@ -296,7 +296,7 @@
   --mat-expansion-header-disabled-state-text-color: var(--primary-disabled);
   --mat-expansion-header-text-color: var(--primary-high-emphasis);
   --mat-expansion-header-description-color: var(--primary-medium-emphasis);
-  --mat-expansion-header-indicator-color: var(--primary-medium-emphasis);
+  --mat-expansion-header-indicator-color: var(--neutral-100);
 
   --mat-expansion-header-text-font: Roboto, sans-serif;
   --mat-expansion-header-text-size: var(--fs-md);

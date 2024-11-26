@@ -1,5 +1,6 @@
 export interface IServicesList {
     title: string;
     description: string;
-    buttonTitle: string;
+    buttonTitle?: string;
+    image?: string;
 }
