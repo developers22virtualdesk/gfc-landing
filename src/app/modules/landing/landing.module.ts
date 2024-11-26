@@ -7,19 +7,22 @@ import { LandingComponent } from './landing.component';
 import { LandingRoutes } from './landing.routes';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { BusinessPlatformComponent } from './pages/business-platform/business-platform.component';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @NgModule({
   imports: [
     RouterModule.forChild(LandingRoutes),
     CommonModule,
     AngularMaterialModule,
-    FooterComponent
+    FooterComponent,
+    MatExpansionModule
 ],
   declarations: [
     LandingComponent,
-
     HomeComponent,
-    ServicesComponent
+    ServicesComponent,
+    BusinessPlatformComponent
   ]
 })
 export class LandingModule { }
