@@ -7,6 +7,10 @@
     padding: 0 2rem !important;
 }
 
+.mat-mdc-card-outlined  .mat-mdc-card-content{
+    padding: 0rem !important;
+}
+
 .mat-mdc-card-actions {
     padding: 2rem 1.5rem 2rem 1.5rem !important;
 }

@@ -1,0 +1,11 @@
+.footer-list.mat-mdc-nav-list .mat-mdc-list-item:hover {
+    border-bottom: 1px solid var(--neutral-50);
+}
+
+.footer-list.mat-mdc-nav-list .mat-mdc-list-item:hover .mdc-list-item__primary-text {
+    color: var(--neutral-500) !important;
+}
+
+.footer-list.mat-mdc-nav-list .mat-mdc-list-item:hover .mdc-list-item__primary-text {
+    color: var(--neutral-50) !important;
+}

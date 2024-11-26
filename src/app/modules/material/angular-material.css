@@ -141,14 +141,14 @@
 
   /* #region Material Card */
   --mdc-elevated-card-container-shape: 1rem;
-  --mdc-outlined-card-container-shape: 1rem;
+  --mdc-outlined-card-container-shape: 0rem;
   --mdc-outlined-card-outline-width: 1px;
 
   --mdc-elevated-card-container-color: var(--surface-high-emphasis);
   --mdc-elevated-card-container-elevation: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  --mdc-outlined-card-container-color: white;
-  --mdc-outlined-card-outline-color: rgba(0, 0, 0, 0.12);
-  --mdc-outlined-card-container-elevation: 0px 0px 0px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 0px rgba(0, 0, 0, 0.14), 0px 0px 0px 0px rgba(0, 0, 0, 0.12);
+  --mdc-outlined-card-container-color: transparent;
+  --mdc-outlined-card-outline-color: transparent;
+  --mdc-outlined-card-container-elevation: transparent;
   --mat-card-subtitle-text-color: var(--primary-medium-emphasis);
 
   /* TODO Update to current typography */
