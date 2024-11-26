@@ -3,6 +3,7 @@ import { LandingComponent } from './landing.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
+import { BusinessPlatformComponent } from './pages/business-platform/business-platform.component';
 
 export const LandingRoutes: Routes = [
     {
@@ -17,6 +18,10 @@ export const LandingRoutes: Routes = [
             {
                 path: 'home',
                 component: HomeComponent,
+            },
+            {
+                path: 'business-platform',
+                component: BusinessPlatformComponent,
             },
             {
                 path: 'our-services',
