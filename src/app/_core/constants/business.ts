@@ -1,4 +1,4 @@
-import { partnerType } from '../models/business.model';
+import { impact, partnerType } from '../models/business.model';
 
 export const PARTNERTYPES_OPTIONS: partnerType[] = [
   {
@@ -32,3 +32,23 @@ export const PARTNERTYPES_OPTIONS: partnerType[] = [
     body: 'Become an agency owner with GFI and secure your future by building your own brand, with an opportunity to gain equity in the company, and unlocking unlimited potential in the financial industry.',
   },
 ];
+
+
+export const IMPACT_OPTIONS: impact[] = [
+  {
+    image: 'https://placehold.co/150',
+    description: 'Ready to embark on a thrilling journey to financial empowerment and fulfillment?'
+  },
+  {
+    image: 'https://placehold.co/150',
+    description: 'Join our vibrant community of dream-chasers, wealth-builders, and impact-makers.'
+  },
+  {
+    image: 'https://placehold.co/150',
+    description: 'Explore endless opportunities, personal growth, and financial success.'
+  },
+  {
+    image: 'https://placehold.co/150',
+    description: 'Be part of something extraordinary, because we believe in living life to the fullest.'
+  }
+]

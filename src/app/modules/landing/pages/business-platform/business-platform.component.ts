@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { PARTNERTYPES_OPTIONS } from '../../../../_core/constants/business';
+import { IMPACT_OPTIONS, PARTNERTYPES_OPTIONS } from '../../../../_core/constants/business';
 
 @Component({
   selector: 'app-business-platform',
@@ -9,6 +9,9 @@ import { PARTNERTYPES_OPTIONS } from '../../../../_core/constants/business';
 export class BusinessPlatformComponent implements OnInit {
 
   public readonly PartnerTypesOptions = PARTNERTYPES_OPTIONS;
+
+
+  public readonly ImpactOptions = IMPACT_OPTIONS;
 
   ngOnInit()
   {

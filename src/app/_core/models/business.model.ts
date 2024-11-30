@@ -3,3 +3,8 @@ export interface partnerType {
     subtitle: string,
     body: string
 }
+
+export interface impact {
+    image: string,
+    description: string
+}
