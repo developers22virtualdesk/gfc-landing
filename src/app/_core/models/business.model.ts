@@ -13,3 +13,8 @@ export interface marketingStrategies{
     title: string,
     description: string,
 }
+
+export interface impact {
+    image: string,
+    description: string
+}

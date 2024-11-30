@@ -1,7 +1,7 @@
 import {
   incomeStream,
   marketingStrategies,
-  partnerType,
+  impact, partnerType,
 } from '../models/business.model';
 
 export const PARTNERTYPES_OPTIONS: partnerType[] = [

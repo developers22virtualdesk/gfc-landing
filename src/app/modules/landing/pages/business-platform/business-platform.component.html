@@ -97,50 +97,55 @@
         <h6 class="text-secondary-600 text-center">Where Dreams Turn To Impact</h6>
         <h2 class="text-center">Welcome to the GFI Family</h2>
     </div>
-    <div class="row row-cols-4">
-        <div>
-            <p class="">Ready to embark on a thrilling journey to financial empowerment and fulfillment?</p>
+    <div class="row row-cols-2 row-cols-lg-4 mt-5">
+        @for (item of ImpactOptions; track item.description) {
+
+        <div class="col mb-2 mb-lg-0">
+            <div>
+                <div class="d-flex w-100">
+                    <img mat-card-image src={{item.image}} alt="Placeholder Image" class="img-fluid w-100" />
+                </div>
+                <h5 class="mt-2">{{item.description}}</h5>
+            </div>
         </div>
-        <div>
-            <p class="">Join our vibrant community of dream-chasers, wealth-builders, and impact-makers.</p>
-        </div>
-        <div>
-            <p class="">Explore endless opportunities, personal growth, and financial success.</p>
-        </div>
-        <div>
-            <p class="">Be part of something extraordinary, because we believe in living life to the fullest.</p>
-        </div>
+        }
     </div>
 </section>
 
 <section class="container align-content-center py-5 my-4">
     <div class="row">
-        <div class="d-flex flex-column gap-2 py-2 col-6">
-            <h2>6 Ways To Partner With GFI</h2>
-            <p>Discover the diverse pathways to partner with GFI based on your aspirations and interests. Whether you
-                envision becoming a client, embarking on a part-time venture, diving into being an agency owner, or
-                anything
-                in between, we offer a range of opportunities for you to align with our mission and make a meaningful
-                impact
-                through Inspirational Marketing. </p>
-            <p>
-                Choose the path that resonates with you and join our community of change-makers.
-            </p>
+        <div class="col-12 col-lg-6">
+            <div class="d-flex flex-column gap-2 py-2">
+                <h2>6 Ways To Partner With GFI</h2>
+                <p>Discover the diverse pathways to partner with GFI based on your aspirations and interests. Whether
+                    you
+                    envision becoming a client, embarking on a part-time venture, diving into being an agency owner, or
+                    anything
+                    in between, we offer a range of opportunities for you to align with our mission and make a
+                    meaningful
+                    impact
+                    through Inspirational Marketing. </p>
+                <p>
+                    Choose the path that resonates with you and join our community of change-makers.
+                </p>
+            </div>
         </div>
-        <mat-accordion class="col-6">
-            @for (item of PartnerTypesOptions; track item.title) {
-            <mat-expansion-panel>
-                <mat-expansion-panel-header>
-                    <mat-panel-title> {{item.title}} </mat-panel-title>
-                </mat-expansion-panel-header>
-                <p>{{item.subtitle}}</p>
-                <p>{{item.title}}</p>
-                <p>{{item.body}}</p>
-            </mat-expansion-panel>
-            } @empty {
-            <li>There are no items.</li>
-            }
-        </mat-accordion>
+        <div class="col-12 col-lg-6">
+            <mat-accordion>
+                @for (item of PartnerTypesOptions; track item.title) {
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title> {{item.title}} </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p>{{item.subtitle}}</p>
+                    <p>{{item.title}}</p>
+                    <p>{{item.body}}</p>
+                </mat-expansion-panel>
+                } @empty {
+                <li>There are no items.</li>
+                }
+            </mat-accordion>
+        </div>
     </div>
 
 </section>
