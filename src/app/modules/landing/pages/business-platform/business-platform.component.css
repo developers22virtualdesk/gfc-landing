@@ -1,9 +1,28 @@
 .hero {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), 
-                    url('/assets/images/hero-business.jpg');
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("/assets/images/hero-business.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100svh;
   position: relative;
+}
+
+.expandable-img {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 6rem;
+  max-width: 12rem;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+}
+
+.expandable-img:hover {
+  flex-grow: 1;
+  transition: all 0.3s ease-in-out;
 }
