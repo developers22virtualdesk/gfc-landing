@@ -1,0 +1,37 @@
+<form autocomplete="off" [formGroup]="_form" (ngSubmit)="onSubmit()">
+  <div class="row">
+  <ng-container *ngIf="isLifeInsurance">
+      <div class="col-12 col-md-6">
+        <mat-form-field class="w-100">
+          <mat-label for="">Birthdate </mat-label>
+          <input matInput id="" [matDatepicker]="picker">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <mat-form-field class="w-100">
+          <mat-label>Select your gender</mat-label>
+          <mat-select>
+            <!-- @for (food of foods; track food) {
+              <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+            } -->
+          </mat-select>
+        </mat-form-field>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <mat-form-field class="w-100">
+          <mat-label>Marital status</mat-label>
+          <mat-select>
+            <!-- @for (food of foods; track food) {
+              <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+            } -->
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </ng-container>
+  </div>
+</form>

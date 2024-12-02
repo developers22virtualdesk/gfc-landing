@@ -1,0 +1,28 @@
+<form autocomplete="off" [formGroup]="_form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <mat-form-field class="w-100">
+        <mat-label for="preferred_language">Preferred language if other than English</mat-label>
+        <input matInput id="preferred_language" type="text" formControlName="preferred_language">
+        <mat-error></mat-error>
+      </mat-form-field>
+    </div>
+
+    <div class="col-12 col-md-6">
+      <mat-form-field class="w-100">
+        <mat-label for="find_us">How did you hear about us?</mat-label>
+        <mat-select id="find_us" formControlName="find_us">
+          <mat-option>None</mat-option>
+          @for (item of FaqsItems; track item.title) {
+          <mat-option [value]="item.title">{{item.description}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <div class="col-12">
+      <mat-checkbox formControlName="has_consent">I hereby consent to receive calls from or on behalf of GFI Agency at
+        the telephone number provided above. I understand that consent is not a condition of purchase.</mat-checkbox>
+    </div>
+  </div>
+</form>

@@ -1,127 +1,88 @@
-<section class="container-fluid landing-section">
-  CONTACT
-  <iframe src="https://api.leadconnectorhq.com/widget/form/l375vEyWyLTs7alzTivy"
-    style="width:100%;height:100%;border:none;border-radius:3px" id="inline-l375vEyWyLTs7alzTivy"
-    data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value=""
-    data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate"
-    data-deactivation-value="" data-form-name="GFC Form test" data-height="664"
-    data-layout-iframe-id="inline-l375vEyWyLTs7alzTivy" data-form-id="l375vEyWyLTs7alzTivy" title="GFC Form test">
-  </iframe>
-  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-
-  <mat-stepper linear #stepper class="container">
-    <mat-step class="my-2">
-      <ng-template matStepLabel>Choose an option</ng-template>
-      <div class="row">
-        @for (item of ServiceOptions; track item.title) {
-        <div class="col-12 col-md-4">
-          <mat-card class="w-100" appearance="outlined" class="transparent">
-            <mat-card-header>
-              <mat-card-title>{{item.title}}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content class="d-flex justify-content-center">
-              <div>
-                <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
-                  [fontIcon]="item.icon"></mat-icon>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
-        } @empty {
-        <li>There are no items.</li>
-        }
+<ng-container *ngIf="!showForm">
+  <section class="container">
+    <div class="row">
+      <div class="col-12 col-md-4 px-5">
+        <mat-card appearance="outlined" class="transparent form-card" (click)="onClientClicked()">
+          <mat-card-content class="my-4 text-center">
+            <h6>{{ServiceOptions[ServiceOption.Client].title}}</h6>
+            <div class="d-flex justify-content-center">
+              <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
+                [fontIcon]="ServiceOptions[ServiceOption.Client].icon"></mat-icon>
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
 
+      <div class="col-12 col-md-4 px-5">
+        <mat-card appearance="outlined" class="transparent form-card" (click)="onPartnerClicked()">
+          <mat-card-content class="my-4 text-center">
+            <h6>{{ServiceOptions[ServiceOption.Partner].title}}</h6>
+            <div class="d-flex justify-content-center">
+              <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
+                [fontIcon]="ServiceOptions[ServiceOption.Partner].icon"></mat-icon>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="col-12 col-md-4 px-5">
+        <mat-card appearance="outlined" class="transparent form-card" (click)="onGeneralClicked()">
+          <mat-card-content class="my-4 text-center">
+            <h6>{{ServiceOptions[ServiceOption.General].title}}</h6>
+            <div class="d-flex justify-content-center">
+              <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
+                [fontIcon]="ServiceOptions[ServiceOption.General].icon"></mat-icon>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </section>
+</ng-container>
+
+<ng-container *ngIf="showForm">
+  <mat-stepper linear #stepper class="container">
+    <ng-container *ngIf="showClientForm">
+      <mat-step class="my-2">
+        <ng-template matStepLabel>Select whats best</ng-template>
+
+        <div>
+          <button mat-button (click)="onReturnClicked()">Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+    </ng-container>
+
+    <mat-step label="Fill out your data" class="my-2">
+      <ng-template matStepLabel>General information</ng-template>
+      <app-general-form></app-general-form>
       <div>
+        <ng-container *ngIf="showPartnerForm || showGeneralForm">
+          <button mat-button (click)="onReturnClicked()">Back</button>
+        </ng-container>
+        <ng-container *ngIf="showClientForm">
+          <button mat-button matStepperPrevious>Back</button>
+        </ng-container>
         <button mat-button matStepperNext>Next</button>
       </div>
     </mat-step>
 
-    <mat-step [stepControl]="personalDataFormGroup" label="Fill out your data" class="my-2">
-      <form [formGroup]="personalDataFormGroup">
-        <div class="row">
-          <div class="col-6">
-            <mat-form-field class="w-100" appearance="outline">
-              <mat-label>Name</mat-label>
-              <input matInput formControlName="name" placeholder="Enter your name">
-            </mat-form-field>
-          </div>
-
-          <div class="col-6">
-            <mat-form-field class="w-100" appearance="outline">
-              <mat-label>Last name</mat-label>
-              <input matInput formControlName="lastName" placeholder="Enter your last name">
-            </mat-form-field>
-          </div>
-
-          <div class="col-6">
-            <mat-form-field class="w-100" appearance="outline">
-              <mat-label>E-mail</mat-label>
-              <input matInput formControlName="email" placeholder="Enter your e-mail">
-            </mat-form-field>
-          </div>
-
-          <div class="col-6">
-            <mat-form-field class="w-100" appearance="outline">
-              <mat-label>Phone</mat-label>
-              <input matInput formControlName="phone" placeholder="Enter your phone">
-            </mat-form-field>
-          </div>
-
-          <div class="col-6">
-            <mat-form-field class="w-100" appearance="outline">
-              <mat-label>City</mat-label>
-              <input matInput formControlName="city" placeholder="Enter your city">
-            </mat-form-field>
-          </div>
-
-          <div class="col-6">
-            <mat-form-field class="w-100" appearance="outline">
-              <mat-label>State</mat-label>
-              <input matInput formControlName="state" placeholder="Enter your state or province">
-            </mat-form-field>
-          </div>
-
-          <div class="col-6">
-            <mat-form-field class="w-100" appearance="outline">
-              <mat-label>Zip code</mat-label>
-              <input matInput formControlName="zip" placeholder="Enter your ZIP or postal code">
-            </mat-form-field>
-          </div>
-        </div>
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
-      </form>
-    </mat-step>
-
     <mat-step class="my-2">
-      <ng-template matStepLabel>Select your service</ng-template>
-      <div class="row">
-        @for (item of InsuranceOptions; track item.title) {
-        <div class="col-12 col-md-4">
-          <mat-card class="w-100">
-            <mat-card-header>
-              <mat-card-title>{{item.title}}</mat-card-title>
-            </mat-card-header>
-            <mat-card-content class="d-flex justify-content-center">
-              <div>
-                <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
-                  [fontIcon]="item.icon"></mat-icon>
-              </div>
-            </mat-card-content>
-          </mat-card>
-        </div>
-        } @empty {
-        <li>There are no items.</li>
-        }
-      </div>
+      <ng-template matStepLabel>Depends information</ng-template>
 
+      <ng-container *ngIf="showPartnerForm">
+        <app-partner-form></app-partner-form>
+      </ng-container>
+
+      <ng-container *ngIf="showClientForm">
+        <app-client-form></app-client-form>
+      </ng-container>
+
+      <app-additional-form></app-additional-form>
       <div>
         <button mat-button matStepperPrevious>Back</button>
         <button mat-button matStepperNext>Next</button>
       </div>
     </mat-step>
   </mat-stepper>
-</section>
+</ng-container>
