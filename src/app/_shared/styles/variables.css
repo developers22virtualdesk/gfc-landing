@@ -116,7 +116,7 @@
 
     /* Line height */
     /* 16px */
-    --lh-xxsm: 1rem;
+    --lh-xxsm: 1.5rem;
     /* 24px */
     --lh-xsm: clamp(1rem, 1.2vw, 1.5rem);
     /* 32px */
@@ -126,7 +126,7 @@
     /* 56px */
     --lh-lg: clamp(2.25rem, 4vw, 3.5rem);
     /* 72px */
-    --lh-xlg: clamp(2.5rem, 5vw, 4.5rem);
+    --lh-xlg: clamp(3rem, 5vw, 4rem);
     /* 120px */
     --lh-xxlg: clamp(4.5rem, 8vw, 7.5rem);
     /* #endregion */
