@@ -1,7 +1,9 @@
 import {
   incomeStream,
   marketingStrategies,
-  impact, partnerType,
+  impact,
+  partnerType,
+  startingPoint,
 } from '../models/business.model';
 
 export const PARTNERTYPES_OPTIONS: partnerType[] = [
@@ -105,5 +107,52 @@ export const MARKETING_STRATEGIES: marketingStrategies[] = [
     title: '6. Proven System',
     description: `Utilize the proven system that has propelled GFI to unparalleled success, providing you with a reliable blueprint for achieving your business objectives. 
     Join our agency and leverage this time-tested system to accelerate your own financial empowerment journey by using our 10 industry trade secrets that make us the best!`,
+  },
+];
+
+export const IMPACT_OPTIONS: impact[] = [
+  {
+    image: 'https://globalfinancialimpact.com/wp-content/uploads/woman-on-ipad.webp',
+    description:
+      'Ready to embark on a thrilling journey to financial empowerment and fulfillment?',
+  },
+  {
+    image: 'https://globalfinancialimpact.com/wp-content/uploads/audience-2048x1366.webp',
+    description:
+      'Join our vibrant community of dream-chasers, wealth-builders, and impact-makers.',
+  },
+  {
+    image: 'https://globalfinancialimpact.com/wp-content/uploads/girls-laughing-2048x1366.webp',
+    description:
+      'Explore endless opportunities, personal growth, and financial success.',
+  },
+  {
+    image: 'https://globalfinancialimpact.com/wp-content/uploads/team-of-leaders-2048x1302.webp',
+    description:
+      'Be part of something extraordinary, because we believe in living life to the fullest.',
+  },
+];
+
+export const STARTING_POINTS: startingPoint[] = [
+  {
+    step: 'STEP 1',
+    title: 'Complete The Request Form',
+    description:
+      'Begin your journey towards becoming a GFI business partner by submitting your application request.',
+    image: 'https://globalfinancialimpact.com/wp-content/uploads/girl-with-phone.webp',
+  },
+  {
+    step: 'STEP 2',
+    title: 'Explore The Business Model',
+    description:
+      'We’ll connect so you can gain a comprehensive understanding of the business model and compensation.',
+    image: 'https://globalfinancialimpact.com/wp-content/uploads/charts-2048x1366.webp',
+  },
+  {
+    step: 'STEP 3',
+    title: 'Meet The\n Team',
+    description:
+      'Get to know our dedicated team of professionals who will guide and support you on your path to success.',
+    image: 'https://globalfinancialimpact.com/wp-content/uploads/team-handshake.webp',
   },
 ];

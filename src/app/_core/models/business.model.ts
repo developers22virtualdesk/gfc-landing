@@ -18,3 +18,10 @@ export interface impact {
     image: string,
     description: string
 }
+
+export interface startingPoint{
+    step: string,
+    title: string,
+    description: string,
+    image: string
+}

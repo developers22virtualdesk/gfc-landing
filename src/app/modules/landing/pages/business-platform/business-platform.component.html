@@ -1,5 +1,5 @@
-<!-- Hero Section
-<section class="hero d-flex align-items-center justify-content-start">
+<!-- Hero Section -->
+<!-- <section class="hero d-flex align-items-center justify-content-start">
     <div class="hero-overlay"></div>
     <div class="hero-content mx-5">
         <div class="row">
@@ -37,12 +37,13 @@
             turning dreams into reality, one success story at a time.
         </p>
     </div>
-</section> -->
+</section>
 
 <section class="container py-5">
-    <h2 class="text-center">Marketing Strategies</h2>
-    <!-- Primera fila -->
-    <div class="row mt-5">
+    <h6 class="text-secondary-600 text-center">THE GFI DIFFERENCE</h6>
+    <h2 class="text-center">Inspirational Marketing</h2>
+
+    <div class="row mt-5 mb-5">
         <div class="col-6">
             <div>
                 <h5>{{ MarketingStrategies[0].title }}</h5>
@@ -50,20 +51,26 @@
                 <button mat-flat-button>Start Here</button>
             </div>
         </div>
-        <div class="col-6">images</div>
+        <div class="col-6">
+            <div class="ms-5 position-relative">
+                <img src="https://globalfinancialimpact.com/wp-content/uploads/professional-man-2048x1365.webp"
+                    alt="Image 1" class="img-fluid" style="width: 60%;">
+                <img src="https://globalfinancialimpact.com/wp-content/uploads/girl-in-green-e1700686911536.webp"
+                    alt="Image 2" class="img-fluid position-absolute" style="width: 40%; top: 20%; left: 40%;">
+            </div>
+        </div>
     </div>
 
-    <!-- Segunda fila -->
-    <div class="row justify-content-end mt-5">
-        <div class="col-4" *ngFor="let item of MarketingStrategies.slice(1, 3)">
+    <div class="row justify-content-end mt-5 position-relative">
+        <img src="https://globalfinancialimpact.com/wp-content/uploads/asian-man.webp" alt="Image 1"
+            class="img-fluid position-absolute" style="width: 35%; top: -19%; left: 0%;">
+        <div class="col-4 mt-5" *ngFor="let item of MarketingStrategies.slice(1, 3)">
             <div class="p-5 bg-accent-100 m-2 h-100">
                 <h5>{{ item.title }}</h5>
                 <p class="mt-2">{{ item.description }}</p>
             </div>
         </div>
     </div>
-
-    <!-- Tercera fila -->
     <div class="row justify-content-center bg-primary-300 p-5 mt-5">
         <div class="col bg-white p-4 mx-4" *ngFor="let item of MarketingStrategies.slice(3)">
             <h5>{{ item.title }}</h5>
@@ -71,9 +78,6 @@
         </div>
     </div>
 </section>
-
-
-
 
 <section class="container align-content-center py-5 my-4">
     <div class="d-flex flex-column gap-2 py-2">
@@ -112,74 +116,93 @@
     </div>
 </section>
 
-<section class="container align-content-center py-5 my-4">
-    <div class="row">
-        <div class="col-12 col-lg-6">
-            <div class="d-flex flex-column gap-2 py-2">
-                <h2>6 Ways To Partner With GFI</h2>
-                <p>Discover the diverse pathways to partner with GFI based on your aspirations and interests. Whether
-                    you
-                    envision becoming a client, embarking on a part-time venture, diving into being an agency owner, or
-                    anything
-                    in between, we offer a range of opportunities for you to align with our mission and make a
-                    meaningful
-                    impact
-                    through Inspirational Marketing. </p>
-                <p>
-                    Choose the path that resonates with you and join our community of change-makers.
-                </p>
+<div class="bg-primary-800 text-white p-5">
+    <section class="container align-content-center py-5 my-4">
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="d-flex flex-column gap-2 py-2">
+                    <h2 class="text-white">6 Ways To Partner With GFI</h2>
+                    <p>Discover the diverse pathways to partner with GFI based on your aspirations and interests.
+                        Whether
+                        you
+                        envision becoming a client, embarking on a part-time venture, diving into being an agency owner,
+                        or
+                        anything
+                        in between, we offer a range of opportunities for you to align with our mission and make a
+                        meaningful
+                        impact
+                        through Inspirational Marketing. </p>
+                    <p>
+                        Choose the path that resonates with you and join our community of change-makers.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <mat-accordion class="">
+                    @for (item of PartnerTypesOptions; track item.title) {
+                    <mat-expansion-panel class="bg-white text-primary-900">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title> {{item.title}} </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p>{{item.subtitle}}</p>
+                        <p>{{item.title}}</p>
+                        <p>{{item.body}}</p>
+                    </mat-expansion-panel>
+                    } @empty {
+                    <li>There are no items.</li>
+                    }
+                </mat-accordion>
             </div>
         </div>
-        <div class="col-12 col-lg-6">
-            <mat-accordion>
-                @for (item of PartnerTypesOptions; track item.title) {
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title> {{item.title}} </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <p>{{item.subtitle}}</p>
-                    <p>{{item.title}}</p>
-                    <p>{{item.body}}</p>
-                </mat-expansion-panel>
-                } @empty {
-                <li>There are no items.</li>
-                }
-            </mat-accordion>
-        </div>
-    </div>
 
-</section>
+    </section>
+</div>
+
 
 <section class="container align-content-center py-5 my-4">
     <div class="d-flex flex-column gap-2 py-2">
-        <h2 class="text-centers">Getting Started Is Easy</h2>
+        <h2 class="text-center">Getting Started Is Easy</h2>
     </div>
-    <div class="row row-cols-3 align-items-center">
-        <div>
-            <h6>STEP 1</h6>
-            <h3>Complete The Request Form</h3>
-            <p>Begin your journey towards becoming a GFI business partner by submitting your application request.</p>
+    <div class="row row-cols-1 row-cols-md-3 mt-4">
+        @for (item of StartingPoints; track item.description) {
+        <div class="col">
+            <div class="bg-primary-50 p-3 h-75">
+                <div class="d-flex justify-content-end">
+                    <img src={{item.image}} alt="Placeholder Image" class="img-fluid w-50" />
+                </div>
+                <div class="mt-5 ">
+                    <h6 class="fw-bold">{{ item.step }}</h6>
+                    <h3 style="white-space: pre-line;">{{ item.title }}</h3>
+                </div>
+            </div>
+            <p class="mt-4 fs-5 lh-base fw-light">{{ item.description }}</p>
         </div>
-        <div>
-            <h6>STEP 2</h6>
-            <h3>Explore The Business Model</h3>
-            <p>We’ll connect so you can gain a comprehensive understanding of the business model and compensation.</p>
-        </div>
-        <div>
-            <h6>STEP 3</h6>
-            <h3>Meet The Team</h3>
-            <p>Get to know our dedicated team of professionals who will guide and support you on your path to success.
-            </p>
-        </div>
+        }
     </div>
-</section>
+</section> -->
 
-<section class="container align-content-center py-5 my-4">
-    <div class="d-flex flex-column gap-2 py-2">
-        <h2>Make Your Life A Story Worth Telling</h2>
-        <p>Transform your life into a remarkable story of impact with GFI’s unique business opportunity. Explore how you
-            can create a positive change for your family, community, and country by partnering with us.</p>
-    </div>
-    <div>
-    </div>
-</section>
+<div class="bg-primary-800 text-white">
+    <section class="container py-5 my-4" style="height: auto;">
+        <div class="row" style="height: 30rem;">
+            <div class="col-4 mt-5">
+                <div class="d-flex flex-column gap-2 py-2">
+                    <h2 class="text-white">Make Your Life A Story Worth Telling</h2>
+                    <p>Transform your life into a remarkable story of impact with GFI’s unique business opportunity.
+                        Explore how
+                        you
+                        can create a positive change for your family, community, and country by partnering with us.</p>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center ms-5 gap-4">
+                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
+                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
+                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
+                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
+                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
+                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
+            </div>
+        </div>
+        <div>
+        </div>
+    </section>
+</div>
