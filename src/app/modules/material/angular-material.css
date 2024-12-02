@@ -141,12 +141,12 @@
 
   /* #region Material Card */
   --mdc-elevated-card-container-shape: 1rem;
-  --mdc-outlined-card-container-shape: 0rem;
+  --mdc-outlined-card-container-shape: .5rem;
   --mdc-outlined-card-outline-width: 1px;
 
   --mdc-elevated-card-container-color: var(--surface-high-emphasis);
   --mdc-elevated-card-container-elevation: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  --mdc-outlined-card-container-color: transparent;
+  --mdc-outlined-card-container-color: var(--neutral-200);
   --mdc-outlined-card-outline-color: transparent;
   --mdc-outlined-card-container-elevation: transparent;
   --mat-card-subtitle-text-color: var(--primary-medium-emphasis);
@@ -296,7 +296,7 @@
   --mat-expansion-header-disabled-state-text-color: var(--primary-disabled);
   --mat-expansion-header-text-color: var(--primary-high-emphasis);
   --mat-expansion-header-description-color: var(--primary-medium-emphasis);
-  --mat-expansion-header-indicator-color: var(--primary-medium-emphasis);
+  --mat-expansion-header-indicator-color: var(--neutral-100);
 
   --mat-expansion-header-text-font: Roboto, sans-serif;
   --mat-expansion-header-text-size: var(--fs-md);
@@ -334,14 +334,14 @@
   --mdc-filled-text-field-error-hover-active-indicator-color: var(--error);
 
   /* Change if needed */
-  --mdc-outlined-text-field-caret-color: var(--primary-600);
-  --mdc-outlined-text-field-focus-outline-color: var(--primary-600);
-  --mdc-outlined-text-field-focus-label-text-color: rgba(103, 58, 183, 0.87);
-  --mdc-outlined-text-field-label-text-color: rgba(0, 0, 0, 0.6);
-  --mdc-outlined-text-field-hover-label-text-color: rgba(0, 0, 0, 0.6);
-  --mdc-outlined-text-field-disabled-label-text-color: var(--neutral-900);
-  --mdc-outlined-text-field-input-text-color: rgba(0, 0, 0, 0.87);
-  --mdc-outlined-text-field-disabled-input-text-color: var(--neutral-900);
+  --mdc-outlined-text-field-caret-color: var(--neutral-300);
+  --mdc-outlined-text-field-focus-outline-color: var(--neutral-300);
+  --mdc-outlined-text-field-focus-label-text-color: var(--neutral-300);
+  --mdc-outlined-text-field-label-text-color: var(--neutral-600);
+  --mdc-outlined-text-field-hover-label-text-color: var(--neutral-200);
+  --mdc-outlined-text-field-disabled-label-text-color: var(--neutral-100);
+  --mdc-outlined-text-field-input-text-color: var(--neutral-100);
+  --mdc-outlined-text-field-disabled-input-text-color: var(--neutral-100);
   --mdc-outlined-text-field-input-text-placeholder-color: rgba(0, 0, 0, 0.6);
   --mdc-outlined-text-field-error-caret-color: var(--error);
   --mdc-outlined-text-field-error-focus-label-text-color: var(--error);
@@ -349,7 +349,7 @@
   --mdc-outlined-text-field-error-hover-label-text-color: var(--error);
   --mdc-outlined-text-field-outline-color: var(--neutral-900);
   --mdc-outlined-text-field-disabled-outline-color: rgba(0, 0, 0, 0.06);
-  --mdc-outlined-text-field-hover-outline-color: rgba(0, 0, 0, 0.87);
+  --mdc-outlined-text-field-hover-outline-color: var(--neutral-200);
   --mdc-outlined-text-field-error-focus-outline-color: var(--error);
   --mdc-outlined-text-field-error-hover-outline-color: var(--error);
   --mdc-outlined-text-field-error-outline-color: var(--error);

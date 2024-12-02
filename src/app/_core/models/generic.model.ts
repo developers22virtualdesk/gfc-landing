@@ -1,4 +1,4 @@
-export interface IBenefitsList {
+export interface IGenericList {
     title: string;
     description: string;
 }

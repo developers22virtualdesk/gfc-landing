@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {
   INCOMESTREAM_OPTIONS,
   MARKETING_STRATEGIES,
@@ -6,6 +6,7 @@ import {
   PARTNERTYPES_OPTIONS,
   STARTING_POINTS,
 } from '../../../../_core/constants/business';
+import { FAQS_BUSINESS_PLATFORM_ITEMS } from '../../../../_core/constants/faqs.const';
 
 @Component({
   selector: 'app-business-platform',
@@ -18,6 +19,6 @@ export class BusinessPlatformComponent implements OnInit {
   public readonly MarketingStrategies = MARKETING_STRATEGIES;
   public readonly ImpactOptions = IMPACT_OPTIONS;
   public readonly StartingPoints = STARTING_POINTS;
-
+  public readonly FaqsItems = FAQS_BUSINESS_PLATFORM_ITEMS;
   ngOnInit() {}
 }
