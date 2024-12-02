@@ -17,3 +17,12 @@
 .mat-mdc-card-actions {
     padding: 2rem 1.5rem 2rem 1.5rem !important;
 }
+
+.mat-mdc-card-outlined.form-card:hover {
+    background-color: var(--accent-100);
+    cursor: pointer;
+}
+
+.mat-mdc-card-outlined.form-card:hover mat-icon {
+    --mat-icon-color: var(--primary-700) !important;
+}
