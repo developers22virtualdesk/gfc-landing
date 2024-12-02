@@ -22,7 +22,7 @@ export const INSURANCE_ITEMS: IServicesList[] = [
     {
         title: 'Tax-Free Retirement',
         description: 'Explore Tax-Free Retirement. Grow your savings without the tax burden and secure a brighter financial future.',
-        image: 'https://placehold.co/150'
+        image: 'assets/images/family2.webp'
     },
     {
         title: 'Market Loss & Asset Protection',

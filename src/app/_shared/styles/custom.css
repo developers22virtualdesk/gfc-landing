@@ -12,9 +12,10 @@ h6 {
     font-family: Instrument Sans, sans-serif !important;
     font-weight: 400 !important;
     font-size: clamp(0.875rem, 1.2vw, var(--fs-md)) !important; /* Responsive for --fs-md */
-    line-height: var(--lh-sm) !important;
+    line-height: var(--lh-xsm) !important;
     letter-spacing: 0.009rem !important;
     text-transform: uppercase !important;
+    letter-spacing: 0.1rem !important;
 }
 
 h5 {
@@ -22,8 +23,9 @@ h5 {
     color: var(--primary-900) !important;
     font-weight: 600 !important;
     font-size: clamp(1.125rem, 2vw, 1.5rem) !important;
-    line-height: var(--lh-xxlg) !important;
+    line-height: var(--lh-sm) !important;
     letter-spacing: 0.009rem !important;
+    letter-spacing: 0.1rem !important;
 }
 
 h4 {
@@ -31,7 +33,8 @@ h4 {
     color: var(--primary-900) !important;
     font-weight: 400 !important;
     font-size: clamp(1.5rem, 3vw, 2.125rem) !important;
-    line-height: 2.25rem !important;
+    line-height: var(--lh-md) !important;
+    letter-spacing: 0.1rem !important;
 }
 
 h3 {
@@ -39,7 +42,8 @@ h3 {
     color: var(--primary-900) !important;
     font-weight: 400 !important;
     font-size: clamp(2rem, 4vw, 3rem) !important;
-    line-height: 3.5rem !important;
+    line-height: var(--lh-lg) !important;
+    letter-spacing: 0.1rem !important;
 }
 
 h2 {
@@ -47,8 +51,8 @@ h2 {
     color: var(--primary-900) !important;
     font-weight: 100 !important;
     font-size: clamp(2.5rem, 5vw, 4rem) !important;
-    line-height: 4.5rem !important;
-    letter-spacing: -0.031rem !important;
+    line-height: var(--lh-xlg) !important;
+    letter-spacing: 0.1rem !important;
 }
 
 h1 {
@@ -56,8 +60,8 @@ h1 {
     color: var(--primary-900);
     font-weight: 400 !important;
     font-size: clamp(4rem, 8vw, 6rem) !important;
-    line-height: 112px !important;
-    letter-spacing: -0.094rem !important;
+    line-height: var(--lh-xxlg) !important;
+    letter-spacing: 0.1rem !important;
 }
 
 /* #endregion */
@@ -69,7 +73,7 @@ h1 {
     font-weight: 400;
     font-size: var(--fs-xsm);
     line-height: var(--lh-sm);
-    letter-spacing: 0.009rem;
+    letter-spacing: 0.1rem !important;
 }
 
 .text-overline {
@@ -78,7 +82,7 @@ h1 {
     font-weight: 600;
     font-size: var(--fs-xxsm);
     line-height: var(--lh-xxsm);
-    letter-spacing: 0.094rem;
+    letter-spacing: 0.1rem !important;
     text-transform: uppercase;
 }
 
@@ -88,7 +92,7 @@ h1 {
     font-weight: 400;
     font-size: var(--fs-xxl);
     line-height: var(--lh-sm);
-    letter-spacing: 0.009rem;
+    letter-spacing: 0.1rem !important;
     text-transform: uppercase;
 }
 
@@ -98,7 +102,7 @@ h1 {
     font-weight: 600;
     font-size: var(--fs-sm);
     line-height: var(--lh-sm);
-    letter-spacing: 0.078rem;
+    letter-spacing: 0.1rem !important;
     text-transform: uppercase;
 }
 
@@ -107,8 +111,8 @@ h1 {
     font-family: Instrument Sans, sans-serif;
     font-weight: 400;
     font-size: var(--fs-md);
-    line-height: var(--lh-xxlg);
-    letter-spacing: 0.5px;
+    line-height: var(--lh-xxsm);
+    letter-spacing: 0.063rem !important;
 }
 
 .text-link {
@@ -116,8 +120,8 @@ h1 {
     font-family: "Montserrat";
     font-weight: 400;
     font-size: var(--fs-md);
-    line-height: var(--lh-xxlg);
-    letter-spacing: 0.016rem;
+    line-height: var(--lh-xxsm);
+    letter-spacing: 0.1rem !important;
     cursor: pointer;
     text-decoration: underline;
 }

@@ -115,19 +115,19 @@
     --fs-xxxlg: 1.5rem;
 
     /* Line height */
-    /* 12px */
-    --lh-xxsm: 0.75rem;
-    /* 14px */
-    --lh-xsm: 0.875rem;
     /* 16px */
-    --lh-sm: 1rem;
-    /* 18px */
-    --lh-md: 1.125rem;
-    /* 20px */
-    --lh-lg: 1.25rem;
-    /* 22px */
-    --lh-xlg: 1.375rem;
+    --lh-xxsm: 1.5rem;
     /* 24px */
-    --lh-xxlg: 1.5rem;
+    --lh-xsm: clamp(1rem, 1.2vw, 1.5rem);
+    /* 32px */
+    --lh-sm: clamp(1.5rem, 2vw, 2rem);
+    /* 36px */
+    --lh-md: clamp(2rem, 3vw, 2.25rem)
+    /* 56px */
+    --lh-lg: clamp(2.25rem, 4vw, 3.5rem);
+    /* 72px */
+    --lh-xlg: clamp(3rem, 5vw, 4rem);
+    /* 120px */
+    --lh-xxlg: clamp(4.5rem, 8vw, 7.5rem);
     /* #endregion */
 }
