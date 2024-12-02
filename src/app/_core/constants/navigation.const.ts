@@ -7,7 +7,7 @@ export const NAVITAGION_ITEMS: INavitagionList[] = [
     { displayName: 'Business Platform', link: 'business-platform', isActive: true },
     { displayName: 'Charity', link: 'charity', isActive: false },
     { displayName: 'GFC Lifestyle', link: 'gfc-lifestyle', isActive: false },
-    { displayName: 'Contact Us', link: 'contact-us', isActive: true },
+    { displayName: 'Contact', link: 'contact', isActive: true },
 ];
 
 export const SOCIAL_MEDIA_ITEMS: INavitagionList[] = [

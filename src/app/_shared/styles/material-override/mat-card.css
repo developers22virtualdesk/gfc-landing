@@ -1,7 +1,10 @@
+.mat-mdc-card-outlined.transparent {
+    --mdc-outlined-card-container-color: transparent !important;
+}
+
 .mat-mdc-card-header {
     padding: 2rem 2rem .5rem !important;
 }
-
 
 .mat-mdc-card-content {
     padding: 0 2rem !important;

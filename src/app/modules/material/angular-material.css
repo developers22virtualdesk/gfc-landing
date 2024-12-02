@@ -334,14 +334,14 @@
   --mdc-filled-text-field-error-hover-active-indicator-color: var(--error);
 
   /* Change if needed */
-  --mdc-outlined-text-field-caret-color: var(--primary-600);
-  --mdc-outlined-text-field-focus-outline-color: var(--primary-600);
-  --mdc-outlined-text-field-focus-label-text-color: rgba(103, 58, 183, 0.87);
-  --mdc-outlined-text-field-label-text-color: rgba(0, 0, 0, 0.6);
-  --mdc-outlined-text-field-hover-label-text-color: rgba(0, 0, 0, 0.6);
-  --mdc-outlined-text-field-disabled-label-text-color: var(--neutral-900);
-  --mdc-outlined-text-field-input-text-color: rgba(0, 0, 0, 0.87);
-  --mdc-outlined-text-field-disabled-input-text-color: var(--neutral-900);
+  --mdc-outlined-text-field-caret-color: var(--neutral-300);
+  --mdc-outlined-text-field-focus-outline-color: var(--neutral-300);
+  --mdc-outlined-text-field-focus-label-text-color: var(--neutral-300);
+  --mdc-outlined-text-field-label-text-color: var(--neutral-600);
+  --mdc-outlined-text-field-hover-label-text-color: var(--neutral-200);
+  --mdc-outlined-text-field-disabled-label-text-color: var(--neutral-100);
+  --mdc-outlined-text-field-input-text-color: var(--neutral-100);
+  --mdc-outlined-text-field-disabled-input-text-color: var(--neutral-100);
   --mdc-outlined-text-field-input-text-placeholder-color: rgba(0, 0, 0, 0.6);
   --mdc-outlined-text-field-error-caret-color: var(--error);
   --mdc-outlined-text-field-error-focus-label-text-color: var(--error);
@@ -349,7 +349,7 @@
   --mdc-outlined-text-field-error-hover-label-text-color: var(--error);
   --mdc-outlined-text-field-outline-color: var(--neutral-900);
   --mdc-outlined-text-field-disabled-outline-color: rgba(0, 0, 0, 0.06);
-  --mdc-outlined-text-field-hover-outline-color: rgba(0, 0, 0, 0.87);
+  --mdc-outlined-text-field-hover-outline-color: var(--neutral-200);
   --mdc-outlined-text-field-error-focus-outline-color: var(--error);
   --mdc-outlined-text-field-error-hover-outline-color: var(--error);
   --mdc-outlined-text-field-error-outline-color: var(--error);

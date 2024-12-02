@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PARTNERTYPES_OPTIONS } from '../../../../_core/constants/business';
+import { FAQS_BUSINESS_PLATFORM_ITEMS } from '../../../../_core/constants/faqs.const';
 
 @Component({
   selector: 'app-business-platform',
@@ -9,7 +10,7 @@ import { PARTNERTYPES_OPTIONS } from '../../../../_core/constants/business';
 export class BusinessPlatformComponent implements OnInit {
 
   public readonly PartnerTypesOptions = PARTNERTYPES_OPTIONS;
-
+  public readonly FaqsItems = FAQS_BUSINESS_PLATFORM_ITEMS;
   ngOnInit()
   {
   }

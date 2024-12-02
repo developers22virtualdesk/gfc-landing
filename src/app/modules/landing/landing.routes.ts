@@ -1,9 +1,10 @@
 import { Routes } from '@angular/router';
 import { LandingComponent } from './landing.component';
+import { BusinessPlatformComponent } from './pages/business-platform/business-platform.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
-import { BusinessPlatformComponent } from './pages/business-platform/business-platform.component';
 
 export const LandingRoutes: Routes = [
     {
@@ -28,8 +29,12 @@ export const LandingRoutes: Routes = [
                 component: ServicesComponent,
             },
             {
-                path: 'contact-us',
+                path: 'contact',
                 component: ContactComponent,
+            },
+            {
+                path: 'get-started',
+                component: GetStartedComponent,
             }
         ]
     }

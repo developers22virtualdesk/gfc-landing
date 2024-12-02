@@ -222,3 +222,29 @@
     <div>
     </div>
 </section>
+
+<!-- FAQs -->
+<div class="py-5 bg-primary-400">
+    <section class="container align-content-center">
+        <div class="d-flex flex-column text-center py-2">
+            <h2 class="text-white">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="py-5">
+            <mat-accordion>
+                @for (item of FaqsItems; track item.title) {
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title class="text-white"> {{item.title}} </mat-panel-title>
+                    </mat-expansion-panel-header>
+                    <p class="text-body text-white">{{item.description}}</p>
+                </mat-expansion-panel>
+                } @empty {
+                <li>There are no items.</li>
+                }
+            </mat-accordion>
+        </div>
+    </section>
+</div>
+
+<app-footer></app-footer>
