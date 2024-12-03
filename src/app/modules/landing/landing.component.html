@@ -1,5 +1,5 @@
-<mat-drawer-container class="w-100 h-100">
-    <mat-drawer #sideNavigationBar mode="over" class="d-block d-lg-none w-100">
+<mat-drawer-container class="">
+    <mat-drawer #sideNavigationBar mode="over" class="glass-bg d-block d-lg-none w-100">
         <!-- Toggle sidenav button -->
          <mat-toolbar>
              <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
@@ -24,21 +24,21 @@
 
     <mat-drawer-content>
         <section #navigationBar>
-            <mat-toolbar>
+            <mat-toolbar class="glass-bg justify-content-between position-fixed px-4 top-0 start-0 end-0" style="height: 100px; z-index: 1000;">
                 <!-- Toggle sidenav button -->
-                <span class="d-block d-lg-none me-4 me-lg-0">
+                <span class="d-block d-lg-none me-4 me-lg-0 text-white">
                     <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
                         <mat-icon>menu</mat-icon>
                     </button>
                 </span>
                 <!-- Logo -->
-                <span>GFI Landing</span>
+                <img src="assets/images/Global-Financial-Catalyst-LOGO-horizontal.webp" alt="gfc logo" class="img-fluid" style="width: 257px;">
                 <!-- <span class="toolbar-spacer"></span> -->
                 <!-- Menu -->
-                <mat-nav-list class="d-none d-lg-flex gap-2 ms-auto">
+                <mat-nav-list class="d-none d-lg-flex gap-2">
                     @for (item of NavigationItems; track item.displayName) {
                     <ng-container *ngIf="item.isActive">
-                        <mat-list-item [routerLink]="item.link" [routerLinkActive]="['active']">
+                        <mat-list-item  [routerLink]="item.link" [routerLinkActive]="['active']">
                             {{item.displayName}}
                         </mat-list-item>
                     </ng-container>
@@ -47,7 +47,7 @@
                     }
                 </mat-nav-list>
                 <!-- CTA Button -->
-                <button mat-raised-button class="ms-auto ms-lg-4" routerLink="get-started">
+                <button mat-raised-button class="ms-auto ms-lg-0" routerLink="get-started">
                     <mat-icon iconPositionEnd>arrow_forward</mat-icon>
                     Get Started
                 </button>
