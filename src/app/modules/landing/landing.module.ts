@@ -6,6 +6,7 @@ import { AdditionalFormComponent } from './components/additional-form/additional
 import { ClientFormComponent } from './components/client-form/client-form.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GeneralFormComponent } from './components/general-form/general-form.component';
+import { InsuranceTypeFormComponent } from './components/insurance-type-form/insurance-type-form.component';
 import { PartnerFormComponent } from './components/partner-form/partner-form.component';
 import { LandingComponent } from './landing.component';
 import { LandingRoutes } from './landing.routes';
@@ -41,6 +42,7 @@ import {
     PartnerFormComponent,
     ClientFormComponent,
     AdditionalFormComponent,
+    InsuranceTypeFormComponent,
     LucideAngularModule.pick({
       PiggyBank,
       Shield,

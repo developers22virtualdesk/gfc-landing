@@ -174,24 +174,25 @@
   --mdc-checkbox-unselected-hover-state-layer-opacity: 0.04;
   --mdc-checkbox-unselected-pressed-state-layer-opacity: 0.16;
 
-  --mdc-checkbox-disabled-selected-icon-color: var(--primary-disabled);
-  --mdc-checkbox-disabled-unselected-icon-color: var(--primary-disabled) !important;
-  --mdc-checkbox-selected-checkmark-color: var(--surface-high-emphasis);
-  --mdc-checkbox-selected-focus-icon-color: var(--primary-600);
-  --mdc-checkbox-selected-hover-icon-color: var(--primary-600);
-  --mdc-checkbox-selected-icon-color: var(--primary-600);
-  --mdc-checkbox-selected-pressed-icon-color: var(--primary-600);
+  --mdc-checkbox-disabled-selected-icon-color: var(--neutral-900);
+  --mdc-checkbox-disabled-unselected-icon-color: var(--neutral-900) !important;
+  --mdc-checkbox-selected-checkmark-color: var(--neutral-50);
+  --mdc-checkbox-selected-focus-icon-color: var(--secondary-600);
+  --mdc-checkbox-selected-hover-icon-color: var(--secondary-600);
+  --mdc-checkbox-selected-icon-color: var(--secondary-600);
+  --mdc-checkbox-selected-pressed-icon-color: var(--secondary-600);
   --mdc-checkbox-unselected-focus-icon-color: #212121;
   --mdc-checkbox-unselected-hover-icon-color: #212121;
   --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.54);
-  --mdc-checkbox-selected-focus-state-layer-color: var(--primary-600);
-  --mdc-checkbox-selected-hover-state-layer-color: var(--primary-600);
-  --mdc-checkbox-selected-pressed-state-layer-color: var(--primary-600);
+  --mdc-checkbox-selected-focus-state-layer-color: var(--secondary-600);
+  --mdc-checkbox-selected-hover-state-layer-color: var(--secondary-600);
+  --mdc-checkbox-selected-pressed-state-layer-color: var(--secondary-600);
   --mdc-checkbox-unselected-focus-state-layer-color: black;
   --mdc-checkbox-unselected-hover-state-layer-color: black;
   --mdc-checkbox-unselected-pressed-state-layer-color: black;
-  --mat-checkbox-disabled-label-color: var(--primary-disabled);
-  --mat-checkbox-label-text-color: var(--primary-high-emphasis);
+  --mat-checkbox-disabled-label-color: var(--neutral-600);
+  --mat-checkbox-label-text-color: var(--neutral-900);
+  --mat-minimal-pseudo-checkbox-selected-checkmark-color: var(--secondary-600);
   /* #endregion */
 
   /* #region Material Chips */
@@ -451,9 +452,9 @@
   /* #region Material Select */
   --mat-select-panel-background-color: white;
   --mat-select-enabled-trigger-text-color: rgba(0, 0, 0, 0.87);
-  --mat-select-disabled-trigger-text-color: var(--primary-disabled);
-  --mat-select-placeholder-text-color: var(--primary-medium-emphasis);
-  --mat-select-disabled-arrow-color: var(--primary-disabled);
+  --mat-select-disabled-trigger-text-color: var(--neutral-600);
+  --mat-select-placeholder-text-color: var(--neutral-50);
+  --mat-select-disabled-arrow-color: var(--neutral-600);
   --mat-select-invalid-arrow-color: var(--error);
 
   --mat-option-label-text-font: "Montserrat";
@@ -462,9 +463,9 @@
   --mat-option-label-text-tracking: 0.03125em;
   --mat-option-label-text-weight: 400;
 
-  --mat-option-selected-state-label-text-color: var(--primary-600);
-  --mat-option-label-text-color: var(--primary-high-emphasis);
-  --mat-option-hover-state-layer-color: var(--primary-500);
+  --mat-option-selected-state-label-text-color: var(--secondary-600);
+  --mat-option-label-text-color: var(--neutral-50);
+  --mat-option-hover-state-layer-color: var(--secondary-500);
   --mat-option-focus-state-layer-color: rgba(0, 0, 0, 0.04);
   --mat-option-selected-state-layer-color: rgba(0, 0, 0, 0.04);
   /* #endregion */
@@ -513,7 +514,7 @@
   --mdc-list-list-item-disabled-label-text-color: var(--neutral-700);
   --mdc-list-list-item-disabled-leading-icon-color: var(--neutral-700);
   --mdc-list-list-item-disabled-trailing-icon-color: var(--neutral-700);
-  --mdc-list-list-item-hover-label-text-color: var(--primary-500);
+  --mdc-list-list-item-hover-label-text-color: var(--neutral-900);
   --mdc-list-list-item-hover-leading-icon-color: var(--neutral-900);
   --mdc-list-list-item-hover-trailing-icon-color: var(--neutral-900);
   --mdc-list-list-item-focus-label-text-color: var(--black);
@@ -521,6 +522,28 @@
   --mdc-list-list-item-hover-state-layer-opacity: 0.04;
   --mdc-list-list-item-focus-state-layer-color: transparent;
   --mdc-list-list-item-focus-state-layer-opacity: 0.12;
+  /* #endregion */
+
+  /* #region Material Slider */
+  --mdc-slider-handle-color: var(--secondary-600);
+  --mdc-slider-focus-handle-color: var(--secondary-600);
+  --mdc-slider-hover-handle-color: var(--secondary-600);
+  --mdc-slider-active-track-color: var(--secondary-600);
+  --mdc-slider-inactive-track-color: var(--secondary-600);
+  --mdc-slider-with-tick-marks-inactive-container-color: var(--secondary-600);
+  --mdc-slider-with-tick-marks-active-container-color: white;
+  --mdc-slider-disabled-active-track-color: #000;
+  --mdc-slider-disabled-handle-color: #000;
+  --mdc-slider-disabled-inactive-track-color: #000;
+  --mdc-slider-label-container-color: #000;
+  --mdc-slider-label-label-text-color: #fff;
+  --mdc-slider-with-overlap-handle-outline-color: #fff;
+  --mdc-slider-with-tick-marks-disabled-container-color: #000;
+  --mdc-slider-handle-elevation: 0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+  --mat-slider-ripple-color: var(--secondary-600);
+  --mat-slider-hover-state-layer-color: rgba(63, 81, 181, 0.05);
+  --mat-slider-focus-state-layer-color: rgba(63, 81, 181, 0.2);
+  --mat-slider-value-indicator-opacity: 0.6;
   /* #endregion */
 
   /* #region Material Stepper */
@@ -535,11 +558,11 @@
   --mat-stepper-header-selected-state-label-text-weight: 400;
 
   --mat-stepper-header-icon-foreground-color: var(--neutral-800);
-  --mat-stepper-header-selected-state-icon-background-color: var(--primary-400);
+  --mat-stepper-header-selected-state-icon-background-color: var(--primary-600);
   --mat-stepper-header-selected-state-icon-foreground-color: var(--neutral-100);
-  --mat-stepper-header-done-state-icon-background-color: var(--primary-400);
+  --mat-stepper-header-done-state-icon-background-color: var(--primary-600);
   --mat-stepper-header-done-state-icon-foreground-color: var(--neutral-100);
-  --mat-stepper-header-edit-state-icon-background-color: var(--primary-400);
+  --mat-stepper-header-edit-state-icon-background-color: var(--primary-600);
   --mat-stepper-header-edit-state-icon-foreground-color: var(--neutral-100);
   --mat-stepper-container-color: transparent;
   --mat-stepper-line-color: var(--neutral-500);

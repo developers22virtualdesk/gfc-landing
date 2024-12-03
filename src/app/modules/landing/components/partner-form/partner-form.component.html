@@ -1,6 +1,7 @@
 <form autocomplete="off" [formGroup]="_form" (ngSubmit)="onSubmit()">
   <div class="row">
     <div class="col-12 col-md-6">
+      <mat-label>Current income</mat-label>
       <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
         <input matSliderThumb formControlName="income" >
       </mat-slider>
@@ -20,4 +21,4 @@
       <mat-checkbox formControlName="has_license">Are you a licensed agent?</mat-checkbox>
     </div>
   </div>
-</form>
+</form> 

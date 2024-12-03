@@ -1,88 +1,135 @@
-<ng-container *ngIf="!showForm">
-  <section class="container">
-    <div class="row">
-      <div class="col-12 col-md-4 px-5">
-        <mat-card appearance="outlined" class="transparent form-card" (click)="onClientClicked()">
-          <mat-card-content class="my-4 text-center">
-            <h6>{{ServiceOptions[ServiceOption.Client].title}}</h6>
-            <div class="d-flex justify-content-center">
-              <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
-                [fontIcon]="ServiceOptions[ServiceOption.Client].icon"></mat-icon>
-            </div>
-          </mat-card-content>
-        </mat-card>
-      </div>
-
-      <div class="col-12 col-md-4 px-5">
-        <mat-card appearance="outlined" class="transparent form-card" (click)="onPartnerClicked()">
-          <mat-card-content class="my-4 text-center">
-            <h6>{{ServiceOptions[ServiceOption.Partner].title}}</h6>
-            <div class="d-flex justify-content-center">
-              <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
-                [fontIcon]="ServiceOptions[ServiceOption.Partner].icon"></mat-icon>
-            </div>
-          </mat-card-content>
-        </mat-card>
-      </div>
-
-      <div class="col-12 col-md-4 px-5">
-        <mat-card appearance="outlined" class="transparent form-card" (click)="onGeneralClicked()">
-          <mat-card-content class="my-4 text-center">
-            <h6>{{ServiceOptions[ServiceOption.General].title}}</h6>
-            <div class="d-flex justify-content-center">
-              <mat-icon class="big neutral-300" aria-hidden="false" aria-label="item.label"
-                [fontIcon]="ServiceOptions[ServiceOption.General].icon"></mat-icon>
-            </div>
-          </mat-card-content>
-        </mat-card>
-      </div>
+<div class="py-5 bg-accent-50">
+  <section class="container align-content-center">
+    <div class="d-flex flex-column text-center gap-2 pb-5">
+      <h2>Start Your Insurance Application!</h2>
+      <h6>Take the first step toward securing your future with our tailored insurance solutions.</h6>
     </div>
-  </section>
-</ng-container>
 
-<ng-container *ngIf="showForm">
-  <mat-stepper linear #stepper class="container">
-    <ng-container *ngIf="showClientForm">
-      <mat-step class="my-2">
-        <ng-template matStepLabel>Select whats best</ng-template>
-
-        <div>
-          <button mat-button (click)="onReturnClicked()">Back</button>
-          <button mat-button matStepperNext>Next</button>
+    <ng-container *ngIf="!showForm">
+      <div class="row">
+        <div class="col-12 col-md-4 px-5 mb-4">
+          <mat-card appearance="outlined" class="transparent form-card" (click)="onClientClicked()">
+            <mat-card-content class="my-4 text-center">
+              <div class="d-flex justify-content-center mb-2">
+                <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
+                  [fontIcon]="ServiceOptions[ServiceOption.Client].icon"></mat-icon>
+              </div>
+              <h6>{{ServiceOptions[ServiceOption.Client].title}}</h6>
+            </mat-card-content>
+          </mat-card>
         </div>
-      </mat-step>
+
+        <div class="col-12 col-md-4 px-5 mb-4">
+          <mat-card appearance="outlined" class="transparent form-card" (click)="onPartnerClicked()">
+            <mat-card-content class="my-4 text-center">
+              <div class="d-flex justify-content-center mb-2">
+                <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
+                  [fontIcon]="ServiceOptions[ServiceOption.Partner].icon"></mat-icon>
+              </div>
+              <h6>{{ServiceOptions[ServiceOption.Partner].title}}</h6>
+            </mat-card-content>
+          </mat-card>
+        </div>
+
+        <div class="col-12 col-md-4 px-5 mb-4">
+          <mat-card appearance="outlined" class="transparent form-card" (click)="onGeneralClicked()">
+            <mat-card-content class="my-4 text-center">
+              <div class="d-flex justify-content-center mb-2">
+                <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
+                  [fontIcon]="ServiceOptions[ServiceOption.General].icon"></mat-icon>
+              </div>
+              <h6>{{ServiceOptions[ServiceOption.General].title}}</h6>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
     </ng-container>
 
-    <mat-step label="Fill out your data" class="my-2">
-      <ng-template matStepLabel>General information</ng-template>
-      <app-general-form></app-general-form>
-      <div>
-        <ng-container *ngIf="showPartnerForm || showGeneralForm">
-          <button mat-button (click)="onReturnClicked()">Back</button>
-        </ng-container>
+    <ng-container *ngIf="showForm">
+      <mat-stepper linear #stepper class="container">
         <ng-container *ngIf="showClientForm">
-          <button mat-button matStepperPrevious>Back</button>
+          <!-- Select insurance form -->
+          <mat-step class="my-2">
+            <ng-template matStepLabel>Select your insurance type:</ng-template>
+            <ng-template matStepContent>
+              <!-- Insurance type form -->
+              <app-insurance-type-form (onValueChanged)="onInsuranceTypeFormCompleted($event)" (isFormComplete)="firstFormValid = true"></app-insurance-type-form>
+  
+              <div class="mt-4">
+                <button mat-button (click)="onReturnClicked()">Back</button>
+                <button mat-button matStepperNext>Next</button>
+              </div>
+            </ng-template>
+          </mat-step>
         </ng-container>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step>
 
-    <mat-step class="my-2">
-      <ng-template matStepLabel>Depends information</ng-template>
+        <!--  General information -->
+        <mat-step class="my-2">
+          <ng-template matStepLabel>General information:</ng-template>
+          <ng-template matStepContent>
+            <!-- General form -->
+            <app-general-form></app-general-form>
 
-      <ng-container *ngIf="showPartnerForm">
-        <app-partner-form></app-partner-form>
-      </ng-container>
+            <ng-container *ngIf="showGeneralForm">
+              <app-additional-form></app-additional-form>
+            </ng-container>
 
-      <ng-container *ngIf="showClientForm">
-        <app-client-form></app-client-form>
-      </ng-container>
+            <div class="mt-4">
+              <ng-container *ngIf="showPartnerForm || showGeneralForm">
+                <button mat-button (click)="onReturnClicked()">Back</button>
+              </ng-container>
+              <ng-container *ngIf="showClientForm">
+                <button mat-button matStepperPrevious>Back</button>
+              </ng-container>
+              <button mat-button matStepperNext>Next</button>
+            </div>
+          </ng-template>
+        </mat-step>
 
-      <app-additional-form></app-additional-form>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </mat-step>
-  </mat-stepper>
-</ng-container>
+        <!-- Additional information form -->
+         <ng-container *ngIf="!showGeneralForm">
+           <mat-step class="my-2">
+             <ng-template matStepLabel>Additional information:</ng-template>
+             <ng-template matStepContent>
+               <!-- Partner form -->
+               <ng-container *ngIf="showPartnerForm">
+                 <app-partner-form></app-partner-form>
+               </ng-container>
+     
+               <!-- Client form -->
+               <ng-container *ngIf="showClientForm">
+                 <app-client-form [insuranceType]="insurance_type"></app-client-form>
+               </ng-container>
+     
+               <!-- Additional form -->
+               <app-additional-form></app-additional-form>
+   
+               <div class="mt-4">
+                 <button mat-button matStepperPrevious>Back</button>
+                 <button mat-button matStepperNext>Next</button>
+               </div>
+             </ng-template>
+           </mat-step>
+         </ng-container>
+      </mat-stepper>
+    </ng-container>
+  </section>
+</div>
+
+<section class="cta d-flex align-items-center justify-content-start">
+  <div class="cta-overlay"></div>
+  <div class="cta-content mx-5 w-100">
+    <div class="row">
+      <h2 class="col-12 col-md-7 text-white">Step Into A Brighter Future</h2>
+    </div>
+
+    <div class="row mt-3">
+      <p class="col-12 col-md-7 text-white">
+        You deserve the power to shape your financial future, turning your dreams into reality and leaving a lasting
+        impact on your life and the lives of others.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>

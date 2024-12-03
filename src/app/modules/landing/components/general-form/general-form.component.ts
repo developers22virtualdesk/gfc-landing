@@ -1,13 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FAQS_SERVICES_ITEMS } from '../../../../_core/constants/faqs.const';
 import { BaseFormComponent } from '../../../../_shared/interfaces/base-form.interface';
 import { AngularMaterialModule } from '../../../material/angular-material.module';
 
 @Component({
   selector: 'app-general-form',
   templateUrl: './general-form.component.html',
-  styleUrls: ['./general-form.component.css'],
   standalone: true,
   imports: [
     AngularMaterialModule,
@@ -15,9 +13,10 @@ import { AngularMaterialModule } from '../../../material/angular-material.module
     FormsModule,
   ]
 })
-export class GeneralFormComponent extends BaseFormComponent implements OnInit {
-
-  public FaqsItems = FAQS_SERVICES_ITEMS;
+export class GeneralFormComponent extends BaseFormComponent implements OnInit
+{
+  @Output() onValueChanged: EventEmitter<any> = new EventEmitter<any>();
+  @Output() isFormComplete: EventEmitter<any> = new EventEmitter<any>();
 
   constructor()
   {
@@ -51,7 +50,7 @@ export class GeneralFormComponent extends BaseFormComponent implements OnInit {
 
   override onSubmit(): void
   {
- 
+
   }
 
 }
