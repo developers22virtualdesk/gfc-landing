@@ -9,10 +9,10 @@ export const SERVICE_OPTIONS: ICardOption[] = [
 
 export const INSURANCE_OPTIONS: ICardOption[] = [
     { title: 'Life Insurance', icon: 'volunteer_activism', label: 'Life Insurance' },
-    { title: 'Wealth Insurance', icon: 'assured_workload', label: 'Wealth Insurance' },
-    { title: 'Accumulation, Strategies & Rollovers', icon: 'shield_with_heart', label: 'Accumulation, Strategies & Rollovers' }
+    { title: 'State Planning', icon: 'assured_workload', label: 'State Planning' },
+    { title: 'Wealth Acummulation Strategies & Rollovers', icon: 'shield_with_heart', label: 'Wealth Acummulation Strategies & Rollovers' }
 ];
-
+ 
 export const GENDER_OPTIONS: IOptionList[] = [
     { title: 'Male', value: 'Male' },
     { title: 'Female', value: 'Female' },
