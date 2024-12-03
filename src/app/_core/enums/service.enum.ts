@@ -9,8 +9,8 @@ export enum SERVICE_OPTION
 export enum INSURANCE_OPTION 
 {
     Life = 0,
+    State,
     Wealth,
-    Rollovers,
 }
 
 export enum CLIENT_SERVICE_OPTION {

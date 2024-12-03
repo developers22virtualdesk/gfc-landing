@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SERVICE_OPTIONS } from '../../../../_core/constants/form.const';
+import { FORM_TITLES, SERVICE_OPTIONS } from '../../../../_core/constants/form.const';
+import { FORM_TYPE } from '../../../../_core/enums/form.enum';
 import { CLIENT_SERVICE_OPTION, SERVICE_OPTION } from '../../../../_core/enums/service.enum';
+import { GHL } from '../../../../_core/models/ghl.models';
 
 @Component({
   selector: 'app-get-started',
@@ -10,33 +12,41 @@ import { CLIENT_SERVICE_OPTION, SERVICE_OPTION } from '../../../../_core/enums/s
 export class GetStartedComponent implements OnInit
 {
   public readonly ServiceOptions = SERVICE_OPTIONS;
+  public readonly FormTitle = FORM_TITLES;
   public readonly ServiceOption = SERVICE_OPTION;
   public readonly ClientServiceOption = CLIENT_SERVICE_OPTION;
-
+  public readonly FormTypeOption = FORM_TYPE;
   public firstFormValid: boolean = false;
+  public formType: FORM_TYPE = FORM_TYPE.None;
 
-  private _showClientForm: boolean = false;
-  private _showPartnerForm: boolean = false;
-  private _showGeneralForm: boolean = false;
+  private _clientFormValue!: GHL.IClient;
+  private _partnerFormValue!: GHL.IPartner;
+  private _generalFormValue !: GHL.IGeneral;
+
+
+  get title(): string
+  {
+    return this.FormTitle.get(this.formType)!;
+  }
 
   get showClientForm(): boolean
   {
-    return this._showClientForm;
+    return this.formType == FORM_TYPE.Client;
   }
 
   get showPartnerForm(): boolean
   {
-    return this._showPartnerForm;
+    return this.formType == FORM_TYPE.Partner;
   }
 
   get showGeneralForm(): boolean
   {
-    return this._showGeneralForm;
+    return this.formType == FORM_TYPE.General;
   }
 
   get showForm(): boolean
   {
-    return this._showClientForm || this._showGeneralForm || this._showPartnerForm;
+    return this.formType != FORM_TYPE.None;
   }
 
   constructor() { }
@@ -45,49 +55,32 @@ export class GetStartedComponent implements OnInit
   {
   }
 
-  public insurance_type: any;
-
-  public onInsuranceTypeFormCompleted(value: Event): void
+  public onClientFormCompleted(clientFormValue: GHL.IClient): void
   {
-    console.log(value);
-    this.insurance_type = value;
+    console.log(clientFormValue);
   }
 
-  public onGeneralFormCompleted(): void
+  public onPartnerFormCompleted(partnerFormValue: GHL.IPartner): void
   {
-
+    console.log(partnerFormValue);
   }
 
-  public onAdditionalFormCompleted(): void
+  public onGeneralFormCompleted(generalFormValue: GHL.IGeneral): void
   {
-    
+    console.log(generalFormValue);
   }
 
-  public onClientClicked(): void
+  public resetApplication(): void
   {
-    this._showClientForm = true;
-    this._showPartnerForm = false;
-    this._showGeneralForm = false;
-  }
+    this.formType = FORM_TYPE.None;
 
-  public onPartnerClicked(): void
-  {
-    this._showClientForm = false;
-    this._showPartnerForm = true;
-    this._showGeneralForm = false;
-  }
-
-  public onGeneralClicked(): void
-  {
-    this._showClientForm = false;
-    this._showPartnerForm = false;
-    this._showGeneralForm = true;
-  }
-
-  public onReturnClicked(): void
-  {
-    this._showClientForm = false;
-    this._showPartnerForm = false;
-    this._showGeneralForm = false;
+    setTimeout(() =>
+    {
+      const element = document.getElementById('sectionTitle');
+      if (element)
+      {
+        element.scrollIntoView({ behavior: 'smooth', block: "end", inline: "start" });
+      }
+    }, 100);
   }
 }

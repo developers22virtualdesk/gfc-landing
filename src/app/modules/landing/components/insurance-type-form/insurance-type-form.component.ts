@@ -38,9 +38,9 @@ export class InsuranceTypeFormComponent implements OnInit
     return this._insuranceType.value == INSURANCE_OPTION.Wealth;
   }
 
-  get isRolloverInsurance(): boolean
+  get isStateInsurance(): boolean
   {
-    return this._insuranceType.value == INSURANCE_OPTION.Rollovers;
+    return this._insuranceType.value == INSURANCE_OPTION.State;
   }
 
   ngOnInit()

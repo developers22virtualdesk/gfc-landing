@@ -37,8 +37,6 @@ export abstract class BaseFormComponent
 
     public getFormControl(controlName: string, customForm?: FormGroup): FormControl
     {
-        console.log(controlName);
-        console.log(this.getForm().controls)
         if (customForm)
         {
             return customForm.get(controlName) as FormControl;
