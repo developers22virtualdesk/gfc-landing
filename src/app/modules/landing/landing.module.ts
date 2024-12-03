@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { AngularMaterialModule } from '../material/angular-material.module';
 import { AdditionalFormComponent } from './components/additional-form/additional-form.component';
 import { ClientFormComponent } from './components/client-form/client-form.component';
-import { FooterComponent } from "./components/footer/footer.component";
+import { FooterComponent } from './components/footer/footer.component';
 import { GeneralFormComponent } from './components/general-form/general-form.component';
 import { InsuranceTypeFormComponent } from './components/insurance-type-form/insurance-type-form.component';
 import { PartnerFormComponent } from './components/partner-form/partner-form.component';
@@ -15,6 +15,21 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
+import {
+  Briefcase,
+  Calculator,
+  DollarSign,
+  FileText,
+  GraduationCap,
+  HeartPulse,
+  Landmark,
+  LucideAngularModule,
+  PiggyBank,
+  RefreshCw,
+  Shield,
+  Sliders,
+  UserCheck,
+} from 'lucide-angular';
 
 @NgModule({
   imports: [
@@ -27,7 +42,21 @@ import { ServicesComponent } from './pages/services/services.component';
     PartnerFormComponent,
     ClientFormComponent,
     AdditionalFormComponent,
-    InsuranceTypeFormComponent
+    InsuranceTypeFormComponent,
+    LucideAngularModule.pick({
+      PiggyBank,
+      Shield,
+      GraduationCap,
+      Landmark,
+      HeartPulse,
+      FileText,
+      Briefcase,
+      UserCheck,
+      Calculator,
+      DollarSign,
+      RefreshCw,
+      Sliders
+    }),
   ],
   declarations: [
     LandingComponent,
@@ -36,6 +65,6 @@ import { ServicesComponent } from './pages/services/services.component';
     ServicesComponent,
     BusinessPlatformComponent,
     GetStartedComponent,
-  ]
+  ],
 })
-export class LandingModule { }
+export class LandingModule {}
