@@ -1,7 +1,7 @@
-<mat-drawer-container class="">
-    <mat-drawer #sideNavigationBar mode="over" class="glass-bg d-block d-lg-none w-100">
+<mat-drawer-container id="container" class="" >
+    <mat-drawer #sideNavigationBar mode="over" class="glass-bg d-block d-lg-none w-100" >
         <!-- Toggle sidenav button -->
-         <mat-toolbar>
+         <mat-toolbar style="height: 100px;">
              <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
                  <mat-icon>close</mat-icon>
              </button>
