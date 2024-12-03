@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { INSURANCE_OPTIONS, SERVICE_OPTIONS } from '../../../../_core/constants/form.const';
-import { ServiceOption } from '../../../../_core/enums/service.enum';
+import { SERVICE_OPTIONS } from '../../../../_core/constants/form.const';
+import { CLIENT_SERVICE_OPTION, SERVICE_OPTION } from '../../../../_core/enums/service.enum';
 
 @Component({
   selector: 'app-get-started',
@@ -10,8 +10,10 @@ import { ServiceOption } from '../../../../_core/enums/service.enum';
 export class GetStartedComponent implements OnInit
 {
   public readonly ServiceOptions = SERVICE_OPTIONS;
-  public readonly InsuranceOptions = INSURANCE_OPTIONS;
-  public readonly ServiceOption = ServiceOption;
+  public readonly ServiceOption = SERVICE_OPTION;
+  public readonly ClientServiceOption = CLIENT_SERVICE_OPTION;
+
+  public firstFormValid: boolean = false;
 
   private _showClientForm: boolean = false;
   private _showPartnerForm: boolean = false;
@@ -41,6 +43,24 @@ export class GetStartedComponent implements OnInit
 
   ngOnInit()
   {
+  }
+
+  public insurance_type: any;
+
+  public onInsuranceTypeFormCompleted(value: Event): void
+  {
+    console.log(value);
+    this.insurance_type = value;
+  }
+
+  public onGeneralFormCompleted(): void
+  {
+
+  }
+
+  public onAdditionalFormCompleted(): void
+  {
+    
   }
 
   public onClientClicked(): void

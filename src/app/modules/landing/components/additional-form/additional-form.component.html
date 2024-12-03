@@ -13,8 +13,8 @@
         <mat-label for="find_us">How did you hear about us?</mat-label>
         <mat-select id="find_us" formControlName="find_us">
           <mat-option>None</mat-option>
-          @for (item of FaqsItems; track item.title) {
-          <mat-option [value]="item.title">{{item.description}}</mat-option>
+          @for (item of HearAboutOptions; track item.title) {
+          <mat-option [value]="item.value">{{item.title}}</mat-option>
           }
         </mat-select>
       </mat-form-field>

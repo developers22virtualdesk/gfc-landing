@@ -1,4 +1,5 @@
 import { ICardOption } from "../models/form.model";
+import { IOptionList } from "../models/generic.model";
 
 export const SERVICE_OPTIONS: ICardOption[] = [
     { title: 'I want to become a GFI partner', icon: 'handshake', label: 'Become a partner' },
@@ -7,13 +8,33 @@ export const SERVICE_OPTIONS: ICardOption[] = [
 ];
 
 export const INSURANCE_OPTIONS: ICardOption[] = [
- { title: 'Complimentary Financial Roadmap', icon: 'road', label: ''},
- { title: 'Retirement Planning', icon: 'volunteer_activism', label: ''},
- { title: 'Life Insurance/Protection for my Family', icon: 'family_home', label: ''},
- { title: 'Estate Planning/Preserve Wealth', icon: '', label: ''},
- { title: '401(k) Rollover', icon: '', label: ''},
- { title: 'Tax Advantaged Products or Solutions', icon: '', label: ''},
- { title: 'College Funds/Child Accounts', icon: '', label: ''},
- { title: 'Pension Plan', icon: '', label: ''},
- { title: 'Other', icon: '', label: ''}
+    { title: 'Life Insurance', icon: 'volunteer_activism', label: 'Life Insurance' },
+    { title: 'Wealth Insurance', icon: 'assured_workload', label: 'Wealth Insurance' },
+    { title: 'Accumulation, Strategies & Rollovers', icon: 'shield_with_heart', label: 'Accumulation, Strategies & Rollovers' }
 ];
+
+export const GENDER_OPTIONS: IOptionList[] = [
+    { title: 'Male', value: 'Male' },
+    { title: 'Female', value: 'Female' },
+    { title: 'Non-binary', value: 'Non-binary' },
+    { title: 'Prefer Not to say', value: 'Prefer Not to say' },
+    { title: 'Other', value: 'Other' }
+];
+
+export const MARITAL_OPTIONS: IOptionList[] = [
+    {title: 'Single', value: 'Single'},
+    {title: 'Married', value: 'Married'},
+    {title: 'Divorced', value: 'Divorced'},
+    {title: 'Widowed', value: 'Widowed'},
+    {title: 'Separated', value: 'Separated'},
+    {title: 'Prefer Not to Say', value: 'Prefer Not to Say'}
+];
+
+export const HEAR_ABOUT_OPTIONS: IOptionList[] = [
+    {title: 'Facebook', value: 'Facebook'},
+    {title: 'Instagram', value: 'Instagram'},
+    {title: 'Google', value: 'Google'},
+    {title: 'Friend', value: 'Friend'},
+    {title: 'Family', value: 'Family'},
+    {title: 'LinkedIn', value: 'LinkedIn'}
+]

@@ -1,10 +1,10 @@
 <form autocomplete="off" [formGroup]="_form" (ngSubmit)="onSubmit()">
   <div class="row">
-  <ng-container *ngIf="isLifeInsurance">
+    <ng-container *ngIf="isLifeInsurance">
       <div class="col-12 col-md-6">
         <mat-form-field class="w-100">
-          <mat-label for="">Birthdate </mat-label>
-          <input matInput id="" [matDatepicker]="picker">
+          <mat-label for="birthdate">Date of birth </mat-label>
+          <input matInput id="birthdate" [matDatepicker]="picker">
           <mat-hint>MM/DD/YYYY</mat-hint>
           <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
@@ -13,24 +13,81 @@
 
       <div class="col-12 col-md-6">
         <mat-form-field class="w-100">
-          <mat-label>Select your gender</mat-label>
-          <mat-select>
-            <!-- @for (food of foods; track food) {
-              <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
-            } -->
+          <mat-label for="gender">Select your gender</mat-label>
+          <mat-select id="gender" formControlName="gender">
+            @for (item of GenderOptions; track item.title) {
+            <mat-option [value]="item.value">{{item.title}}</mat-option>
+            }
           </mat-select>
         </mat-form-field>
       </div>
 
       <div class="col-12 col-md-6">
         <mat-form-field class="w-100">
-          <mat-label>Marital status</mat-label>
-          <mat-select>
-            <!-- @for (food of foods; track food) {
-              <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
-            } -->
+          <mat-label for="marital_status">Marital status</mat-label>
+          <mat-select id="marital_status" formControlName="marital_status">
+            @for (item of MaritalOptions ; track item.title) {
+            <mat-option [value]="item.value">{{item.title}}</mat-option>
+            }
           </mat-select>
         </mat-form-field>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <mat-label>Annual income range:</mat-label>
+        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
+          <input matSliderThumb formControlName="annual_income">
+        </mat-slider>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <mat-label>Currently saving per month:</mat-label>
+        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
+          <input matSliderThumb formControlName="saving_per_month">
+        </mat-slider>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <mat-label>How much more could you save? (monthly):</mat-label>
+        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
+          <input matSliderThumb formControlName="save_more">
+        </mat-slider>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <mat-form-field class="w-100">
+          <mat-label for="residence">State of residence</mat-label>
+          <input matInput id="residence" formControlName="residence">
+        </mat-form-field>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="isWealthInsurance">
+      <div class="col-12 col-md-6">
+        <mat-label>Currently saving per month:</mat-label>
+        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
+          <input matSliderThumb formControlName="saving_per_month">
+        </mat-slider>
+      </div>
+
+      <div class="col-12 col-md-6">
+        <mat-label>How much more could you save? (monthly):</mat-label>
+        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
+          <input matSliderThumb formControlName="save_more">
+        </mat-slider>
+      </div>
+
+      <div class="col-12">
+        <mat-radio-group formControlName="current_saving">
+          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
+          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
+          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
+          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
+          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
+        </mat-radio-group>
       </div>
     </ng-container>
   </div>
