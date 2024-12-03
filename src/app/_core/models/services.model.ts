@@ -3,4 +3,5 @@ export interface IServicesList {
     description: string;
     buttonTitle?: string;
     image?: string;
+    color?: string;
 }

@@ -64,16 +64,16 @@
   </div>
   <div class="row">
     @for (item of InsuranceItems; track item.title) {
-    <div class="col-6 col-md-4 py-3">
-      <mat-card class="h-100">
-        <img mat-card-image [src]="item.image" alt="Placeholder Image" class="img-fluid overflow-hidden" style="height: 416px; width: 416px;" />
-        <mat-card-content class="my-4">
-          <h5>
-            {{item.title}}
-          </h5>
-          <p class="text-body mt-3">{{item.description}}</p>
-        </mat-card-content>
-      </mat-card>
+    <div class="col-12 col-md-4 py-1 py-md-2 d-flex">
+      <div class="border border-accent-500 rounded-2 p-3 shadow-hover w-100">
+        <div class="d-flex">
+          <lucide-icon [name]="item.image" class="me-2" [ngStyle]="{color: item.color}"></lucide-icon>
+          <div>
+            <p class="fs-6 lh-sm fw-medium m-0 text-primary-900">{{item.title}}</p>
+            <p class="mt-2" style="color: #a6a6a7">{{item.description}}</p>
+          </div>
+        </div>
+      </div>
     </div>
     } @empty {
     <li>There are no items.</li>
@@ -156,6 +156,25 @@
     <h6>As part of our commitment to our clients, each of our providers we partner with are rated A or higher by
       industry standards.</h6>
   </div>
+    <div class="slider bg-primary-900 mt-5" style="
+            --width: 100px;
+            --height: 50px;
+            --quantity: 10;
+        "
+        >
+            <div class="list">
+                <div class="item" style="--position: 1"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 2"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 3"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 4"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 5"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 6"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 7"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 8"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 9"><img src="assets/images/logo-white-complete.png" alt=""></div>
+                <div class="item" style="--position: 10"><img src="assets/images/logo-white-complete.png" alt=""></div>
+            </div>
+        </div>
 </section>
 
 <!-- FAQs -->
