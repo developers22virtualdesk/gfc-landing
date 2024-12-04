@@ -290,7 +290,7 @@
   /* #endregion */
 
   /* #region Material Expansion Panel */
-  --mat-expansion-container-shape: 4px;
+  --mat-expansion-container-shape: 0px;
   --mat-expansion-legacy-header-indicator-display: inline-block;
   --mat-expansion-header-indicator-display: none;
 

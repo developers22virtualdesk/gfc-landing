@@ -1,9 +1,21 @@
 <!-- Hero Section -->
 <section class="sub-hero d-flex align-items-center justify-content-start">
   <div class="sub-hero-overlay"></div>
-  <div class="sub-hero-content mx-5">
-    <div class="row">
-      <h1 class="col-12 col-md-10 text-white ">Tailored Financial Strategies for <b>Your Success</b></h1>
+  <div class="sub-hero-content mx-5 w-100">
+    <div class="row w-100">
+      <h2 class="col-12 col-md-7 text-white ">Tailored Financial Strategies for <b>Your Success</b></h2>
+    </div>
+
+    <div class="row mt-3">
+      <h5 class="col-12 col-md-7 text-white ">
+        Transform your financial future with personalized tools and expert mentorship.
+      </h5>
+    </div>
+    
+    <div class="row mt-5">
+      <button mat-raised-button color="accent" class="col-auto">
+        Contact Us Now
+      </button>
     </div>
   </div>
 </section>
@@ -12,7 +24,7 @@
 <section class="container align-content-center py-5 my-4">
   <div class="row">
     <div class="col-4 d-none d-md-block">
-      <img src="assets/images/family4.webp" alt="Placeholder Image" class="img-fluid w-100 h-100" />
+      <img src="assets/images/family4.webp" alt="Placeholder Image" class="img-fluid w-100 h-100" loading="lazy"/>
     </div>
     <div class="col-12 col-md-8">
       <div class="py-4">
@@ -51,7 +63,7 @@
         </p>
       </div>
       <div class="col-4 d-none d-md-block">
-        <img src="assets/images/family5.webp" alt="Placeholder Image" class="img-fluid w-100" />
+        <img src="assets/images/family5.webp" alt="Placeholder Image" class="img-fluid w-100" loading="lazy"/>
       </div>
     </div>
   </section>
@@ -156,47 +168,48 @@
     <h6>As part of our commitment to our clients, each of our providers we partner with are rated A or higher by
       industry standards.</h6>
   </div>
-    <div class="slider bg-primary-900 mt-5" style="
+  <div class="slider bg-primary-900 mt-5" style="
             --width: 100px;
             --height: 50px;
             --quantity: 10;
-        "
-        >
-            <div class="list">
-                <div class="item" style="--position: 1"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 2"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 3"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 4"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 5"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 6"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 7"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 8"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 9"><img src="assets/images/logo-white-complete.png" alt=""></div>
-                <div class="item" style="--position: 10"><img src="assets/images/logo-white-complete.png" alt=""></div>
-            </div>
-        </div>
+        ">
+    <div class="list">
+      <div class="item" style="--position: 1"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 2"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 3"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 4"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 5"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 6"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 7"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 8"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 9"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+      <div class="item" style="--position: 10"><img src="assets/images/logo-white-complete.png" alt="" loading="lazy"></div>
+    </div>
+  </div>
 </section>
 
 <!-- FAQs -->
-<div class="py-5 bg-primary-400">
-  <section class="container align-content-center">
-    <div class="d-flex flex-column text-center py-2">
-      <h2 class="text-white">Frequently Asked Questions</h2>
-    </div>
+<div class="py-5 bg-primary-900">
+  <section class="container align-content-center py-4">
+    <div class="row">
+      <div class="col-12 col-md-3 text-center py-2">
+        <h2 class="text-white">FAQs</h2>
+      </div>
 
-    <div class="py-5">
-      <mat-accordion>
-        @for (item of FaqsItems; track item.title) {
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title class="text-white"> {{item.title}} </mat-panel-title>
-          </mat-expansion-panel-header>
-          <p class="text-body text-white">{{item.description}}</p>
-        </mat-expansion-panel>
-        } @empty {
-        <li>There are no items.</li>
-        }
-      </mat-accordion>
+      <div class="col-12 col-md-9">
+        <mat-accordion>
+          @for (item of FaqsItems; track item.title) {
+          <mat-expansion-panel class="mat-elevation-z0 border-bottom">
+            <mat-expansion-panel-header>
+              <mat-panel-title class="text-white"> {{item.title}} </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="text-white">{{item.description}}</p>
+          </mat-expansion-panel>
+          } @empty {
+          <li>There are no items.</li>
+          }
+        </mat-accordion>
+      </div>
     </div>
   </section>
 </div>
