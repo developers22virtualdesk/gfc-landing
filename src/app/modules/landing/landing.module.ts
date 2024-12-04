@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import
@@ -38,7 +38,7 @@ import { ServicesComponent } from './pages/services/services.component';
     CommonModule,
     AngularMaterialModule,
     FooterComponent,
-
+    NgOptimizedImage,
     GeneralFormComponent,
     PartnerFormComponent,
     ClientFormComponent,
@@ -56,7 +56,7 @@ import { ServicesComponent } from './pages/services/services.component';
       Calculator,
       DollarSign,
       RefreshCw,
-      Sliders
+      Sliders,
     }),
   ],
   declarations: [

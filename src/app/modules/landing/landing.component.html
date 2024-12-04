@@ -1,12 +1,12 @@
-<mat-drawer-container id="container" class="" >
-    <mat-drawer #sideNavigationBar mode="over" class="glass-bg d-block d-lg-none w-100" >
+<mat-drawer-container id="container" class="">
+    <mat-drawer #sideNavigationBar mode="over" class="glass-bg d-block d-lg-none w-100">
         <!-- Toggle sidenav button -->
-         <mat-toolbar style="height: 100px;">
-             <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
-                 <mat-icon>close</mat-icon>
-             </button>
-         </mat-toolbar>
-         
+        <mat-toolbar style="height: 100px;">
+            <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
+                <mat-icon>close</mat-icon>
+            </button>
+        </mat-toolbar>
+
         <!-- Menu -->
         <mat-nav-list>
             @for (item of NavigationItems; track item.displayName) {
@@ -24,7 +24,8 @@
 
     <mat-drawer-content>
         <section #navigationBar>
-            <mat-toolbar class="glass-bg justify-content-between position-fixed px-4 top-0 start-0 end-0" style="height: 100px; z-index: 1000;">
+            <mat-toolbar class="glass-bg justify-content-between position-fixed px-4 top-0 start-0 end-0"
+                style="height: 100px; z-index: 1000;">
                 <!-- Toggle sidenav button -->
                 <span class="d-block d-lg-none me-4 me-lg-0 text-white">
                     <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
@@ -32,13 +33,14 @@
                     </button>
                 </span>
                 <!-- Logo -->
-                <img src="assets/images/Global-Financial-Catalyst-LOGO-horizontal.webp" alt="gfc logo" class="img-fluid" style="width: 257px;">
+                    <img ngSrc="assets/images/Global-Financial-Catalyst-LOGO-horizontal.png" alt="gfc logo"
+                        class="img-fluid" priority width="200" height="37">
                 <!-- <span class="toolbar-spacer"></span> -->
                 <!-- Menu -->
                 <mat-nav-list class="d-none d-lg-flex gap-2">
                     @for (item of NavigationItems; track item.displayName) {
                     <ng-container *ngIf="item.isActive">
-                        <mat-list-item  [routerLink]="item.link" [routerLinkActive]="['active']">
+                        <mat-list-item [routerLink]="item.link" [routerLinkActive]="['active']">
                             {{item.displayName}}
                         </mat-list-item>
                     </ng-container>
