@@ -1,6 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import
+  {
+    Briefcase,
+    Calculator,
+    DollarSign,
+    FileText,
+    GraduationCap,
+    HeartPulse,
+    Landmark,
+    LucideAngularModule,
+    PiggyBank,
+    RefreshCw,
+    Shield,
+    Sliders,
+    UserCheck,
+  } from 'lucide-angular';
 import { AngularMaterialModule } from '../material/angular-material.module';
 import { AdditionalFormComponent } from './components/additional-form/additional-form.component';
 import { ClientFormComponent } from './components/client-form/client-form.component';
@@ -15,21 +31,6 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { GetStartedComponent } from './pages/get-started/get-started.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ServicesComponent } from './pages/services/services.component';
-import {
-  Briefcase,
-  Calculator,
-  DollarSign,
-  FileText,
-  GraduationCap,
-  HeartPulse,
-  Landmark,
-  LucideAngularModule,
-  PiggyBank,
-  RefreshCw,
-  Shield,
-  Sliders,
-  UserCheck,
-} from 'lucide-angular';
 
 @NgModule({
   imports: [
@@ -65,6 +66,6 @@ import {
     ServicesComponent,
     BusinessPlatformComponent,
     GetStartedComponent,
-  ],
+  ]
 })
-export class LandingModule {}
+export class LandingModule { }

@@ -1,14 +1,12 @@
 <!-- Hero Section -->
 <section class="sub-hero d-flex align-items-center justify-content-start">
     <div class="sub-hero-overlay"></div>
-    <div class="sub-hero-content mx-5">
-        <div class="row">
-            <h1 class="col-12 col-md-7 text-white ">Inspirational Marketing</h1>
+    <div class="sub-hero-content mx-5 w-100">
+        <div class="row w-100">
+            <h2 class="col-12 col-md-7 text-white">Inspirational Marketing</h2>
         </div>
 
         <div class="row mt-3">
-            <h3 class="col-12 col-md-7 text-white mb-2">Real Business Ownership</h3>
-
             <h5 class="col-12 col-md-7 text-white ">
                 Build a business that you can pass onto your loved ones to create generational wealth, with the most
                 competitive personal compensation, builder’s compensation, and Agency Owner platform in the industry.
@@ -17,7 +15,7 @@
 
         <div class="row mt-5">
             <button mat-raised-button color="accent" class="col-auto">
-                Start your Journey Now
+                Grow with Us
             </button>
         </div>
     </div>
@@ -39,7 +37,7 @@
     </div>
 </section>
 
-<section class="container py-5">
+<section class="container py-5 my-4">
     <h6 class="text-secondary-600 text-center">THE GFI DIFFERENCE</h6>
     <h2 class="text-center">Inspirational Marketing</h2>
 
@@ -54,9 +52,10 @@
         <div class="col-6">
             <div class="ms-5 position-relative">
                 <img src="https://globalfinancialimpact.com/wp-content/uploads/professional-man-2048x1365.webp"
-                    alt="Image 1" class="img-fluid" style="width: 60%;">
+                    alt="Image 1" class="img-fluid" style="width: 60%;" loading="lazy">
                 <img src="https://globalfinancialimpact.com/wp-content/uploads/girl-in-green-e1700686911536.webp"
-                    alt="Image 2" class="img-fluid position-absolute" style="width: 40%; top: 20%; left: 40%;">
+                    alt="Image 2" class="img-fluid position-absolute" style="width: 40%; top: 20%; left: 40%;"
+                    loading="lazy">
             </div>
         </div>
     </div>
@@ -107,7 +106,8 @@
         <div class="col mb-2 mb-lg-0">
             <div>
                 <div class="d-flex w-100">
-                    <img mat-card-image src={{item.image}} alt="Placeholder Image" class="img-fluid w-100" />
+                    <img mat-card-image src={{item.image}} alt="Placeholder Image" class="img-fluid w-100"
+                        loading="lazy" />
                 </div>
                 <h5 class="mt-2">{{item.description}}</h5>
             </div>
@@ -158,7 +158,6 @@
     </section>
 </div>
 
-
 <section class="container align-content-center py-5 my-4">
     <div class="d-flex flex-column gap-2 py-2">
         <h2 class="text-center">Getting Started Is Easy</h2>
@@ -168,7 +167,7 @@
         <div class="col">
             <div class="bg-primary-50 p-3 h-75">
                 <div class="d-flex justify-content-end">
-                    <img src={{item.image}} alt="Placeholder Image" class="img-fluid w-50" />
+                    <img src={{item.image}} alt="Placeholder Image" class="img-fluid w-50" loading="lazy" />
                 </div>
                 <div class="mt-5 ">
                     <h6 class="fw-bold">{{ item.step }}</h6>
@@ -194,12 +193,30 @@
                 </div>
             </div>
             <div class="col d-flex justify-content-center ms-5 gap-4">
-                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
-                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
-                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
-                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
-                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
-                <div class="expandable-img" style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"></div>
+                <div class="expandable-img"
+                    style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"
+                    loading="lazy">
+                </div>
+                <div class="expandable-img"
+                    style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"
+                    loading="lazy">
+                </div>
+                <div class="expandable-img"
+                    style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"
+                    loading="lazy">
+                </div>
+                <div class="expandable-img"
+                    style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"
+                    loading="lazy">
+                </div>
+                <div class="expandable-img"
+                    style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"
+                    loading="lazy">
+                </div>
+                <div class="expandable-img"
+                    style="background-image: url(https://globalfinancialimpact.com/wp-content/uploads/agent4.webp);"
+                    loading="lazy">
+                </div>
             </div>
         </div>
         <div>
@@ -208,25 +225,27 @@
 </div>
 
 <!-- FAQs -->
-<div class="py-5 bg-primary-400">
-    <section class="container align-content-center">
-        <div class="d-flex flex-column text-center py-2">
-            <h2 class="text-white">Frequently Asked Questions</h2>
-        </div>
+<div class="py-5 bg-primary-900">
+    <section class="container align-content-center py-4">
+        <div class="row">
+            <div class="col-12 col-md-3 text-center py-2">
+                <h2 class="text-white">FAQs</h2>
+            </div>
 
-        <div class="py-5">
-            <mat-accordion>
-                @for (item of FaqsItems; track item.title) {
-                <mat-expansion-panel>
-                    <mat-expansion-panel-header>
-                        <mat-panel-title class="text-white"> {{item.title}} </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <p class="text-body text-white">{{item.description}}</p>
-                </mat-expansion-panel>
-                } @empty {
-                <li>There are no items.</li>
-                }
-            </mat-accordion>
+            <div class="col-12 col-md-9">
+                <mat-accordion>
+                    @for (item of FaqsItems; track item.title) {
+                    <mat-expansion-panel class="mat-elevation-z0 border-bottom">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title class="text-white"> {{item.title}} </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <p class="text-white">{{item.description}}</p>
+                    </mat-expansion-panel>
+                    } @empty {
+                    <li>There are no items.</li>
+                    }
+                </mat-accordion>
+            </div>
         </div>
     </section>
 </div>

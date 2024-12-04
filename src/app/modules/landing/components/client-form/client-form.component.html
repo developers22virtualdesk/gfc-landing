@@ -1,94 +1,259 @@
-<form autocomplete="off" [formGroup]="_form" (ngSubmit)="onSubmit()">
-  <div class="row">
-    <ng-container *ngIf="isLifeInsurance">
-      <div class="col-12 col-md-6">
-        <mat-form-field class="w-100">
-          <mat-label for="birthdate">Date of birth </mat-label>
-          <input matInput id="birthdate" [matDatepicker]="picker">
-          <mat-hint>MM/DD/YYYY</mat-hint>
-          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-      </div>
+<mat-stepper linear #stepper class="container">
+  <!-- Select insurance form -->
+  <mat-step [stepControl]="insuranceForm" class="my-2">
+    <ng-template matStepLabel>Select your insurance type:</ng-template>
+    <ng-template matStepContent>
+      <form autocomplete="off" [formGroup]="insuranceForm" (ngSubmit)="onSubmit()">
+        <app-insurance-type-form (onValueChanged)="onInsuranceTypeFormCompleted($event)"></app-insurance-type-form>
 
-      <div class="col-12 col-md-6">
-        <mat-form-field class="w-100">
-          <mat-label for="gender">Select your gender</mat-label>
-          <mat-select id="gender" formControlName="gender">
-            @for (item of GenderOptions; track item.title) {
-            <mat-option [value]="item.value">{{item.title}}</mat-option>
-            }
-          </mat-select>
-        </mat-form-field>
-      </div>
+        <div class="d-flex justify-content-end gap-4 mt-4">
+          <button mat-button type="button" (click)="onReturnClicked()">Back</button>
+          <button mat-raised-button type="button" [disabled]="!isInsuranceFormValid" matStepperNext>
+            Next
+          </button>
+        </div>
+      </form>
+    </ng-template>
+  </mat-step>
 
-      <div class="col-12 col-md-6">
-        <mat-form-field class="w-100">
-          <mat-label for="marital_status">Marital status</mat-label>
-          <mat-select id="marital_status" formControlName="marital_status">
-            @for (item of MaritalOptions ; track item.title) {
-            <mat-option [value]="item.value">{{item.title}}</mat-option>
-            }
-          </mat-select>
-        </mat-form-field>
-      </div>
+  <!--  General information -->
+  <mat-step [stepControl]="generalForm" class="my-2">
+    <ng-template matStepLabel>General information:</ng-template>
+    <ng-template matStepContent>
+      <!-- General form -->
+      <form autocomplete="off" [formGroup]="generalForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="col-12 col-md-6 my-2">
+            <mat-form-field class="w-100">
+              <mat-label for="first_name">First Name</mat-label>
+              <input matInput id="first_name" type="text" formControlName="first_name"
+                placeholder="Insert your first name">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
 
-      <div class="col-12 col-md-6">
-        <mat-label>Annual income range:</mat-label>
-        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
-          <input matSliderThumb formControlName="annual_income">
-        </mat-slider>
-      </div>
+          <div class="col-12 col-md-6 my-2">
+            <mat-form-field class="w-100">
+              <mat-label for="last_name">Last Name</mat-label>
+              <input matInput id="last_name" formControlName="last_name" placeholder="Insert your last name">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
 
-      <div class="col-12 col-md-6">
-        <mat-label>Currently saving per month:</mat-label>
-        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
-          <input matSliderThumb formControlName="saving_per_month">
-        </mat-slider>
-      </div>
+          <div class="col-12 col-md-6 my-2">
+            <mat-form-field class="w-100">
+              <mat-label for="email">Email</mat-label>
+              <input matInput id="email" formControlName="email" placeholder="Insert your email">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
 
-      <div class="col-12 col-md-6">
-        <mat-label>How much more could you save? (monthly):</mat-label>
-        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
-          <input matSliderThumb formControlName="save_more">
-        </mat-slider>
-      </div>
+          <div class="col-12 col-md-6 my-2">
+            <mat-form-field class="w-100">
+              <mat-label for="phone">Phone</mat-label>
+              <input matInput id="phone" formControlName="phone" placeholder="Insert your phone">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
 
-      <div class="col-12 col-md-6">
-        <mat-form-field class="w-100">
-          <mat-label for="residence">State of residence</mat-label>
-          <input matInput id="residence" formControlName="residence">
-        </mat-form-field>
-      </div>
-    </ng-container>
+          <div class="col-12">
+            <mat-form-field class="w-100">
+              <mat-label for="city">City</mat-label>
+              <input matInput id="city" formControlName="city" placeholder="Insert your city">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
 
-    <ng-container *ngIf="isWealthInsurance">
-      <div class="col-12 col-md-6">
-        <mat-label>Currently saving per month:</mat-label>
-        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
-          <input matSliderThumb formControlName="saving_per_month">
-        </mat-slider>
-      </div>
+          <div class="col-12 col-md-6 my-2">
+            <mat-form-field class="w-100">
+              <mat-label for="state">State</mat-label>
+              <input matInput id="state" formControlName="state" placeholder="Insert your state">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
 
-      <div class="col-12 col-md-6">
-        <mat-label>How much more could you save? (monthly):</mat-label>
-        <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel" class="w-100">
-          <input matSliderThumb formControlName="save_more">
-        </mat-slider>
-      </div>
+          <div class="col-12 col-md-6 my-2">
+            <mat-form-field class="w-100">
+              <mat-label for="zip">Zip</mat-label>
+              <input matInput id="zip" formControlName="zip" placeholder="Insert your zip">
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
 
-      <div class="col-12">
-        <mat-radio-group formControlName="current_saving">
-          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
-          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
-          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
-          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
-          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
-          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
-          <mat-radio-button class="example-margin" value="after">After</mat-radio-button>
-          <mat-radio-button class="example-margin" value="before">Before</mat-radio-button>
-        </mat-radio-group>
-      </div>
-    </ng-container>
-  </div>
-</form>
+          <div class="col-12">
+            <mat-form-field class="w-100">
+              <mat-label for="message">Message</mat-label>
+              <textarea matInput id="message" formControlName="message"
+                placeholder="Insert your question or message"></textarea>
+              <mat-error></mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="d-flex justify-content-end gap-4 mt-4">
+          <button mat-button type="button" matStepperPrevious>Back</button>
+          <button mat-raised-button type="button" [disabled]="!isGeneralFormValid" matStepperNext>
+            Next
+          </button>
+        </div>
+      </form>
+    </ng-template>
+  </mat-step>
+
+  <!-- Additional information -->
+  <mat-step [stepControl]="additionalForm" class="my-2">
+    <ng-template matStepLabel>Additional information:</ng-template>
+    <ng-template matStepContent>
+      <!-- Client form -->
+      <form autocomplete="off" [formGroup]="additionalForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <ng-container *ngIf="isLifeInsurance">
+            <div class="col-12 my-2">
+              <mat-label>What life insurance products are you interested in?</mat-label>
+              <p class="text-disabled">Select all that apply</p>
+              <div class="row">
+                @for (item of InsuranceInterestOptions; let index = $index; track item.title) {
+                <div class="col-4 col-md-2 my-2">
+                  <mat-card appearance="outlined" class="transparent form-card h-100" [class.active]="item.isClicked"
+                    (click)="addInsuranceInterest(item, index)">
+                    <mat-card-content class="my-4 text-center">
+                      <div class="d-flex justify-content-center mb-2">
+                        <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
+                          [fontIcon]="item.icon"></mat-icon>
+                      </div>
+                      <h6>{{item.title}}</h6>
+                    </mat-card-content>
+                  </mat-card>
+                </div>
+                } @empty {
+                <li>There are no items.</li>
+                }
+              </div>
+            </div>
+
+            <div class="col-12 col-md-6 my-2">
+              <mat-form-field class="w-100">
+                <mat-label for="birthdate">Date of birth </mat-label>
+                <input matInput id="birthdate" formControlName="birthdate" [matDatepicker]="picker">
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+
+            <div class="col-12 col-md-6 my-2">
+              <mat-form-field class="w-100">
+                <mat-label for="gender">Select your gender</mat-label>
+                <mat-select id="gender" formControlName="gender">
+                  @for (item of GenderOptions; track item.title) {
+                  <mat-option [value]="item.value">{{item.title}}</mat-option>
+                  }
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="col-12 col-md-6 my-2">
+              <mat-form-field class="w-100">
+                <mat-label for="marital_status">Marital status</mat-label>
+                <mat-select id="marital_status" formControlName="marital_status">
+                  @for (item of MaritalOptions ; track item.title) {
+                  <mat-option [value]="item.value">{{item.title}}</mat-option>
+                  }
+                </mat-select>
+              </mat-form-field>
+            </div>
+
+            <div class="col-12 col-md-6 my-2">
+              <mat-label>Annual income range:</mat-label>
+              <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel"
+                class="w-100">
+                <input matSliderThumb formControlName="annual_income">
+              </mat-slider>
+            </div>
+
+            <div class="col-12 col-md-6 my-2">
+              <mat-label>Currently saving per month:</mat-label>
+              <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel"
+                class="w-100">
+                <input matSliderThumb formControlName="saving_per_month">
+              </mat-slider>
+            </div>
+
+            <div class="col-12 col-md-6 my-2">
+              <mat-label>How much more could you save? (monthly):</mat-label>
+              <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel"
+                class="w-100">
+                <input matSliderThumb formControlName="save_more">
+              </mat-slider>
+            </div>
+          </ng-container>
+
+          <ng-container *ngIf="isWealthInsurance">
+            <div class="col-12 col-md-6 my-2">
+              <mat-label>Currently saving per month:</mat-label>
+              <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel"
+                class="w-100">
+                <input matSliderThumb formControlName="saving_per_month">
+              </mat-slider>
+            </div>
+
+            <div class="col-12 col-md-6 my-2">
+              <mat-label>How much more could you save? (monthly):</mat-label>
+              <mat-slider min="0" max="250000" step="10000" showTickMarks discrete [displayWith]="formatLabel"
+                class="w-100">
+                <input matSliderThumb formControlName="save_more">
+              </mat-slider>
+            </div>
+
+            <div class="col-12 my-2">
+              <mat-label>Current saving vehicles</mat-label>
+              <div class="row">
+                @for (item of CurrentSavingsOptions; track item.title) {
+                <mat-checkbox class="col-2 col-md-3" [value]="item.value" (change)="toggleCurrentSaving(item)">
+                  {{item.title}}
+                </mat-checkbox>
+                } @empty {
+                <li>There are no items.</li>
+                }
+              </div>
+            </div>
+
+            <div class="col-12 my-2">
+              <mat-label>What is most important to you?</mat-label>
+              <p class="text-disabled">Select all that apply</p>
+              <div class="row">
+                @for (item of InsuranceMattersOptions; let index = $index; track item.title) {
+                <div class="col-12 col-md-4 my-2">
+                  <mat-card appearance="outlined" class="transparent form-card h-100" [class.active]="item.isClicked"
+                    (click)="addMatter(item, index)">
+                    <mat-card-content class="my-4 text-center">
+                      <div class="d-flex justify-content-center mb-2">
+                        <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
+                          [fontIcon]="item.icon"></mat-icon>
+                      </div>
+                      <h6>{{item.title}}</h6>
+                    </mat-card-content>
+                  </mat-card>
+                </div>
+                } @empty {
+                <li>There are no items.</li>
+                }
+              </div>
+            </div>
+          </ng-container>
+        </div>
+
+        <!-- Additional form -->
+        <app-additional-form (onFormCompleted)="onAdditionalFormCompleted($event)"></app-additional-form>
+
+        <div class="d-flex justify-content-end gap-4 mt-4">
+          <button mat-button type="button" matStepperPrevious>Back</button>
+          <button mat-raised-button type="submit" [disabled]="!isAdditionalFormValid" matStepperNext>
+            <mat-icon fontIcon="send" iconPositionEnd></mat-icon>
+            Send
+          </button>
+        </div>
+      </form>
+    </ng-template>
+  </mat-step>
+</mat-stepper>

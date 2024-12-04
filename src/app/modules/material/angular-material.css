@@ -166,6 +166,11 @@
   /* #endregion */
 
   /* #region Material Checkbox */
+  --mdc-radio-selected-focus-icon-color: var(--primary-900);
+  --mdc-radio-selected-hover-icon-color: var(--primary-900);
+  --mdc-radio-selected-icon-color: var(--primary-900);
+  --mdc-radio-selected-pressed-icon-color: var(--primary-900);
+
   --mdc-checkbox-disabled-selected-checkmark-color: #fff;
   --mdc-checkbox-selected-focus-state-layer-opacity: 0.16;
   --mdc-checkbox-selected-hover-state-layer-opacity: 0.04;
@@ -250,12 +255,12 @@
   --mat-datepicker-calendar-header-text-size: 11px;
   --mat-datepicker-calendar-header-text-weight: 400;
 
-  --mat-datepicker-calendar-date-selected-state-text-color: var(--surface-high-emphasis);
+  --mat-datepicker-calendar-date-selected-state-text-color: var(--neutral-100);
   --mat-datepicker-calendar-date-selected-state-background-color: var(--primary-600);
   --mat-datepicker-calendar-date-selected-disabled-state-background-color: rgba(103, 58, 183, 0.4);
   --mat-datepicker-calendar-date-today-selected-state-outline-color: white;
   --mat-datepicker-calendar-date-focus-state-background-color: var(--primary-500);
-  --mat-datepicker-calendar-date-hover-state-background-color: var(--primary-500);
+  --mat-datepicker-calendar-date-hover-state-background-color: var(--primary-50);
   --mat-datepicker-toggle-active-state-icon-color: var(--primary-600);
   --mat-datepicker-calendar-date-in-range-state-background-color: var(--primary-500);
   --mat-datepicker-calendar-date-in-comparison-range-state-background-color: rgba(249, 171, 0, 0.2);
@@ -264,8 +269,8 @@
   --mat-datepicker-calendar-date-in-overlap-range-selected-state-background-color: #46a35e;
   /* . */
 
-  --mat-datepicker-toggle-icon-color: var(--primary-high-emphasis);
-  --mat-datepicker-calendar-body-label-text-color: var(--primary-high-emphasis);
+--mat-datepicker-toggle-icon-color: var(--neutral-800);
+  --mat-datepicker-calendar-body-label-text-color: black;
   --mat-datepicker-calendar-period-button-text-color: black;
   --mat-datepicker-calendar-period-button-icon-color: rgba(0, 0, 0, 0.54);
   --mat-datepicker-calendar-navigation-button-icon-color: rgba(0, 0, 0, 0.54);
@@ -285,7 +290,7 @@
   /* #endregion */
 
   /* #region Material Expansion Panel */
-  --mat-expansion-container-shape: 4px;
+  --mat-expansion-container-shape: 0px;
   --mat-expansion-legacy-header-indicator-display: inline-block;
   --mat-expansion-header-indicator-display: none;
 

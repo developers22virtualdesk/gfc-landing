@@ -122,12 +122,12 @@
     /* 32px */
     --lh-sm: clamp(1.5rem, 2vw, 2rem);
     /* 36px */
-    --lh-md: clamp(2rem, 3vw, 2.25rem)
+    --lh-md: clamp(2rem, 3vw, 2.25rem);
     /* 56px */
     --lh-lg: clamp(2.25rem, 4vw, 3.5rem);
     /* 72px */
     --lh-xlg: clamp(3rem, 5vw, 4rem);
     /* 120px */
-    --lh-xxlg: clamp(4.5rem, 8vw, 7.5rem);
+    --lh-xxlg: clamp(4.125rem, 8vw, 7.5rem);
     /* #endregion */
 }

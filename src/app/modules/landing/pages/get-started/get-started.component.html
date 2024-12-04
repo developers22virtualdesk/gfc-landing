@@ -1,5 +1,5 @@
 <div class="py-5 bg-accent-50">
-  <section class="container align-content-center">
+  <section id="sectionTitle" class="container align-content-center">
     <div class="d-flex flex-column text-center gap-2 pb-5">
       <h2>Start Your Insurance Application!</h2>
       <h6>Take the first step toward securing your future with our tailored insurance solutions.</h6>
@@ -8,7 +8,7 @@
     <ng-container *ngIf="!showForm">
       <div class="row">
         <div class="col-12 col-md-4 px-5 mb-4">
-          <mat-card appearance="outlined" class="transparent form-card" (click)="onClientClicked()">
+          <mat-card appearance="outlined" class="transparent form-card" (click)="formType = FormTypeOption.Client">
             <mat-card-content class="my-4 text-center">
               <div class="d-flex justify-content-center mb-2">
                 <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
@@ -20,7 +20,7 @@
         </div>
 
         <div class="col-12 col-md-4 px-5 mb-4">
-          <mat-card appearance="outlined" class="transparent form-card" (click)="onPartnerClicked()">
+          <mat-card appearance="outlined" class="transparent form-card" (click)="formType = FormTypeOption.Partner">
             <mat-card-content class="my-4 text-center">
               <div class="d-flex justify-content-center mb-2">
                 <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
@@ -32,7 +32,7 @@
         </div>
 
         <div class="col-12 col-md-4 px-5 mb-4">
-          <mat-card appearance="outlined" class="transparent form-card" (click)="onGeneralClicked()">
+          <mat-card appearance="outlined" class="transparent form-card" (click)="formType = FormTypeOption.General">
             <mat-card-content class="my-4 text-center">
               <div class="d-flex justify-content-center mb-2">
                 <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
@@ -46,72 +46,18 @@
     </ng-container>
 
     <ng-container *ngIf="showForm">
-      <mat-stepper linear #stepper class="container">
-        <ng-container *ngIf="showClientForm">
-          <!-- Select insurance form -->
-          <mat-step class="my-2">
-            <ng-template matStepLabel>Select your insurance type:</ng-template>
-            <ng-template matStepContent>
-              <!-- Insurance type form -->
-              <app-insurance-type-form (onValueChanged)="onInsuranceTypeFormCompleted($event)" (isFormComplete)="firstFormValid = true"></app-insurance-type-form>
-  
-              <div class="mt-4">
-                <button mat-button (click)="onReturnClicked()">Back</button>
-                <button mat-button matStepperNext>Next</button>
-              </div>
-            </ng-template>
-          </mat-step>
-        </ng-container>
-
-        <!--  General information -->
-        <mat-step class="my-2">
-          <ng-template matStepLabel>General information:</ng-template>
-          <ng-template matStepContent>
-            <!-- General form -->
-            <app-general-form></app-general-form>
-
-            <ng-container *ngIf="showGeneralForm">
-              <app-additional-form></app-additional-form>
-            </ng-container>
-
-            <div class="mt-4">
-              <ng-container *ngIf="showPartnerForm || showGeneralForm">
-                <button mat-button (click)="onReturnClicked()">Back</button>
-              </ng-container>
-              <ng-container *ngIf="showClientForm">
-                <button mat-button matStepperPrevious>Back</button>
-              </ng-container>
-              <button mat-button matStepperNext>Next</button>
-            </div>
-          </ng-template>
-        </mat-step>
-
-        <!-- Additional information form -->
-         <ng-container *ngIf="!showGeneralForm">
-           <mat-step class="my-2">
-             <ng-template matStepLabel>Additional information:</ng-template>
-             <ng-template matStepContent>
-               <!-- Partner form -->
-               <ng-container *ngIf="showPartnerForm">
-                 <app-partner-form></app-partner-form>
-               </ng-container>
-     
-               <!-- Client form -->
-               <ng-container *ngIf="showClientForm">
-                 <app-client-form [insuranceType]="insurance_type"></app-client-form>
-               </ng-container>
-     
-               <!-- Additional form -->
-               <app-additional-form></app-additional-form>
-   
-               <div class="mt-4">
-                 <button mat-button matStepperPrevious>Back</button>
-                 <button mat-button matStepperNext>Next</button>
-               </div>
-             </ng-template>
-           </mat-step>
-         </ng-container>
-      </mat-stepper>
+      <ng-container *ngIf="showClientForm">
+        <app-client-form (onBackClicked)="resetApplication()" (onFormCompleted)="onClientFormCompleted($event)">
+        </app-client-form>
+      </ng-container>
+      <ng-container *ngIf="showPartnerForm">
+        <app-partner-form (onBackClicked)="resetApplication()"(onFormCompleted)="onPartnerFormCompleted($event)">
+        </app-partner-form>
+      </ng-container>
+      <ng-container *ngIf="showGeneralForm">
+        <app-general-form (onBackClicked)="resetApplication()"(onFormCompleted)="onGeneralFormCompleted($event)">
+        </app-general-form>
+      </ng-container>
     </ng-container>
   </section>
 </div>
