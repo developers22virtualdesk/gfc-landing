@@ -285,27 +285,30 @@
 </div> -->
 
 <!-- FAQs -->
-<section class="container align-content-center py-4">
-    <div class="row">
+<div class="py-5 bg-primary-900">
+    <section class="container align-content-center py-4">
+      <div class="row">
         <div class="col-12 col-md-3 text-center py-2">
-            <h2 class="">FAQs</h2>
+          <h2 class="text-white">FAQs</h2>
         </div>
-
+  
         <div class="col-12 col-md-9">
-            <mat-accordion>
-                @for (item of FaqsItems; track item.title) {
-                <mat-expansion-panel class="mat-elevation-z0 border-bottom">
-                    <mat-expansion-panel-header>
-                        <mat-panel-title> {{item.title}} </mat-panel-title>
-                    </mat-expansion-panel-header>
-                    <p class="">{{item.description}}</p>
-                </mat-expansion-panel>
-                } @empty {
-                <li>There are no items.</li>
-                }
-            </mat-accordion>
+          <mat-accordion>
+            @for (item of FaqsItems; track item.title) {
+            <mat-expansion-panel class="mat-elevation-z0 border-bottom">
+              <mat-expansion-panel-header>
+                <mat-panel-title class="text-white"> {{item.title}} </mat-panel-title>
+              </mat-expansion-panel-header>
+              <p class="text-white">{{item.description}}</p>
+            </mat-expansion-panel>
+            } @empty {
+            <li>There are no items.</li>
+            }
+          </mat-accordion>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
+  </div>
+  
 
 <app-footer></app-footer>
