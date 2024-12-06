@@ -3,8 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import
   {
+    Award,
     Briefcase,
     Calculator,
+    ChartNoAxesColumn,
+    ChartPie,
     DollarSign,
     FileText,
     GraduationCap,
@@ -15,7 +18,10 @@ import
     RefreshCw,
     Shield,
     Sliders,
+    TrendingUp,
     UserCheck,
+    UserPlus,
+    Users,
   } from 'lucide-angular';
 import { AngularMaterialModule } from '../material/angular-material.module';
 import { AdditionalFormComponent } from './components/additional-form/additional-form.component';
@@ -57,6 +63,12 @@ import { ServicesComponent } from './pages/services/services.component';
       DollarSign,
       RefreshCw,
       Sliders,
+      Users,
+      ChartNoAxesColumn,
+      TrendingUp,
+      UserPlus,
+      Award,
+      ChartPie
     }),
   ],
   declarations: [
