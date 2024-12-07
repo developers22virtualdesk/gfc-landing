@@ -1,9 +1,9 @@
 .mat-mdc-nav-list .mat-mdc-list-item:hover {
-    border-bottom: 1px solid var(--primary-500);
+    border-bottom: 1px solid var(--secondary-300);
 }
 
 .mat-mdc-nav-list .mat-mdc-list-item.active {
-    border-bottom: 1px solid var(--primary-500);
+    border-bottom: 1px solid var(--secondary-300);
 }
 
 .mat-mdc-list-item, .mat-mdc-list-option {

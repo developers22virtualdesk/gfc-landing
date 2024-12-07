@@ -21,6 +21,11 @@ export class LandingComponent implements OnInit
 
   public toggleSidenav(): void
   {
+    const container = document.getElementById("container");
+    if(container){
+      container.classList.toggle("h-100")
+    }
     this.sideNavigationBar.toggle();
+
   }
 }

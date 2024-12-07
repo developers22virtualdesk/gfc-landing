@@ -5,6 +5,7 @@ import {
   IMPACT_OPTIONS,
   PARTNERTYPES_OPTIONS,
   STARTING_POINTS,
+  PARTNER_PERKS,
 } from '../../../../_core/constants/business';
 import { FAQS_BUSINESS_PLATFORM_ITEMS } from '../../../../_core/constants/faqs.const';
 
@@ -20,5 +21,6 @@ export class BusinessPlatformComponent implements OnInit {
   public readonly ImpactOptions = IMPACT_OPTIONS;
   public readonly StartingPoints = STARTING_POINTS;
   public readonly FaqsItems = FAQS_BUSINESS_PLATFORM_ITEMS;
+  public readonly PartnerPerks = PARTNER_PERKS;
   ngOnInit() {}
 }

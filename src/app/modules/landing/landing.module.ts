@@ -1,10 +1,13 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import
   {
+    Award,
     Briefcase,
     Calculator,
+    ChartNoAxesColumn,
+    ChartPie,
     DollarSign,
     FileText,
     GraduationCap,
@@ -15,7 +18,10 @@ import
     RefreshCw,
     Shield,
     Sliders,
+    TrendingUp,
     UserCheck,
+    UserPlus,
+    Users,
   } from 'lucide-angular';
 import { AngularMaterialModule } from '../material/angular-material.module';
 import { AdditionalFormComponent } from './components/additional-form/additional-form.component';
@@ -38,7 +44,7 @@ import { ServicesComponent } from './pages/services/services.component';
     CommonModule,
     AngularMaterialModule,
     FooterComponent,
-
+    NgOptimizedImage,
     GeneralFormComponent,
     PartnerFormComponent,
     ClientFormComponent,
@@ -56,7 +62,13 @@ import { ServicesComponent } from './pages/services/services.component';
       Calculator,
       DollarSign,
       RefreshCw,
-      Sliders
+      Sliders,
+      Users,
+      ChartNoAxesColumn,
+      TrendingUp,
+      UserPlus,
+      Award,
+      ChartPie
     }),
   ],
   declarations: [
