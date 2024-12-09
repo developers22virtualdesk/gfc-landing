@@ -93,3 +93,24 @@ export const INSURANCE_ITEMS: IServicesList[] = [
     }
 ];
 
+export const PARTNERS: string[] = [
+    "assets/images/partners/american-equity.png",
+    "assets/images/partners/american-national.png",
+    "assets/images/partners/ameritas.webp",
+    "assets/images/partners/augu-star.webp",
+    "assets/images/partners/banner-life.webp",
+    "assets/images/partners/bmi.webp",
+    "assets/images/partners/corebridge.png",
+    "assets/images/partners/ethos.webp",
+    "assets/images/partners/foresters.png",
+    "assets/images/partners/global-atlantic.png",
+    "assets/images/partners/john-handcock.webp",
+    "assets/images/partners/lincoln.png",
+    "assets/images/partners/mutualofomaha.png",
+    "assets/images/partners/nassau.webp",
+    "assets/images/partners/north-american.png",
+    "assets/images/partners/oneamerica.webp",
+    "assets/images/partners/prudential.webp",
+    "assets/images/partners/securian.webp",
+    "assets/images/partners/silac.webp"
+];

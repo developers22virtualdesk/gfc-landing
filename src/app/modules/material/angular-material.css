@@ -519,7 +519,7 @@
   --mdc-list-list-item-disabled-label-text-color: var(--neutral-700);
   --mdc-list-list-item-disabled-leading-icon-color: var(--neutral-700);
   --mdc-list-list-item-disabled-trailing-icon-color: var(--neutral-700);
-  --mdc-list-list-item-hover-label-text-color: var(--neutral-900);
+  --mdc-list-list-item-hover-label-text-color: white;
   --mdc-list-list-item-hover-leading-icon-color: var(--neutral-900);
   --mdc-list-list-item-hover-trailing-icon-color: var(--neutral-900);
   --mdc-list-list-item-focus-label-text-color: var(--black);
@@ -527,6 +527,9 @@
   --mdc-list-list-item-hover-state-layer-opacity: 0.04;
   --mdc-list-list-item-focus-state-layer-color: transparent;
   --mdc-list-list-item-focus-state-layer-opacity: 0.12;
+
+  --mdc-list-list-item-label-text-color: white;
+  --mdc-list-list-item-focus-label-text-color: white;
   /* #endregion */
 
   /* #region Material Slider */
