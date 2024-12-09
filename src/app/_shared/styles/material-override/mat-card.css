@@ -1,5 +1,7 @@
 .mat-mdc-card-outlined.transparent {
     --mdc-outlined-card-container-color: transparent !important;
+    --mdc-outlined-card-outline-width: 1px;
+    --mdc-outlined-card-outline-color: var(--neutral-100) !important;
 }
 
 .mat-mdc-card-header {
@@ -8,10 +10,6 @@
 
 .mat-mdc-card-content {
     padding: 0 2rem !important;
-}
-
-.mat-mdc-card-outlined  .mat-mdc-card-content{
-    padding: 0rem !important;
 }
 
 .mat-mdc-card-actions {

@@ -3,6 +3,7 @@ import { FORM_TITLES, SERVICE_OPTIONS } from '../../../../_core/constants/form.c
 import { FORM_TYPE } from '../../../../_core/enums/form.enum';
 import { CLIENT_SERVICE_OPTION, SERVICE_OPTION } from '../../../../_core/enums/service.enum';
 import { GHL } from '../../../../_core/models/ghl.models';
+import { GHLService } from '../../../../_core/services/ghl.service';
 
 @Component({
   selector: 'app-get-started',
@@ -49,7 +50,7 @@ export class GetStartedComponent implements OnInit
     return this.formType != FORM_TYPE.None;
   }
 
-  constructor() { }
+  constructor(private GHLService: GHLService) { }
 
   ngOnInit()
   {
@@ -58,16 +59,47 @@ export class GetStartedComponent implements OnInit
   public onClientFormCompleted(clientFormValue: GHL.IClient): void
   {
     console.log(clientFormValue);
+    this.GHLService.postClientForm(clientFormValue).subscribe({
+      next: (response: boolean) =>
+      {
+        console.log(response);
+      },
+      error: () =>
+      {
+
+      }
+    });
+    
   }
 
   public onPartnerFormCompleted(partnerFormValue: GHL.IPartner): void
   {
     console.log(partnerFormValue);
+    this.GHLService.postPartnerForm(partnerFormValue).subscribe({
+      next: (response: boolean) =>
+      {
+        console.log(response);
+      },
+      error: () =>
+      {
+
+      }
+    });
   }
 
   public onGeneralFormCompleted(generalFormValue: GHL.IGeneral): void
   {
     console.log(generalFormValue);
+    this.GHLService.postGeneralForm(generalFormValue).subscribe({
+      next: (response: boolean) =>
+      {
+        console.log(response);
+      },
+      error: () =>
+      {
+
+      }
+    });
   }
 
   public resetApplication(): void

@@ -1,3 +1,3 @@
 export const environment = {
-    GHL_URL: ''
+    API_URL: ''
 }

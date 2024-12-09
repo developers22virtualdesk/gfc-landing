@@ -38,7 +38,7 @@ import { ServicesComponent } from './pages/services/services.component';
     CommonModule,
     AngularMaterialModule,
     FooterComponent,
-
+    
     GeneralFormComponent,
     PartnerFormComponent,
     ClientFormComponent,

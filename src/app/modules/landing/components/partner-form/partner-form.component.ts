@@ -83,8 +83,7 @@ export class PartnerFormComponent implements OnInit
 
   public onSubmit(): void
   {
-    console.log('hace submit')
-    console.log(this.buildGeneralFormModel());
+    this.onFormCompleted.emit(this.buildGeneralFormModel());
   }
 
   public onReturnClicked(): void
@@ -125,7 +124,7 @@ export class PartnerFormComponent implements OnInit
       state: this.generalForm.controls['state'].value,
       zip: this.generalForm.controls['zip'].value,
       message: this.generalForm.controls['message'].value,
-      income: this.additionalForm.controls['income'].value,
+      current_income: this.additionalForm.controls['income'].value,
       time: this.additionalForm.controls['time'].value,
       is_clean: this.additionalForm.controls['is_clean'].value,
       explanation: this.additionalForm.controls['explanation'].value,

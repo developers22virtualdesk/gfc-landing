@@ -31,7 +31,7 @@ export namespace GHL {
 
     export interface IPartner extends IGeneral{
         time: string;
-        income: number;
+        current_income: number;
         is_clean: boolean;
         explanation: string;
         has_license: boolean;
