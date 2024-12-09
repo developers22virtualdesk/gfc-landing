@@ -59,19 +59,28 @@
     </div>
 </section>
 
-<!-- Inspirational Marketing -->
 <section class="container py-5 my-4">
-    <div class="d-flex flex-column text-center gap-2 py-2">
-        <h6 class="text-secondary-600 text-center">THE GFI DIFFERENCE</h6>
-        <h2 class="text-center">Inspirational Marketing</h2>
+    <h6 class="text-secondary-600 text-center">THE GFI DIFFERENCE</h6>
+    <h2 class="text-center">Inspirational Marketing</h2>
+
+    <div class="col-12 mt-3 text-center d-lg-none d-block">
+        <img mat-card-image ngSrc="assets/images/business1.webp" alt="Business Woman"
+            title="Build and secure your wealth." class="img-fluid rounded-3" width="720" height="1080" loading="lazy" />
     </div>
 
-    <div class="row mt-5 mb-5">
-        <div class="col-6">
-            <div>
-                <h5>{{ MarketingStrategies[0].title }}</h5>
-                <p class="mt-2" style="white-space: pre-line;">{{ MarketingStrategies[0].description }}</p>
-                <button mat-flat-button>Start Here</button>
+    <div class="row mt-lg-5 mt-3 align-items-stretch">
+        <div class="col-lg-4 col-12">
+            <div class="row row-cols-1 h-100">
+                @for (item of MarketingStrategies.slice(0, 2); track item.title) {
+                <div class="col py-1 py-md-2 d-flex">
+                    <div class="border rounded-2 p-3 shadow-hover w-100 align-content-center bg-accent-100">
+                        <div class="text-center">
+                            <h5 class="text-primary-900"><b>{{item.title}}</b></h5>
+                            <p class="mt-2 text-body" style="color: #a6a6a7">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+                }
             </div>
         </div>
 
@@ -125,42 +134,47 @@
 
 <div class="bg-primary-800 text-white p-5">
 
-<section class="container align-content-center py-5 my-4">
-    <div class="d-flex flex-column gap-2 py-2">
-        <h6 class="text-secondary-600 text-center">Diversify Your Income</h6>
-        <h2 class="text-center">Multiple Income Streams</h2>
-    </div>
-    <div class="row row-cols-1 row-cols-md-3 g-4 mt-5">
-        @for (item of IncomeStreamOptions; track item.title) {
-        <div class="col">
-            <div class="bg-accent-100 p-3 h-100 d-flex flex-column">
-                <h5 class="mb-2">{{item.title}}</h5>
-                <p class="mt-1">{{item.description}}</p>
-            </div>
-            }
+    <section class="container align-content-center py-5 my-4">
+        <div class="d-flex flex-column gap-2 py-2">
+            <h6 class="text-secondary-600 text-center">Where Dreams Turn To Impact</h6>
+            <h2 class="text-center text-white">Welcome to the GFI Family</h2>
         </div>
-    </section>
-
-<section class="container align-content-center py-5 my-4">
-    <div class="d-flex flex-column gap-2 py-2">
-        <h6 class="text-secondary-600 text-center">Where Dreams Turn To Impact</h6>
-        <h2 class="text-center">Welcome to the GFI Family</h2>
-    </div>
-    <div class="row row-cols-2 row-cols-lg-4 mt-5">
-        @for (item of ImpactOptions; track item.description) {
-
-        <div class="col mb-2 mb-lg-0">
-            <div>
-                <div class="d-flex w-100">
-                    <img mat-card-image src={{item.image}} alt="Placeholder Image" class="img-fluid w-100"
-                        loading="lazy" />
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-5 h-100">
+            @for (item of ImpactOptions; track item.description) {
+            <div class="col mb-2 mb-lg-0 d-flex">
+                <div class="">
+                    <div class="">
+                        <img ngSrc={{item.image}} alt="Placeholder Image" class="img-fluid rounded-3" width="1024" height="684" loading="lazy" />
+                    </div>
+                    <p class="mt-2 text-body" style="color: white !important;">{{item.description}}</p>
                 </div>
             </div>
             }
         </div>
     </section>
 
-<div class="bg-primary-800 text-white p-5">
+    <section class="container align-content-center py-5 my-4">
+        <div class="d-flex flex-column gap-2 py-2">
+            <h6 class="text-secondary-600 text-center">Diversify Your Income</h6>
+            <h2 class="text-center text-white">Multiple Income Streams</h2>
+        </div>
+        <div class="row mt-5">
+            @for (item of IncomeStreamOptions; track item.title) {
+            <div class="col-12 col-md-6 col-lg-4 py-1 py-md-2 d-flex">
+                <div class="border border-accent-500 rounded-2 p-3 shadow-hover w-100">
+                    <div class="d-flex">
+                        <lucide-icon [name]="item.image" class="me-2"></lucide-icon>
+                        <div>
+                            <p class="fs-6 lh-sm fw-medium m-0 text-white"><b>{{item.title}}</b></p>
+                            <p class="mt-2" style="color: #a6a6a7">{{item.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+    </section>
+
     <section class="container align-content-center py-5 my-4">
         <div class="row">
             <div class="col-12 col-lg-6">
@@ -201,7 +215,6 @@
     </section>
 </div>
 
-<!-- Step by step -->
 <section class="container align-content-center py-5 my-4">
     <div class="d-flex flex-column gap-2 py-2">
         <h2 class="text-center">Getting Started Is Easy</h2>
@@ -227,7 +240,7 @@
     </div>
 </section>
 
-<div class="bg-primary-800 text-white">
+<!-- <div class="bg-primary-800 text-white">
     <section class="container py-5 my-4" style="height: auto;">
         <div class="row" style="height: 30rem;">
             <div class="col-4 mt-5">
