@@ -3,8 +3,11 @@
     <div class="col-12 col-md-6 my-2">
       <mat-form-field class="w-100">
         <mat-label for="preferred_language">Preferred language if other than English</mat-label>
-        <input matInput id="preferred_language" type="text" formControlName="preferred_language">
-        <mat-error></mat-error>
+        <mat-select id="preferred_language" formControlName="preferred_language">
+          @for (item of PreferredLanguageOptions; track item.title) {
+          <mat-option [value]="item.value">{{item.title}}</mat-option>
+          }
+        </mat-select>
       </mat-form-field>
     </div>
 

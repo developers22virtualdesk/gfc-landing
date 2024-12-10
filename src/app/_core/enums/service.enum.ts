@@ -9,7 +9,7 @@ export enum SERVICE_OPTION
 export enum INSURANCE_OPTION 
 {
     Life = 0,
-    State,
+    Estate,
     Wealth,
 }
 

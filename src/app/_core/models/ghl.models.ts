@@ -2,7 +2,7 @@ export namespace GHL {
     export interface IAdditional {
         preferred_language: string;
         find_us: string;
-        has_consent: boolean;
+        has_consent: boolean | string;
     }
 
     export interface IGeneral extends IAdditional {
@@ -17,6 +17,7 @@ export namespace GHL {
     }
 
     export interface IClient extends IGeneral{
+        insurance_type: string;
         birthdate?: Date;
         gender?: string;
         marital_status?: string;
@@ -32,8 +33,8 @@ export namespace GHL {
     export interface IPartner extends IGeneral{
         time: string;
         current_income: number;
-        is_clean: boolean;
+        is_clean: boolean | string;
         explanation: string;
-        has_license: boolean;
+        has_license: boolean | string;
     }
 }

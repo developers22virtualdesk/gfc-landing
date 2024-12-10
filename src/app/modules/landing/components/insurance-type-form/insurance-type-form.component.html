@@ -14,13 +14,13 @@
   
   <div class="col-12 col-md-4 px-5 my-2">
     <mat-card appearance="outlined" class="transparent form-card h-100" [class.active]="isStateInsurance"
-      (click)="onOptionClicked(InsuranceOption.State)">
+      (click)="onOptionClicked(InsuranceOption.Estate)">
       <mat-card-content class="my-4 text-center">
         <div class="d-flex justify-content-center mb-2">
           <mat-icon class="medium" aria-hidden="false" aria-label="item.label"
-            [fontIcon]="InsuranceOptions[InsuranceOption.State].icon"></mat-icon>
+            [fontIcon]="InsuranceOptions[InsuranceOption.Estate].icon"></mat-icon>
         </div>
-        <h6>{{InsuranceOptions[InsuranceOption.State].title}}</h6>
+        <h6>{{InsuranceOptions[InsuranceOption.Estate].title}}</h6>
       </mat-card-content>
     </mat-card>
   </div>

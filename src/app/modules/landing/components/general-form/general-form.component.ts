@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FORM_BOOLEAN } from '../../../../_core/constants/form.const';
 import { GHL } from '../../../../_core/models/ghl.models';
 import { BaseFormComponent } from '../../../../_shared/interfaces/base-form.interface';
 import { AngularMaterialModule } from '../../../material/angular-material.module';
@@ -18,6 +19,7 @@ import { AdditionalFormComponent } from '../additional-form/additional-form.comp
 })
 export class GeneralFormComponent extends BaseFormComponent implements OnInit
 {
+  private readonly FormBooleanMap = FORM_BOOLEAN;
   private _additionalFormValue!: GHL.IAdditional;
   private _givesConsent: boolean = false;
 
@@ -71,7 +73,7 @@ export class GeneralFormComponent extends BaseFormComponent implements OnInit
   public onAdditionalFormCompleted(additionalFormValue: GHL.IAdditional): void
   {
     this._additionalFormValue = this.buildAdditionalModel(additionalFormValue);
-    this._givesConsent = this._additionalFormValue.has_consent;
+    this._givesConsent = this._additionalFormValue.has_consent as boolean;
   }
 
   private buildGeneralFormModel(): GHL.IGeneral
@@ -87,7 +89,7 @@ export class GeneralFormComponent extends BaseFormComponent implements OnInit
       message: this._form.controls['message'].value,
       preferred_language: this._additionalFormValue.preferred_language,
       find_us: this._additionalFormValue.find_us,
-      has_consent: this._additionalFormValue.has_consent,
+      has_consent: this.FormBooleanMap.get(this._additionalFormValue.has_consent as boolean)!,
     }
   }
 

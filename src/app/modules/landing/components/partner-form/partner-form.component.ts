@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
-import { PARTNER_TIME_OPTIONS } from '../../../../_core/constants/form.const';
+import { FORM_BOOLEAN, PARTNER_TIME_OPTIONS } from '../../../../_core/constants/form.const';
 import { ICardOption } from '../../../../_core/models/form.model';
 import { GHL } from '../../../../_core/models/ghl.models';
 import { AngularMaterialModule } from '../../../material/angular-material.module';
@@ -21,6 +21,7 @@ import { AdditionalFormComponent } from '../additional-form/additional-form.comp
 })
 export class PartnerFormComponent implements OnInit
 {
+  private readonly FormBooleanMap = FORM_BOOLEAN;
   public PartnerTimeOptions = PARTNER_TIME_OPTIONS;
   public generalForm!: FormGroup;
   public additionalForm!: FormGroup;
@@ -101,7 +102,7 @@ export class PartnerFormComponent implements OnInit
   public onAdditionalFormCompleted(additionalFormValue: GHL.IAdditional): void
   {
     this._additionalFormValue = this.buildAdditionalModel(additionalFormValue);
-    this._givesConsent = this._additionalFormValue.has_consent;
+    this._givesConsent = this._additionalFormValue.has_consent as boolean;
   }
 
   private buildAdditionalModel(value: GHL.IAdditional): GHL.IAdditional
@@ -126,12 +127,12 @@ export class PartnerFormComponent implements OnInit
       message: this.generalForm.controls['message'].value,
       current_income: this.additionalForm.controls['income'].value,
       time: this.additionalForm.controls['time'].value,
-      is_clean: this.additionalForm.controls['is_clean'].value,
+      is_clean: this.FormBooleanMap.get(this.additionalForm.controls['is_clean'].value)!,
       explanation: this.additionalForm.controls['explanation'].value,
-      has_license: this.additionalForm.controls['has_license'].value,
+      has_license: this.FormBooleanMap.get(this.additionalForm.controls['has_license'].value)!,
       preferred_language: this._additionalFormValue.preferred_language,
       find_us: this._additionalFormValue.find_us,
-      has_consent: this._additionalFormValue.has_consent,
+      has_consent: this.FormBooleanMap.get(this._additionalFormValue.has_consent as boolean)!,
     }
   }
 

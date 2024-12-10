@@ -1,4 +1,5 @@
 import { FORM_TYPE } from "../enums/form.enum";
+import { INSURANCE_OPTION } from "../enums/service.enum";
 import { ICardOption } from "../models/form.model";
 import { IOptionList } from "../models/generic.model";
 
@@ -9,6 +10,17 @@ export const FORM_TITLES: Map<FORM_TYPE, string> = new Map([
     [FORM_TYPE.General, 'Share Your Details for Better Financial Solutions']
 ]);
 
+export const FORM_BOOLEAN: Map<boolean, string> = new Map([
+    [true, 'Yes'],
+    [false, 'No']
+]);
+
+export const INSURANCE_TYPE_MAP: Map<INSURANCE_OPTION, string> = new Map([
+    [INSURANCE_OPTION.Life, 'Life Insurance'],
+    [INSURANCE_OPTION.Estate, 'Estate Planning'],
+    [INSURANCE_OPTION.Wealth, 'Wealth Accumulation Strategies & Rollovers']
+]);
+
 export const SERVICE_OPTIONS: ICardOption[] = [
     { title: 'I want to become a GFI partner', icon: 'real_estate_agent', label: 'Become a partner' },
     { title: 'I want to become a client', icon: 'family_restroom', label: 'Become a client' },
@@ -17,7 +29,7 @@ export const SERVICE_OPTIONS: ICardOption[] = [
 
 export const INSURANCE_OPTIONS: ICardOption[] = [
     { title: 'Life Insurance', icon: 'volunteer_activism', label: 'Life Insurance' },
-    { title: 'State Planning', icon: 'assured_workload', label: 'State Planning' },
+    { title: 'Estate Planning', icon: 'assured_workload', label: 'Estate Planning' },
     { title: 'Wealth Acummulation Strategies & Rollovers', icon: 'shield_with_heart', label: 'Wealth Acummulation Strategies & Rollovers' }
 ];
 
@@ -49,7 +61,7 @@ export const GENDER_OPTIONS: IOptionList[] = [
     { title: 'Male', value: 'Male' },
     { title: 'Female', value: 'Female' },
     { title: 'Non-binary', value: 'Non-binary' },
-    { title: 'Prefer Not to say', value: 'Prefer Not to say' },
+    { title: 'Prefer not to say', value: 'Prefer not to say' },
     { title: 'Other', value: 'Other' }
 ];
 
@@ -81,4 +93,9 @@ export const CURRENT_SAVING_OPTIONS: IOptionList[] = [
     { title: 'Mutual Funds', value: 'Mutual Funds' },
     { title: 'Annuities', value: 'Annuities' },
     { title: 'Other', value: 'Other' }
+];
+
+export const PREFERRED_LANGUAGE_OPTIONS: IOptionList[] = [
+    { title: 'English', value: 'English'},
+    { title: 'Spanish', value: 'Spanish'}
 ];

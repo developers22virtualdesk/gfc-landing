@@ -40,7 +40,7 @@ export class InsuranceTypeFormComponent implements OnInit
 
   get isStateInsurance(): boolean
   {
-    return this._insuranceType.value == INSURANCE_OPTION.State;
+    return this._insuranceType.value == INSURANCE_OPTION.Estate;
   }
 
   ngOnInit()

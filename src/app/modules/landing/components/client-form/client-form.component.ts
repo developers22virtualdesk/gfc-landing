@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatStepper } from '@angular/material/stepper';
-import { CURRENT_SAVING_OPTIONS, GENDER_OPTIONS, INSURANCE_INTEREST_OPTIONS, INSURANCE_MATTERS_OPTIONS, MARITAL_OPTIONS } from '../../../../_core/constants/form.const';
+import { CURRENT_SAVING_OPTIONS, FORM_BOOLEAN, GENDER_OPTIONS, INSURANCE_INTEREST_OPTIONS, INSURANCE_MATTERS_OPTIONS, INSURANCE_TYPE_MAP, MARITAL_OPTIONS } from '../../../../_core/constants/form.const';
 import { INSURANCE_OPTION } from '../../../../_core/enums/service.enum';
 import { ICardOption } from '../../../../_core/models/form.model';
 import { IOptionList } from '../../../../_core/models/generic.model';
@@ -27,6 +27,8 @@ import { InsuranceTypeFormComponent } from '../insurance-type-form/insurance-typ
 })
 export class ClientFormComponent implements OnInit
 {
+  private readonly FormBooleanMap = FORM_BOOLEAN;
+  private readonly InsuranceTypeMap = INSURANCE_TYPE_MAP;
   private _additionalFormValue!: GHL.IAdditional;
   private _givesConsent: boolean = false;
   public readonly GenderOptions = GENDER_OPTIONS;
@@ -50,7 +52,7 @@ export class ClientFormComponent implements OnInit
 
   get isWealthInsurance(): boolean
   {
-    return this.insuranceType == INSURANCE_OPTION.Wealth || this.insuranceType == INSURANCE_OPTION.State;
+    return this.insuranceType == INSURANCE_OPTION.Wealth || this.insuranceType == INSURANCE_OPTION.Estate;
   }
 
   get insuranceType(): INSURANCE_OPTION
@@ -196,7 +198,7 @@ export class ClientFormComponent implements OnInit
       this.insuranceInterestArray.push(newMatter);
     }
 
-    if(value.title == 'Get Instant Approval' && value.isClicked)
+    if (value.title == 'Get Instant Approval' && value.isClicked)
     {
       window.open('https://agents.ethoslife.com/invite/f27cc', '_blank');
     }
@@ -245,7 +247,7 @@ export class ClientFormComponent implements OnInit
   public onAdditionalFormCompleted(additionalFormValue: GHL.IAdditional): void
   {
     this._additionalFormValue = this.buildAdditionalModel(additionalFormValue);
-    this._givesConsent = this._additionalFormValue.has_consent;
+    this._givesConsent = this._additionalFormValue.has_consent as boolean;
   }
 
   private buildAdditionalModel(value: GHL.IAdditional): GHL.IAdditional
@@ -260,6 +262,7 @@ export class ClientFormComponent implements OnInit
   private buildGeneralFormModel(): GHL.IClient
   {
     return {
+      insurance_type: this.InsuranceTypeMap.get(this.insuranceForm.controls['insurance_type'].value)!,
       first_name: this.generalForm.controls['first_name'].value,
       last_name: this.generalForm.controls['last_name'].value,
       email: this.generalForm.controls['email'].value,
@@ -280,7 +283,7 @@ export class ClientFormComponent implements OnInit
       matters: this.isWealthInsurance ? this.additionalForm.controls['matters'].value : null,
       preferred_language: this._additionalFormValue.preferred_language,
       find_us: this._additionalFormValue.find_us,
-      has_consent: this._additionalFormValue.has_consent,
+      has_consent: this.FormBooleanMap.get(this._additionalFormValue.has_consent as boolean)!,
     }
   }
 
