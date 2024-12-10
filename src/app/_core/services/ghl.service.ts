@@ -11,7 +11,7 @@ export class GHLService
 {
   constructor(private http: HttpClient) { }
 
-  postGeneralForm(body: GHL.IGeneral): any
+  postGeneralForm(body: GHL.IGeneral): Observable<boolean>
   {
     const httpOptions = {
       headers: new HttpHeaders({
@@ -19,11 +19,7 @@ export class GHLService
       })
     };
 
-    return fetch('/.netlify/functions/hello-world')
-		.then(response => response.json()
-	)
     return this.http.post<boolean>(`/api/general`, body, httpOptions).pipe(share());
-
   }
 
   postClientForm(body: GHL.IClient): Observable<boolean>

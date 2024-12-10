@@ -12,7 +12,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse)
   {
     const allowedOrigin = process.env['VERCEL_URL']!;
     const url = process.env['GENERAL_URL']!;
-    
+
     const response = await fetch(url, {
       method: 'POST',
       headers: {
