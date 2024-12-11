@@ -11,8 +11,8 @@ export const NAVITAGION_ITEMS: INavitagionList[] = [
 ];
 
 export const SOCIAL_MEDIA_ITEMS: INavitagionList[] = [
-    { displayName: 'Facebook', link: 'home', isActive: true },
-    { displayName: 'LinkedIn', link: 'our-story', isActive: true },
+    { displayName: 'Facebook', link: 'https://globalfinancialimpact.com/contact/', isActive: true },
+    { displayName: 'LinkedIn', link: 'https://globalfinancialimpact.com/contact/', isActive: true },
     { displayName: 'Instagram', link: 'our-services', isActive: true },
     { displayName: 'Twitter', link: 'business-platform', isActive: true },
 ]

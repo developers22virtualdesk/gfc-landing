@@ -1,12 +1,10 @@
-import {
-  incomeStream,
-  marketingStrategies,
-  impact,
-  partnerType,
-  startingPoint,
-} from '../models/business.model';
-import { ICardOption } from '../models/form.model';
-import { Icard } from '../models/generic.model';
+import
+  {
+    impact,
+    partnerType,
+    startingPoint
+  } from '../../models/business.model';
+import { ICard } from '../../models/generic.model';
 
 export const PARTNERTYPES_OPTIONS: partnerType[] = [
   {
@@ -41,7 +39,7 @@ export const PARTNERTYPES_OPTIONS: partnerType[] = [
   },
 ];
 
-export const INCOMESTREAM_OPTIONS: Icard[] = [
+export const INCOMESTREAM_OPTIONS: ICard[] = [
   {
     title: 'Personal Income',
     description:
@@ -81,7 +79,7 @@ export const INCOMESTREAM_OPTIONS: Icard[] = [
 ];
 
 
-export const MARKETING_STRATEGIES: Icard[] = [
+export const MARKETING_STRATEGIES: ICard[] = [
   {
     title: 'Business Ownership Opportunity',
     description: `At GFI, we offer a unique chance to own your business, turning hard work into an asset and a legacy for your family.`,
@@ -162,7 +160,7 @@ export const STARTING_POINTS: startingPoint[] = [
   },
 ];
 
-export const PARTNER_PERKS: Icard[] = [
+export const PARTNER_PERKS: ICard[] = [
   {
     title: 'Professional Growth',
     description:

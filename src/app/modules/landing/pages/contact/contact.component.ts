@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { CONTACT_INFO } from '../../../../_core/constants/pages/contact.const';
+import { GHL } from '../../../../_core/models/ghl.models';
+import { GHLService } from '../../../../_core/services/ghl.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit
 {
-  constructor() { }
+  public readonly ContactInfo = CONTACT_INFO;
+
+  constructor(private GHLService: GHLService) { }
 
   ngOnInit()
   {
+  }
+
+  public onGeneralFormCompleted(generalFormValue: GHL.IGeneral): void
+  {
+    console.log(generalFormValue);
+    this.GHLService.postGeneralForm(generalFormValue).subscribe({
+      next: (response: boolean) =>
+      {
+        console.log(response);
+      },
+      error: () =>
+      {
+
+      }
+    });
   }
 }

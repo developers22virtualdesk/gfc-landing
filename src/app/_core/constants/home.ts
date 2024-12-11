@@ -1,6 +1,6 @@
-import { Icard } from "../models/generic.model";
+import { ICard } from "../models/generic.model";
 
-export const JOURNEY_START_POINTS: Icard[] = [
+export const JOURNEY_START_POINTS: ICard[] = [
     {
       title: "Financial Education",
       description: "Access valuable financial education resources to enhance your knowledge and decision-making.",

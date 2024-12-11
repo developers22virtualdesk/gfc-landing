@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  INCOMESTREAM_OPTIONS,
-  MARKETING_STRATEGIES,
-  IMPACT_OPTIONS,
-  PARTNERTYPES_OPTIONS,
-  STARTING_POINTS,
-  PARTNER_PERKS,
-} from '../../../../_core/constants/business';
 import { FAQS_BUSINESS_PLATFORM_ITEMS } from '../../../../_core/constants/faqs.const';
+import
+  {
+    IMPACT_OPTIONS,
+    INCOMESTREAM_OPTIONS,
+    MARKETING_STRATEGIES,
+    PARTNER_PERKS,
+    PARTNERTYPES_OPTIONS,
+    STARTING_POINTS,
+  } from '../../../../_core/constants/pages/business';
 
 @Component({
   selector: 'app-business-platform',

@@ -8,7 +8,7 @@ export interface IOptionList {
     value: string;
 }
 
-export interface Icard{
+export interface ICard{
     title?: string;
     description?: string;
     image?: string;

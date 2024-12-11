@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { FORM_BOOLEAN } from '../../../../_core/constants/form.const';
 import { GHL } from '../../../../_core/models/ghl.models';
@@ -11,6 +12,7 @@ import { AdditionalFormComponent } from '../additional-form/additional-form.comp
   templateUrl: './general-form.component.html',
   standalone: true,
   imports: [
+    CommonModule,
     AngularMaterialModule,
     ReactiveFormsModule,
     FormsModule,
@@ -23,6 +25,8 @@ export class GeneralFormComponent extends BaseFormComponent implements OnInit
   private _additionalFormValue!: GHL.IAdditional;
   private _givesConsent: boolean = false;
 
+  @Input() isContact: boolean = false;
+  
   @Output() onBackClicked: EventEmitter<any> = new EventEmitter<any>();
   @Output() onFormCompleted: EventEmitter<GHL.IGeneral> = new EventEmitter<GHL.IGeneral>();
 

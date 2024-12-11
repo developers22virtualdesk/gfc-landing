@@ -43,7 +43,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transform: scale(1.05);
 }
-
+/* 
 #stat-card h2 {
     font-size: clamp(3rem, 8vw, 4.5rem) !important;
     line-height: 1 !important;
@@ -55,4 +55,4 @@
     line-height: 1.75rem !important;
     color: var(--primary-500) !important;
     font-weight: 600 !important; 
-}
+} */

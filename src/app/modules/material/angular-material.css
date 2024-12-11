@@ -348,7 +348,7 @@
   --mdc-outlined-text-field-disabled-label-text-color: var(--neutral-100);
   --mdc-outlined-text-field-input-text-color: var(--neutral-100);
   --mdc-outlined-text-field-disabled-input-text-color: var(--neutral-100);
-  --mdc-outlined-text-field-input-text-placeholder-color: rgba(0, 0, 0, 0.6);
+  --mdc-outlined-text-field-input-text-placeholder-color: var(--neutral-100);
   --mdc-outlined-text-field-error-caret-color: var(--error);
   --mdc-outlined-text-field-error-focus-label-text-color: var(--error);
   --mdc-outlined-text-field-error-label-text-color: var(--error);
@@ -362,7 +362,7 @@
 
   --mat-form-field-focus-select-arrow-color: red;
   --mat-form-field-disabled-input-text-placeholder-color: var(--neutral-900);
-  --mat-form-field-state-layer-color: transparent;
+  --mat-form-field-state-layer-color: var(--neutral-900);
   --mat-form-field-error-text-color: var(--error);
   --mat-form-field-select-option-text-color: inherit;
   --mat-form-field-select-disabled-option-text-color: GrayText;

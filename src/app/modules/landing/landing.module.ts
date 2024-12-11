@@ -27,7 +27,6 @@ import
 import { AngularMaterialModule } from '../material/angular-material.module';
 import { AdditionalFormComponent } from './components/additional-form/additional-form.component';
 import { ClientFormComponent } from './components/client-form/client-form.component';
-import { FooterComponent } from './components/footer/footer.component';
 import { GeneralFormComponent } from './components/general-form/general-form.component';
 import { InsuranceTypeFormComponent } from './components/insurance-type-form/insurance-type-form.component';
 import { PartnerFormComponent } from './components/partner-form/partner-form.component';
@@ -44,7 +43,6 @@ import { ServicesComponent } from './pages/services/services.component';
     RouterModule.forChild(LandingRoutes),
     CommonModule,
     AngularMaterialModule,
-    FooterComponent,
     NgOptimizedImage,
     GeneralFormComponent,
     PartnerFormComponent,
