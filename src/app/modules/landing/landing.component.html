@@ -24,8 +24,8 @@
 
     <mat-drawer-content>
         <section #navigationBar>
-            <mat-toolbar class="glass-bg justify-content-between position-fixed px-4 top-0 start-0 end-0"
-                style="height: 100px; z-index: 1000;">
+            <div class="bg-primary-800" style="height: 100px;"></div>
+            <mat-toolbar class="glass-bg justify-content-between px-4 ">
                 <!-- Toggle sidenav button -->
                 <span class="d-block d-lg-none me-4 me-lg-0 text-white">
                     <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
@@ -33,8 +33,8 @@
                     </button>
                 </span>
                 <!-- Logo -->
-                    <img ngSrc="assets/images/Global-Financial-Catalyst-LOGO-horizontal.png" alt="gfc logo"
-                        class="img-fluid" priority width="200" height="37">
+                    <img ngSrc="assets/images/logo-white-complete.webp" alt="gfc logo"
+                        class="img-fluid" priority width="100" height="61" >
                 <!-- <span class="toolbar-spacer"></span> -->
                 <!-- Menu -->
                 <mat-nav-list class="d-none d-lg-flex gap-2">

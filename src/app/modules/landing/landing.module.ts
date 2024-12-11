@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import
   {
     Award,
+    Book,
     Briefcase,
     Calculator,
     ChartNoAxesColumn,
@@ -68,7 +69,8 @@ import { ServicesComponent } from './pages/services/services.component';
       TrendingUp,
       UserPlus,
       Award,
-      ChartPie
+      ChartPie,
+      Book
     }),
   ],
   declarations: [

@@ -169,13 +169,13 @@
       industry standards.</h6>
   </div>
   <div class="slider mt-5" 
-     [ngStyle]="{'--width': '200px', '--height': '200px', '--quantity': Partners.length}">>
+     [ngStyle]="{'--width': '150px', '--height': '150px', '--quantity': Partners.length}">>
   <div class="list">
     <div 
       class="item" 
       *ngFor="let partner of Partners; let i = index" 
       [ngStyle]="{'--position': (i + 1)}">
-      <img [src]="partner" alt="Partner logo" loading="lazy" class="w-75">
+      <img [src]="partner" alt="Partner logo" loading="lazy">
     </div>
   </div>
 </div>
