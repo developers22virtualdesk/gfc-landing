@@ -13,7 +13,7 @@
     </div>
 
     <div class="row mt-5">
-      <button mat-raised-button color="accent" class="col-auto">
+      <button mat-raised-button color="accent" class="col-auto" (click)="navigateToLink('get-started')">
         Start your Journey
       </button>
     </div>
@@ -49,44 +49,23 @@
   </div>
 
   <div class="row py-5">
-    <div class="col-12 col-md-4 py-3">
-      <mat-card class="h-100" appearance="outlined" class="transparent hoverable-card">
-        <img ngSrc="assets/images/family1.webp" alt="Family spending time together"
-          title="Build and secure your wealth." class="img-fluid p-2" width="1024" height="684" priority />
-        <mat-card-content class="my-4">
-          <h5>
-            Build and secure your wealth.
-          </h5>
-          <p class="text-link">Become a Client</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-    <div class="col-12 col-md-4 py-3">
-      <mat-card class="h-100" appearance="outlined" class="transparent hoverable-card">
-        <img ngSrc="assets/images/office1.webp" alt="Placeholder Image" class="img-fluid p-2" width="1024" height="684"
-          priority />
-        <mat-card-content class="my-4">
-          <h5>
-            Start a business
-          </h5>
-          <p class="text-link">Become a Partner</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
-
-    <div class="col-12 col-md-4 py-3">
-      <mat-card class="h-100" appearance="outlined" class="transparent hoverable-card">
-        <img ngSrc="assets/images/hands1.webp" alt="Placeholder Image" class="img-fluid p-2" width="1024" height="684"
-          priority />
-        <mat-card-content class="my-4">
-          <h5>
-            Donate and contribute
-          </h5>
-          <p class="text-link">Make an impact</p>
-        </mat-card-content>
-      </mat-card>
-    </div>
+    @for (item of ServicesItems; track item.title) {
+      <div class="col-12 col-md-4 py-3">
+        <mat-card class="h-100" appearance="outlined" class="transparent hoverable-card"
+        (click)="navigateToLink(item.link!)">
+          <img [ngSrc]="item.image!" alt="Family spending time together"
+            [title]="item.title" class="img-fluid p-2" width="1024" height="684" priority />
+          <mat-card-content class="my-4">
+            <h5>
+              {{item.title}}
+            </h5>
+            <p class="text-link">{{item.description}}</p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      } @empty {
+      <mat-list-item>There are no items.</mat-list-item>
+      }
   </div>
 </section>
 
@@ -97,7 +76,7 @@
       <h6 class="text-secondary-600">Help millions</h6>
       <h2 class="text-white">This is the greatest opportunity to help millions protect, build, and secure their wealth.
       </h2>
-      <button mat-raised-button type="button" color="accent" class="mt-4">Start Now</button>
+      <button mat-raised-button type="button" color="accent" class="mt-4" (click)="navigateToLink('get-started')">Start Now</button>
     </div>
   </section>
 </div>

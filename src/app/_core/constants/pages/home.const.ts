@@ -1,4 +1,25 @@
-import { ICard } from "../models/generic.model";
+import { ICard } from "../../models/generic.model";
+
+export const SERVICES_ITEMS: ICard[] = [
+  {
+      title: 'Build & Secure Your Wealth',
+      description: 'Become a client',
+      image: 'assets/images/family1.webp',
+      link: 'our-services',
+  },
+  {
+      title: 'Start A Business',
+      description: 'Become a partner',
+      image: 'assets/images/office1.webp',
+      link: 'business-platform',
+  },
+  {
+      title: 'Donate & Contribute',
+      description: 'Make an impact',
+      image: 'assets/images/hands1.webp',
+      link: 'contact',
+  }
+]
 
 export const JOURNEY_START_POINTS: ICard[] = [
     {

@@ -20,16 +20,19 @@ export class ContactComponent implements OnInit
 
   public onGeneralFormCompleted(generalFormValue: GHL.IGeneral): void
   {
-    console.log(generalFormValue);
     this.GHLService.postGeneralForm(generalFormValue).subscribe({
       next: (response: boolean) =>
       {
-        console.log(response);
       },
       error: () =>
       {
 
       }
     });
+  }
+
+  public redirectToCalendly(): void
+  {
+    window.open('https://calendly.com/gficatalyst/60min?month=2024-10&date=2024-10-13', '_blank');
   }
 }

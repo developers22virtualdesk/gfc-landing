@@ -70,7 +70,7 @@
   --mdc-protected-button-disabled-label-text-color: var(--neutral-700);
   --mat-protected-button-state-layer-color: var(--primary-500);
   --mat-protected-button-disabled-state-layer-color: black;
-  --mat-protected-button-ripple-color: var(--primary-900);
+  --mat-protected-button-ripple-color: var(--secondary-900);
   --mat-protected-button-hover-state-layer-opacity: 0.04;
   --mat-protected-button-focus-state-layer-opacity: 0.12;
   --mat-protected-button-pressed-state-layer-opacity: 0.12;

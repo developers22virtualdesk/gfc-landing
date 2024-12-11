@@ -58,11 +58,9 @@ export class GetStartedComponent implements OnInit
 
   public onClientFormCompleted(clientFormValue: GHL.IClient): void
   {
-    console.log(clientFormValue);
     this.GHLService.postClientForm(clientFormValue).subscribe({
       next: (response: boolean) =>
       {
-        console.log(response);
       },
       error: () =>
       {
@@ -74,11 +72,9 @@ export class GetStartedComponent implements OnInit
 
   public onPartnerFormCompleted(partnerFormValue: GHL.IPartner): void
   {
-    console.log(partnerFormValue);
     this.GHLService.postPartnerForm(partnerFormValue).subscribe({
       next: (response: boolean) =>
       {
-        console.log(response);
       },
       error: () =>
       {
@@ -89,11 +85,9 @@ export class GetStartedComponent implements OnInit
 
   public onGeneralFormCompleted(generalFormValue: GHL.IGeneral): void
   {
-    console.log(generalFormValue);
     this.GHLService.postGeneralForm(generalFormValue).subscribe({
       next: (response: boolean) =>
       {
-        console.log(response);
       },
       error: () =>
       {

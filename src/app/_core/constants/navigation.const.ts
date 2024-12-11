@@ -11,8 +11,8 @@ export const NAVITAGION_ITEMS: INavitagionList[] = [
 ];
 
 export const SOCIAL_MEDIA_ITEMS: INavitagionList[] = [
-    { displayName: 'Facebook', link: 'https://globalfinancialimpact.com/contact/', isActive: true },
-    { displayName: 'LinkedIn', link: 'https://globalfinancialimpact.com/contact/', isActive: true },
-    { displayName: 'Instagram', link: 'our-services', isActive: true },
-    { displayName: 'Twitter', link: 'business-platform', isActive: true },
+    { displayName: 'Facebook', link: 'https://www.facebook.com/globalfinancialcatalyst', isActive: true },
+    { displayName: 'Instagram', link: 'https://www.instagram.com/joebmorales/', isActive: true },
+    { displayName: 'TikTok', link: 'https://www.tiktok.com/@joebmorales', isActive: true },
+    { displayName: 'LinkedIn', link: 'https://www.linkedin.com/in/joebmorales?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app', isActive: true },
 ]

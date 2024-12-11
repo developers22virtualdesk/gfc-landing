@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SERVICES_ITEMS } from '../../../../_core/constants/services.const';
-import { JOURNEY_START_POINTS } from '../../../../_core/constants/home';
+import { Router } from '@angular/router';
+import { JOURNEY_START_POINTS, SERVICES_ITEMS } from '../../../../_core/constants/pages/home.const';
 
 @Component({
   selector: 'app-home',
@@ -11,9 +11,14 @@ export class HomeComponent implements OnInit {
 
   public readonly ServicesItems = SERVICES_ITEMS;
   public readonly JourneyStartPoints = JOURNEY_START_POINTS;
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  navigateToLink(link: string): void
+  {
+    this.router.navigate([link]);
+  }
 }

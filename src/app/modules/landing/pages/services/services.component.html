@@ -13,8 +13,8 @@
     </div>
     
     <div class="row mt-5">
-      <button mat-raised-button color="accent" class="col-auto">
-        Contact Us Now
+      <button mat-raised-button type="button" color="accent" class="col-auto" (click)="navigateToLink('get-started')">
+        Get Started
       </button>
     </div>
   </div>
@@ -39,7 +39,7 @@
         Our solutions are designed to empower you to achieve your financial goals, secure your legacy, and make a
         meaningful impact on your family, community, and beyond.
       </p>
-      <button mat-raised-button>Get Started</button>
+      <button mat-raised-button type="button" (click)="navigateToLink('get-started')">Contact Us</button>
     </div>
   </div>
 </section>
