@@ -9,3 +9,7 @@
 .mat-mdc-list-item, .mat-mdc-list-option {
     width: inherit !important;
 }
+
+mat-option .mdc-list-item__primary-text{
+    color: var(--primary-900) !important;
+}

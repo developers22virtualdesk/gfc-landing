@@ -1,8 +1,4 @@
 .glass-bg {
-  position: fixed;
-  top: 0; 
-  z-index: 1000; 
-  height: 100px;
   background: rgba(3, 27, 57, 0.51);
   backdrop-filter: blur(4.1px);
   -webkit-backdrop-filter: blur(4.1px);
