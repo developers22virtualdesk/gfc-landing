@@ -22,7 +22,7 @@ export const INSURANCE_TYPE_MAP: Map<INSURANCE_OPTION, string> = new Map([
 ]);
 
 export const SERVICE_OPTIONS: ICardOption[] = [
-    { title: 'I want to become a GFI partner', icon: 'real_estate_agent', label: 'Become a partner' },
+    { title: 'I want to become a GFC partner', icon: 'real_estate_agent', label: 'Become a partner' },
     { title: 'I want to become a client', icon: 'family_restroom', label: 'Become a client' },
     { title: 'I have a general question', icon: 'help_outline', label: 'I have a question' }
 ];
