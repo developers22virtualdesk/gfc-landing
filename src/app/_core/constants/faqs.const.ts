@@ -25,23 +25,23 @@ export const FAQS_SERVICES_ITEMS: IGenericList[] = [
 
 export const FAQS_BUSINESS_PLATFORM_ITEMS: IGenericList[] = [
     {
-        title: 'What is the business opportunity offered by GFI?',
+        title: 'What is the business opportunity offered by GFC?',
         description: 'We offer individuals the chance to build their own financial services business, helping families and individuals create a sound financial strategy. As business partners, individuals can tap into comprehensive training, mentorship, and a platform to grow their business.'
     },
     {
-        title: 'Do I need prior experience in the financial industry to start with GFI?',
+        title: 'Do I need prior experience in the financial industry to start with GFC?',
         description: 'No, prior experience in the financial sector is not required. We provide comprehensive training and resources to help new business partners understand the industry, products, and strategies to succeed.'
     },
     {
-        title: 'How do I earn with GFI?',
+        title: 'How do I earn with GFC?',
         description: 'Business partners earn commissions based on the financial products they sell and the services they provide. Additionally, as you build and mentor a team, there’s potential for earning overrides and bonuses based on team performance.'
     },
     {
-        title: 'What kind of support and training does GFI provide to new associates?',
+        title: 'What kind of support and training does GFC provide to new associates?',
         description: 'We are committed to the success of our business partners. New members receive access to in-depth training sessions, mentorship programs, and regular workshops. We also provide marketing tools and resources to help business partners grow their clientele.'
     },
     {
-        title: 'How does GFI differentiate itself from other financial services companies?',
-        description: 'GFI stands out due to our true business ownership, as we focus on financial education and empowerment. Business partners are trained to educate families and individuals about financial concepts rather than just selling products. Additionally, our business model allows individuals from all backgrounds to enter the financial industry and provides them with the tools and training to succeed.'
+        title: 'How does GFC differentiate itself from other financial services companies?',
+        description: 'GFC stands out due to our true business ownership, as we focus on financial education and empowerment. Business partners are trained to educate families and individuals about financial concepts rather than just selling products. Additionally, our business model allows individuals from all backgrounds to enter the financial industry and provides them with the tools and training to succeed.'
     }
 ]

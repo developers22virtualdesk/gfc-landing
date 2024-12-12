@@ -50,22 +50,22 @@
 
   <div class="row py-5">
     @for (item of ServicesItems; track item.title) {
-      <div class="col-12 col-md-4 py-3">
-        <mat-card class="h-100" appearance="outlined" class="transparent hoverable-card"
+    <div class="col-12 col-md-4 py-3">
+      <mat-card class="h-100" appearance="outlined" class="transparent hoverable-card"
         (click)="navigateToLink(item.link!)">
-          <img [ngSrc]="item.image!" alt="Family spending time together"
-            [title]="item.title" class="img-fluid p-2" width="1024" height="684" priority />
-          <mat-card-content class="my-4">
-            <h5>
-              {{item.title}}
-            </h5>
-            <p class="text-link">{{item.description}}</p>
-          </mat-card-content>
-        </mat-card>
-      </div>
-      } @empty {
-      <mat-list-item>There are no items.</mat-list-item>
-      }
+        <img [ngSrc]="item.image!" alt="Family spending time together" [title]="item.title" class="img-fluid p-2"
+          width="1024" height="684" priority />
+        <mat-card-content class="my-4">
+          <h5>
+            {{item.title}}
+          </h5>
+          <p class="text-link">{{item.description}}</p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    } @empty {
+    <mat-list-item>There are no items.</mat-list-item>
+    }
   </div>
 </section>
 
@@ -76,7 +76,8 @@
       <h6 class="text-secondary-600">Help millions</h6>
       <h2 class="text-white">This is the greatest opportunity to help millions protect, build, and secure their wealth.
       </h2>
-      <button mat-raised-button type="button" color="accent" class="mt-4" (click)="navigateToLink('get-started')">Start Now</button>
+      <button mat-raised-button type="button" color="accent" class="mt-4" (click)="navigateToLink('get-started')">Start
+        Now</button>
     </div>
   </section>
 </div>
@@ -101,22 +102,22 @@
 </section>
 
 <section class="container align-content-center my-5">
-    <!-- Protect What Matters Most  -->
-    <div class="row align-items-center h-100 mt-5">
-      <div class="col-12 col-md-6" id="stat-card">
-        <div class="d-flex flex-column gap-2 py-2">
-          <h2>4.5 Billion</h2>
-          <h6 class="mt-2">People are Financially Illiterate</h6>
-        </div>
-        <p class="text-body mt-2">
-          The alarming fact that 4.5 billion people suffer from financial illiteracy highlights the urgent need for
-          financial guidance and support.
-        </p>
+  <!-- Protect What Matters Most  -->
+  <div class="row align-items-center h-100 mt-5">
+    <div class="col-12 col-md-6" id="stat-card">
+      <div class="d-flex flex-column gap-2 py-2">
+        <h2>4.5 Billion</h2>
+        <h6 class="mt-2">People are Financially Illiterate</h6>
       </div>
-      <div class="col-6 d-none d-md-block">
-        <img ngSrc="assets/images/office2.webp" alt="Placeholder Image" class="img-fluid" width="1024" height="684" />
-      </div>
+      <p class="text-body mt-2">
+        The alarming fact that 4.5 billion people suffer from financial illiteracy highlights the urgent need for
+        financial guidance and support.
+      </p>
     </div>
+    <div class="col-6 d-none d-md-block">
+      <img ngSrc="assets/images/office2.webp" alt="Placeholder Image" class="img-fluid" width="1024" height="684" />
+    </div>
+  </div>
 </section>
 <!-- Begin your journey -->
 <section class="container align-content-center py-5">
@@ -143,11 +144,11 @@
       </div>
     </div>
     <div class="d-none d-lg-block col-lg-4 d-flex">
-      <img ngSrc="assets/images/family3.webp" alt="Placeholder Image" class="img-fluid h-100 object-fit-cover" width="1024" height="684" />
+      <img ngSrc="assets/images/family3.webp" alt="Placeholder Image" class="img-fluid h-100 object-fit-cover"
+        width="1024" height="684" />
     </div>
   </div>
 </section>
-
 
 <!-- Your wealth, our mission -->
 <div class="bg-accent-100 py-5">
@@ -192,4 +193,30 @@
       </div>
     </div>
   </section>
+
+
+  <!-- Joe's Quote -->
+  <section class="container pt-3 pb-5 d-flex justify-content-center align-items-center">
+    <div class="row col-lg-10 col-12 border border-accent-500 shadow-lg rounded-2 p-3 fst-italic">
+      <div class="col-lg-4 col-12 d-flex d-lg-block justify-content-center">
+        <img ngSrc="assets/images/GFC-CEO.webp" alt="Placeholder Image" class="img-fluid w-lg-75 w-25 mb-2 mb-lg-0" width="400" height="384"
+          style="border-radius: 50%;" />
+      </div>
+      <div class="col-12 col-lg-8">
+        <p class="text-body">"I’m driven by a clear mission: to build and protect wealth for families. Through
+          personalized financial
+          solutions, I provide individuals with the peace of mind they need to secure their future, empowering them to
+          reach their goals and fulfill their dreams.</p>
+        <p class="text-body">
+          As a wealth strategist, I work with a diverse group of clients, professional athletes, business owners, Baby
+          Boomers, and families from all backgrounds. My focus is on maximizing wealth strategies that help each
+          client
+          build a strong financial foundation and future."</p>
+
+          <p class="fw-bold text-end">Joe Morales</p>
+          <p class="fw-light text-end" style="margin-top: -0.5rem;">CEO & Founder</p>
+      </div>
+    </div>
+  </section>
+
 </div>

@@ -1,8 +1,8 @@
 <mat-drawer-container id="container" class="">
     <mat-drawer #sideNavigationBar mode="over" class="glass-bg d-block d-lg-none w-100">
         <!-- Toggle sidenav button -->
-        <mat-toolbar style="height: 100px;">
-            <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
+        <mat-toolbar class="bg-primary-800" style="height: 100px;">
+            <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()" class="text-white">
                 <mat-icon>close</mat-icon>
             </button>
         </mat-toolbar>
@@ -25,10 +25,10 @@
     <mat-drawer-content>
         <section #navigationBar>
             <div class="bg-primary-800" style="height: 100px;"></div>
-            <mat-toolbar class="glass-bg justify-content-between px-4 ">
+            <mat-toolbar class="glass-bg justify-content-between px-4 position-fixed top-0 z-3" style="height: 100px;">
                 <!-- Toggle sidenav button -->
-                <span class="d-block d-lg-none me-4 me-lg-0 text-white">
-                    <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()">
+                <span class="d-block d-lg-none me-4 me-lg-0">
+                    <button mat-icon-button aria-label="Example icon-button with menu icon" (click)="toggleSidenav()" class="text-white">
                         <mat-icon>menu</mat-icon>
                     </button>
                 </span>
@@ -127,7 +127,7 @@
 
             <div class="row bg-black py-3">
                 <div class="d-flex justify-content-center text-white">
-                    © 2024 GFI Catalyst. All rights reserved
+                    © 2024 GFC Catalyst. All rights reserved
                 </div>
             </div>
         </footer>

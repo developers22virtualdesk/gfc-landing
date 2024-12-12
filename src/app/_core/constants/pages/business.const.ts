@@ -30,12 +30,12 @@ export const PARTNERTYPES_OPTIONS: partnerType[] = [
   {
     title: 'Full-Time',
     subtitle: 'Work With Us',
-    body: 'Unlock the potential of a full-time career in financial services with GFI, where you’ll discover numerous incentives, a proven system, and unwavering support to help you thrive.',
+    body: 'Unlock the potential of a full-time career in financial services with GFC, where you’ll discover numerous incentives, a proven system, and unwavering support to help you thrive.',
   },
   {
     title: 'Agency Owner',
     subtitle: 'Wecome An',
-    body: 'Become an agency owner with GFI and secure your future by building your own brand, with an opportunity to gain equity in the company, and unlocking unlimited potential in the financial industry.',
+    body: 'Become an agency owner with GFC and secure your future by building your own brand, with an opportunity to gain equity in the company, and unlocking unlimited potential in the financial industry.',
   },
 ];
 
@@ -49,7 +49,7 @@ export const INCOMESTREAM_OPTIONS: ICard[] = [
   {
     title: 'Residuals & Renewals Income',
     description:
-      'Enjoy ongoing income from past efforts. With GFI, your financial rewards can grow over time as you cultivate and expand your book of business.',
+      'Enjoy ongoing income from past efforts. With GFC, your financial rewards can grow over time as you cultivate and expand your book of business.',
     image: 'trending-up',
   },
   {
@@ -82,7 +82,7 @@ export const INCOMESTREAM_OPTIONS: ICard[] = [
 export const MARKETING_STRATEGIES: ICard[] = [
   {
     title: 'Business Ownership Opportunity',
-    description: `At GFI, we offer a unique chance to own your business, turning hard work into an asset and a legacy for your family.`,
+    description: `At GFC, we offer a unique chance to own your business, turning hard work into an asset and a legacy for your family.`,
   },
   {
     title: 'Millionaire Mentorship',
@@ -138,7 +138,7 @@ export const STARTING_POINTS: startingPoint[] = [
     step: 'STEP 1',
     title: 'Complete The Request Form',
     description:
-      'Begin your journey towards becoming a GFI business partner by submitting your application request.',
+      'Begin your journey towards becoming a GFC business partner by submitting your application request.',
     image:
       'assets/images/form.webp',
   },
